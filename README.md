@@ -28,8 +28,8 @@ Proyecto Integrador: Desarrollo Web Full Stack Node - Digital House
     .https://loretorings.com/
     .https://ofelia.com.ar/tienda/juno-joyeria-artesanal_429}
 
-    ¿Por qué elegimos cada uno?
-    COMPLETAR #############################################
+    ¿Por qué elegimos cada uno?  
+    
     En cuanto a la elección de los sitios web para inspirarnos, los elegimos porque los mismos ofrecen un producto similar al que vamos a promocionar en nuestro sitio web, a su vez por su estética y también por su fácil accesibilidad al carrito de compras.
 
 
