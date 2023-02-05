@@ -10,7 +10,7 @@ Proyecto Integrador: Desarrollo Web Full Stack Node - Digital House
     .Sitio de venta online de accesorios y joyas (¿artesanales?): anillos, aros, colgantes, pulseras.
 
 -Público al que apunta el sitio:
-    .COMPLETAR ###########################################
+    El principal público al que apunta nuestro sitio serán mujeres de edad joven/media que les guste la moda y los accesorios, que principalmente se encuentren interesadas en la adquisición del producto ofrecido, pero también hacia aquellas que quieran conocer las nuevas tendencias en accesorios. En menor medida, a un público masculino que desee comprar algún presente, o que pueda estar interesado en el producto. Nivel socioeconómico del mismo: ABCD.
 
 -Integrantes del equipo y descripción (COMPLETAR CADA UNO) de los mismos:
     .Andrés Bocchigliere
@@ -30,6 +30,7 @@ Proyecto Integrador: Desarrollo Web Full Stack Node - Digital House
 
     ¿Por qué elegimos cada uno?
     COMPLETAR #############################################
+    En cuanto a la elección de los sitios web para inspirarnos, los elegimos porque los mismos ofrecen un producto similar al que vamos a promocionar en nuestro sitio web, a su vez por su estética y también por su fácil accesibilidad al carrito de compras.
 
 
 
