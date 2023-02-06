@@ -18,7 +18,7 @@ Proyecto Integrador: Desarrollo Web Full Stack Node - Digital House
     -Estudiante de Ingeniería en Computación en Universidad Nacional de Río Negro, Bariloche. Formándome en Desarrollo Web Full Stack Node @Digital House.  36 años.
 
     .Stefania Mendez
-    -
+    -Ex estudiante de contador publico en la Universidad de Buenos Aires. Introduciendome en el mundo del Desarrollo Web en Digital House. 34 años.
 
 
 3. Referencias del mercado
