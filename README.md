@@ -28,7 +28,7 @@ Proyecto Integrador: Desarrollo Web Full Stack Node - Digital House
     .https://www.vadeka.com.ar/
     .https://www.pandoraoficial.com.ar/
     .https://loretorings.com/
-    .https://https://ofelia.com.ar/b/juno-joyeria-artesanal
+    .https://ofelia.com.ar/b/juno-joyeria-artesanal
 
     ¿Por qué elegimos cada uno?  
     
