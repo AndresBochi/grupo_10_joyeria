@@ -48,3 +48,5 @@ Proyecto Integrador: Desarrollo Web Full Stack Node - Digital House
     -Tipografía:
         .Playfair Display (en su versión itálica), diseñada por Claus Eggers Sørensen. 
             .Link : https://fonts.google.com/specimen/Playfair+Display#styles
+
+5. Link Trello: https://trello.com/b/uq5hfwJp/proyecto-integrador-dh-anastassia-joyas
