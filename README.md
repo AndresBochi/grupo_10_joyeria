@@ -2,11 +2,11 @@
 # **Proyecto Integrador: Desarrollo Web Full Stack Node - Digital House**
 ## GRUPO 10 ANASTASSIA JOYAS
 
-### 1.**URL del proyecto**
+### 1. **URL del proyecto**
 
 >https://github.com/AndresBochi/grupo_10_joyeria.git
 
-### 2.**Temática del proyecto**
+### 2. **Temática del proyecto**
 
 >#### Descripción de la oferta de productos y/o servicios del sitio
 Sitio de venta online de accesorios y joyas: anillos, aros, colgantes, pulseras.
@@ -23,7 +23,7 @@ Estudiante de Ingeniería en Computación en Universidad Nacional de Río Negro,
 Ex estudiante de contador publico en la Universidad de Buenos Aires. Introduciendome en el mundo del Desarrollo Web en Digital House. 34 años.
 
 
-### 3.**Referencias del mercado**
+### 3. **Referencias del mercado**
 
 >[Maria Rivolta](https://www.mariarivolta.com/)
 
@@ -42,7 +42,7 @@ Ex estudiante de contador publico en la Universidad de Buenos Aires. Introducien
     -En cuanto a la elección de los sitios web para inspirarnos, los elegimos porque los mismos ofrecen un producto similar al que vamos a promocionar en nuestro sitio web, a su vez por su estética y también por su fácil accesibilidad al carrito de compras.
 
 
-4. **Diseño del sitio**
+### 4. **Diseño del sitio**
 
 >Colores: 
     Principales:
