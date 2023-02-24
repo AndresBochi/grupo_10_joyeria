@@ -2,7 +2,7 @@
 # **Proyecto Integrador: Desarrollo Web Full Stack Node - Digital House**
 ## GRUPO 10 ANASTASSIA JOYAS
 
-1. URL del proyecto:
+1. URL del proyecto: 
     https://github.com/AndresBochi/grupo_10_joyeria.git
 
 2. Temática del proyecto
@@ -33,7 +33,7 @@
     [Pandora](https://www.pandoraoficial.com.ar/)
 
     [Loreto](https://loretorings.com/)
-    
+
     [Juno](https://ofelia.com.ar/b/juno-joyeria-artesanal)
 
     ¿Por qué elegimos cada uno?  
