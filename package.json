@@ -1,0 +1,25 @@
+{
+  "name": "proyecto-integrador-dh",
+  "version": "1.0.0",
+  "description": "Proyecto Integrador: Desarrollo Web Full Stack Node - Digital House",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon src/app.js",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndresBochi/grupo_10_joyeria.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndresBochi/grupo_10_joyeria/issues"
+  },
+  "homepage": "https://github.com/AndresBochi/grupo_10_joyeria#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
