@@ -1,6 +1,6 @@
 
-** #Proyecto Integrador: Desarrollo Web Full Stack Node - Digital House **
-## grupo_10_joyeria
+# **Proyecto Integrador: Desarrollo Web Full Stack Node - Digital House**
+## GRUPO 10 ANASTASSIA JOYAS
 
 1. URL del proyecto:
     https://github.com/AndresBochi/grupo_10_joyeria.git
