@@ -1,28 +1,30 @@
-# Para llevar a cabo nuestra retrospectiva acerca de nuestro Sprint Número 1, utilizamos el formato estrella de mar.
+## Retrospectiva Sprint 1
 
-### Start Doing
+**Para llevar a cabo nuestra retrospectiva acerca de nuestro Sprint Número 1, utilizamos el formato estrella de mar.**
+
+### **Start Doing**
 
 > Comunicación entre todos los integrantes del equipo.
 
 > Hacer un mayor uso de Trello como herramienta para organizar el trabajo.
 
-### More Of
+### **More Of**
 
 > Más reuniones.
 
 > Videollamadas por Discord / Pair Programming remoto.
 
-### Keep doing
+### **Keep doing**
 
 > Consultar cuando algo no sale.
 
 > Cumplir con las tareas asignadas en tiempo y forma.
 
-### Less of
+### **Less of**
 
 >No asistir a las reuniones o llegar fuera de horario.
 
-### Stop Doing
+### **Stop Doing**
 
 > Cargar responsabilidades en una sola persona.
 
