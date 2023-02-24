@@ -38,22 +38,21 @@ Ex estudiante de contador publico en la Universidad de Buenos Aires. Introducien
 >[Juno](https://ofelia.com.ar/b/juno-joyeria-artesanal)
 
 >#### ¿Por qué elegimos cada uno?  
-    
-    En cuanto a la elección de los sitios web para inspirarnos, los elegimos porque los mismos ofrecen un producto similar al que vamos a promocionar en nuestro sitio web, a su vez por su estética y también por su fácil accesibilidad al carrito de compras.
+En cuanto a la elección de los sitios web para inspirarnos, los elegimos porque los mismos ofrecen un producto similar al que vamos a promocionar en nuestro sitio web, a su vez por su estética y también por su fácil accesibilidad al carrito de compras.
 
 
 ### 4. **Diseño del sitio**
 
 >#### Colores: 
-Principales:
-*Dark Salmon - RGB (233, 150, 122) - Hex #E9967A
-*White Smoke - RGB (245, 245, 245) - Hex #F5F5F5
+**Principales**
+Dark Salmon - RGB (233, 150, 122) - Hex #E9967A
+White Smoke - RGB (245, 245, 245) - Hex #F5F5F5
         
-Letras / Iconos:
-*Shade del Dark Salmon - RGB(58, 37, 30) - Hex #3A251E
+**Letras / Iconos**
+Shade del Dark Salmon - RGB(58, 37, 30) - Hex #3A251E
 
 >#### Tipografía:
-Playfair Display (en su versión itálica), diseñada por Claus Eggers Sørensen. 
+**Playfair Display** (en su versión itálica), diseñada por Claus Eggers Sørensen. 
 Link : https://fonts.google.com/specimen/Playfair+Display#styles
 
 ### 5. **Trello**
