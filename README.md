@@ -1,5 +1,6 @@
-# grupo_10_joyeria
-Proyecto Integrador: Desarrollo Web Full Stack Node - Digital House
+
+# **Proyecto Integrador: Desarrollo Web Full Stack Node - Digital House**
+## GRUPO 10 ANASTASSIA JOYAS
 
 1. URL del proyecto:
     https://github.com/AndresBochi/grupo_10_joyeria.git
@@ -18,17 +19,22 @@ Proyecto Integrador: Desarrollo Web Full Stack Node - Digital House
     -Estudiante de Ingeniería en Computación en Universidad Nacional de Río Negro, Bariloche. Formándome en Desarrollo Web Full Stack Node @Digital House.  36 años.
 
     .Stefania Mendez
-    -
+    -Ex estudiante de contador publico en la Universidad de Buenos Aires. Introduciendome en el mundo del Desarrollo Web en Digital House. 34 años.
 
 
 3. Referencias del mercado
 
-    .https://www.mariarivolta.com/
-    .https://ar.isadoraonline.com/
-    .https://www.vadeka.com.ar/
-    .https://www.pandoraoficial.com.ar/
-    .https://loretorings.com/
-    .https://https://ofelia.com.ar/b/juno-joyeria-artesanal
+    [Maria Rivolta](https://www.mariarivolta.com/)
+
+    [Isadora](https://ar.isadoraonline.com/)
+
+    [Vadeka](https://www.vadeka.com.ar/)
+
+    [Pandora](https://www.pandoraoficial.com.ar/)
+
+    [Loreto](https://loretorings.com/)
+    
+    [Juno](https://ofelia.com.ar/b/juno-joyeria-artesanal)
 
     ¿Por qué elegimos cada uno?  
     
