@@ -25,10 +25,15 @@
 3. Referencias del mercado
 
     [Maria Rivolta](https://www.mariarivolta.com/)
+
     [Isadora](https://ar.isadoraonline.com/)
+
     [Vadeka](https://www.vadeka.com.ar/)
+
     [Pandora](https://www.pandoraoficial.com.ar/)
+
     [Loreto](https://loretorings.com/)
+    
     [Juno](https://ofelia.com.ar/b/juno-joyeria-artesanal)
 
     ¿Por qué elegimos cada uno?  
