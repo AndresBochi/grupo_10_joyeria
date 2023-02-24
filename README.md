@@ -45,11 +45,13 @@ En cuanto a la elección de los sitios web para inspirarnos, los elegimos porque
 
 >#### Colores: 
 **Principales**
+
 Dark Salmon - **RGB (233, 150, 122)** - **Hex #E9967A**
 
 White Smoke - **RGB (245, 245, 245)** - **Hex #F5F5F5**
         
 **Letras / Iconos**
+
 Shade del Dark Salmon - **RGB(58, 37, 30)** - **Hex #3A251E**
 
 >#### Tipografía:
