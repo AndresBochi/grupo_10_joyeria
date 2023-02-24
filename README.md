@@ -3,6 +3,7 @@
 ## GRUPO 10 ANASTASSIA JOYAS
 
 1. **URL del proyecto**
+
 >https://github.com/AndresBochi/grupo_10_joyeria.git
 
 2. **Temática del proyecto**
@@ -43,14 +44,19 @@
 
 4. **Diseño del sitio**
 
-    -Colores: 
-        -Principales:
-            -Dark Salmon - RGB (233, 150, 122) - Hex #E9967A
-            -White Smoke - RGB (245, 245, 245) - Hex #F5F5F5
-            
-        -Letras / Iconos:
-            -Shade del Dark Salmon - RGB(58, 37, 30) - Hex #3A251E
+>Colores: 
+    -Principales:
+        -Dark Salmon - RGB (233, 150, 122) - Hex #E9967A
+        -White Smoke - RGB (245, 245, 245) - Hex #F5F5F5
+        
+    -Letras / Iconos:
+        -Shade del Dark Salmon - RGB(58, 37, 30) - Hex #3A251E
 
-    -Tipografía:
-        -Playfair Display (en su versión itálica), diseñada por Claus Eggers Sørensen. 
-            Link : https://fonts.google.com/specimen/Playfair+Display#styles
+>Tipografía:
+    -Playfair Display (en su versión itálica), diseñada por Claus Eggers Sørensen. 
+        Link : https://fonts.google.com/specimen/Playfair+Display#styles
+
+5. **Trello**
+
+>[Trello](https://trello.com/b/uq5hfwJp/proyecto-integrador-dh-anastassia-joyas)
+
