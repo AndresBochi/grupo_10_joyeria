@@ -46,7 +46,8 @@ En cuanto a la elección de los sitios web para inspirarnos, los elegimos porque
 >#### Colores: 
 **Principales**
 
-Dark Salmon - **RGB (233, 150, 122)** - **Hex #E9967A**
+$\color[rgb]{233,150,122} Dark Salmon$
+- **RGB (233, 150, 122)** - **Hex #E9967A**
 
 White Smoke - **RGB (245, 245, 245)** - **Hex #F5F5F5**
         
