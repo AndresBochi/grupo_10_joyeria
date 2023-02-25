@@ -58,8 +58,7 @@ $\color[RGB]{58, 37, 30} ►$
 Shade del Dark Salmon **RGB(58, 37, 30)** - **Hex #3A251E**
 
 >#### Tipografía:
-**Playfair Display** (en su versión itálica), diseñada por Claus Eggers Sørensen. 
-Link : https://fonts.google.com/specimen/Playfair+Display#styles
+**[Playfair Display](https://fonts.google.com/specimen/Playfair+Display#styles)**(en su versión itálica), diseñada por Claus Eggers Sørensen. 
 
 ### 5. **Trello**
 
