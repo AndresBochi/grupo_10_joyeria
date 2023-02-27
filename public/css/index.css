@@ -1,3 +1,69 @@
-p {
-    color: red;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+/* -------------- BODY -------------- */
+
+body {
+    margin: 0;
+}
+
+/* -------------- HEADER -------------- */
+
+#headerFlex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%;
+    background-color: #E9967A;
+}
+
+#divLogo{
+    width: 33%;
+    /* padding: 1.5rem 1rem 1.5rem 1rem; */
+    margin: auto 0;
+}
+#logo {
+    width: 100%;
+}
+
+nav {
+    width: 40%;
+    margin: auto 0;
+}
+
+#listaNav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #3A251E;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#divIconos{
+    width: 20%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fa-magnifying-glass,
+.fa-user,
+.fa-cart-shopping {
+    color: #3A251E;
+    font-size: 30px;
 }
