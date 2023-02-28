@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Playfair Display', serif;
+    color: #3A251E;
 }
 
 /* -------------- BODY -------------- */
@@ -108,7 +109,38 @@ a {
     display: block;
 }
 
-/* -------------- HEADER -------------- */
+/* -------------- MAIN -------------- */
+
+main{
+    background-color: white;
+}
+
+/* -------------- FOOTER -------------- */
+
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: #E9967A;
+}
+
+footer h3{
+    border-bottom: 1px solid #3A251E;
+}
+
+footer ul {
+    padding: 0;
+    
+}
+
+.fa-square-facebook,
+.fa-square-instagram,
+.fa-square-twitter,
+.fa-square-pinterest {
+    color: #3A251E;
+    font-size: 30px;
+}
+/* -------------- MEDIA -------------- */
 
 @media (min-width: 475px) {
 
