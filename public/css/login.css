@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Playfair Display', serif;
+    color: #3A251E;
 }
 
 /* -------------- BODY -------------- */
@@ -22,6 +23,7 @@ body {
 header {
     width: 100%;
     background-color: #E9967A;
+    padding: 0.5rem 0;
 }
 
 #divLogo{
@@ -82,7 +84,7 @@ a {
 #seccionBusqueda{
     padding: 0 1rem 1rem 1rem;
     text-align: right;
-    /* display: none; */
+    display: none; /* <------------ Aquí!!!! para traer la barra de búsqueda */
     margin: auto 0;
 }
 
@@ -108,7 +110,90 @@ a {
     display: block;
 }
 
-/* -------------- HEADER -------------- */
+/* -------------- MAIN -------------- */
+
+main{
+    background-color: whitesmoke;
+}
+
+/* -------------- FOOTER -------------- */
+
+footer{
+    display: flex;
+    flex-flow: column wrap;
+    background-color: #E9967A;
+    text-align: center;
+    /* ************ */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* ************ */
+    
+}
+
+footer h3{
+    border-bottom: 1px solid #3A251E;
+   /*  border-left: 1px solid #3A251E;
+    border-right: 1px solid #3A251E; */
+    margin-bottom: 0;
+}
+
+footer ul {
+    padding: 0;
+    /* border-left: 1px solid #3A251E;
+    border-left: 1px solid #3A251E; */
+    margin-top: 0.5rem;
+}
+
+/* footer li{
+    border-left: 1px solid #3A251E;
+    border-right: 1px solid #3A251E;
+} */
+
+footer a {
+    font-weight: lighter;
+}
+
+.fa-square-facebook,
+.fa-square-instagram,
+.fa-square-twitter,
+.fa-square-pinterest {
+    color: #3A251E;
+    font-size: 30px;
+    margin: 0 0.75rem;
+}
+
+#seccionEmpresa{
+    width:70%;
+    position: relative;
+    left: 15%;
+    /* border-left: 1px solid #3A251E; */
+    /* border-right: 1px solid #3A251E; */
+}
+#seccionRedes{
+    width:70%;
+    position: relative;
+    left: 15%;
+   /*  border-left: 1px solid #3A251E;
+    border-right: 1px solid #3A251E; */
+}
+#seccionLegal{
+    width:70%;
+    position: relative;
+    left: 15%;
+    /* border-left: 1px solid #3A251E; */
+    /* border-right: 1px solid #3A251E; */
+}
+
+#redesFlex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+    
+}
+
+/* -------------- MEDIA -------------- */
 
 @media (min-width: 475px) {
 
@@ -129,6 +214,9 @@ a {
         display: block;
     }
 
+    header {
+        padding: 0;
+    }
     #headerFlex{
         justify-content: space-between;
     }
@@ -144,5 +232,40 @@ a {
     .fa-bars{
         font-size: 30px;
     }
-}
 
+    footer{
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+
+    footer h3{
+        border-bottom: 1px solid #3A251E;
+    }
+
+    #seccionEmpresa{
+        width:25%;
+        position: static;
+    }
+    #seccionRedes{
+        width:25%;
+        position: static;
+    }
+    #seccionLegal{
+        width:25%;
+        position: static;
+    }
+
+    .fa-square-facebook,
+    .fa-square-instagram,
+    .fa-square-twitter,
+    .fa-square-pinterest {
+        margin-right: 1.5rem;
+        margin-left: 0;
+    }
+
+    #redesFlex{
+        justify-content: space-between;
+    }
+    
+}
