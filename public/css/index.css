@@ -58,6 +58,12 @@ a {
     font-size: 16px;
     font-weight: bold;
 }
+.enlacesHeader{
+    transition: background-color 0.5s;
+    border-radius: 5px;
+    padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+    
+}
 
 #divIconos{
     width: 40%;
@@ -136,6 +142,7 @@ footer h3{
    /*  border-left: 1px solid #3A251E;
     border-right: 1px solid #3A251E; */
     margin-bottom: 0;
+    margin-top: 1rem;
 }
 
 footer ul {
@@ -150,8 +157,14 @@ footer ul {
     border-right: 1px solid #3A251E;
 } */
 
-footer a {
+.enlacesFooter {
     font-weight: lighter;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    line-height: 1.7rem;
+    transition: background-color 0.5s;
+    border-radius: 5px;
+    padding: 0.1rem 0.5rem 0.1rem 0.5rem;
 }
 
 .fa-square-facebook,
@@ -164,21 +177,21 @@ footer a {
 }
 
 #seccionEmpresa{
-    width:70%;
+    width: 70%;
     position: relative;
     left: 15%;
     /* border-left: 1px solid #3A251E; */
     /* border-right: 1px solid #3A251E; */
 }
 #seccionRedes{
-    width:70%;
+    width: 70%;
     position: relative;
     left: 15%;
    /*  border-left: 1px solid #3A251E;
     border-right: 1px solid #3A251E; */
 }
 #seccionLegal{
-    width:70%;
+    width: 70%;
     position: relative;
     left: 15%;
     /* border-left: 1px solid #3A251E; */
@@ -189,7 +202,7 @@ footer a {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    
+    margin-top: 1rem;
     
 }
 
@@ -221,6 +234,12 @@ footer a {
         justify-content: space-between;
     }
 
+    .enlacesHeader:hover{
+        background-color: #3A251E;
+        color: #E9967A;
+        
+    }
+
     #divIconos{
         width: 20%;
     }
@@ -241,6 +260,11 @@ footer a {
 
     footer h3{
         border-bottom: 1px solid #3A251E;
+    }
+
+    .enlacesFooter:hover{
+        background-color: #3A251E;
+        color: #E9967A;
     }
 
     #seccionEmpresa{
@@ -266,6 +290,7 @@ footer a {
 
     #redesFlex{
         justify-content: space-between;
+        
     }
     
 }
