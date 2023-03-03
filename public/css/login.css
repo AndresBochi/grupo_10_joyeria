@@ -4,12 +4,14 @@
     box-sizing: border-box;
     font-family: 'Playfair Display', serif;
     color: #3A251E;
+    
 }
 
 /* -------------- BODY -------------- */
 
 body {
     margin: 0;
+    background-color: whitesmoke;
 }
 
 /* -------------- HEADER -------------- */
@@ -150,6 +152,8 @@ main{
 
 .contenedor-padre{
    display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-between;
 
 }
 
@@ -166,11 +170,32 @@ display: flex;
 flex-wrap: nowrap;
 background-color: whitesmoke;
 margin-bottom: 1px;
+align-items: center;
 
+}
+
+.formulario{
+    text-align: justify;
+    margin-left: 20px;
+    align-items: center;
 }
 
 h3{
  margin-top: 5px;
+
+}
+
+input{
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: whitesmoke;
+}
+
+.registro{
+ align-items: center;
+ margin-right: 20px;
 
 }
 
@@ -180,12 +205,17 @@ h3{
     margin-left: 20px;
 }
 
+.boton{
+    background-color: #E9967A;
+
+}
+
 .v-line{
     border-left:  thin solid #5c5b5b;
     height: 50%;
     left: 50%;
     position: absolute;
-    margin bottom: 25px;
+    
    }
 
 /* -------------- FOOTER -------------- */
@@ -607,5 +637,17 @@ footer a {
     #redesFlex{
         justify-content: space-between;
     }
-    
+.registro{
+    margin: 0;
+    padding: 0 35px 0;
+    border-width: 0 1px 0 0;
+
+}  
+
+.iniciar-sesion{
+    margin: 0;
+    padding: 0 35px 0;
+    border-width: 0 1px 0 0;
+}
+
 }
