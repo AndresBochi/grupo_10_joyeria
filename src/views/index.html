@@ -41,7 +41,39 @@
         </section>
     </header>
 
+
     <main>
+
+        <script>
+            function imagen1(){
+                document.getElementById('imagen1').style.display = 'block';
+                document.getElementById('imagen2').style.display = 'none';
+                document.getElementById('imagen3').style.display = 'none';
+            }
+            function imagen2(){
+                document.getElementById('imagen1').style.display = 'none';
+                document.getElementById('imagen2').style.display = 'block';
+                document.getElementById('imagen3').style.display = 'none';
+            }
+            function imagen3(){
+                document.getElementById('imagen1').style.display = 'none';
+                document.getElementById('imagen2').style.display = 'none';
+                document.getElementById('imagen3').style.display = 'block';
+            }
+        </script>
+
+        <section id="carrouselColecciones">
+            <a href="#"><img id="imagen1" src="images/arbol-de-la-vida-colgante.jpg" alt="Colgante Arbol de la Vida"></a>
+            <a href="#"><img id="imagen2" src="images/anillo-acero.jpg" alt="Anillo Acero"></a>
+            <a href="#"><img id="imagen3" src="images/anillo-oro.jpg" alt="Anillo Oro"></a>
+            <div id="botonesSelectores">
+                <button id="botonCarrousel1" class="selectorCarrousel" onclick="imagen1()" aria-selected="true"></i></button>
+                <button id="botonCarrousel2" class="selectorCarrousel" onclick="imagen2()"></i></button>
+                <button id="botonCarrousel3" class="selectorCarrousel" onclick="imagen3()"></i></button>
+            </div>
+        </section>
+
+        
         
     </main>
 

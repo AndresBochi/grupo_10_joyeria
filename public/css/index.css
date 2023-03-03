@@ -4,13 +4,19 @@
     box-sizing: border-box;
     font-family: 'Playfair Display', serif;
     color: #3A251E;
-}
+
+    /* outline: 1px solid red !important; */
+
+}   
 
 /* -------------- BODY -------------- */
 
 body {
     margin: 0;
+    background-color: whitesmoke;
 }
+
+
 
 /* -------------- HEADER -------------- */
 
@@ -24,6 +30,8 @@ header {
     width: 100%;
     background-color: #E9967A;
     padding: 0.5rem 0;
+
+    
 }
 
 #divLogo{
@@ -119,8 +127,79 @@ a {
 /* -------------- MAIN -------------- */
 
 main{
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
 }
+
+
+/* ------- Carrousel Colecciones ------- */
+
+#carrouselColecciones{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%; 
+    margin: 3% auto;
+    padding: 0.5rem;
+    justify-content: center;
+    background-color: #E9967A;
+    /* border: 1px solid #3A251E; */
+    /* overflow: hidden; */
+}
+
+#imagen1,
+#imagen2,
+#imagen3{
+    width: 100%;
+    box-shadow: 0px 0px 5px #3A251E;
+    border: 1px solid #3A251E;
+}
+
+#imagen1{
+    display: block;
+}
+#imagen2,
+#imagen3{
+    display: none;
+}
+
+#botonesSelectores {
+    display: flex;
+    position: absolute;
+    width: 15%;
+    justify-content: space-between;
+    bottom: 8%;
+}
+
+#botonCarrousel1, 
+#botonCarrousel2, 
+#botonCarrousel3 {
+    padding: 0;
+    background-color: #3A251E;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    border: none;
+}
+
+#botonCarrousel1:hover,
+#botonCarrousel2:hover,
+#botonCarrousel3:hover{
+    background-color: #E9967A;
+    border: 1px solid #3A251E;
+}
+
+#botonCarrousel1:focus,
+#botonCarrousel2:focus,
+#botonCarrousel3:focus{
+    background-color: #E9967A;
+    border: 2px solid #3A251E;
+}
+
+
+/* ------- Carrousel Productos Destacados ------- */
+
+
+
 
 /* -------------- FOOTER -------------- */
 
@@ -129,33 +208,18 @@ footer{
     flex-flow: column wrap;
     background-color: #E9967A;
     text-align: center;
-    /* ************ */
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    /* ************ */
-    
 }
 
 footer h3{
     border-bottom: 1px solid #3A251E;
-   /*  border-left: 1px solid #3A251E;
-    border-right: 1px solid #3A251E; */
     margin-bottom: 0;
     margin-top: 1rem;
 }
 
 footer ul {
     padding: 0;
-    /* border-left: 1px solid #3A251E;
-    border-left: 1px solid #3A251E; */
     margin-top: 0.5rem;
 }
-
-/* footer li{
-    border-left: 1px solid #3A251E;
-    border-right: 1px solid #3A251E;
-} */
 
 .enlacesFooter {
     font-weight: lighter;
@@ -180,22 +244,18 @@ footer ul {
     width: 70%;
     position: relative;
     left: 15%;
-    /* border-left: 1px solid #3A251E; */
-    /* border-right: 1px solid #3A251E; */
 }
+
 #seccionRedes{
     width: 70%;
     position: relative;
     left: 15%;
-   /*  border-left: 1px solid #3A251E;
-    border-right: 1px solid #3A251E; */
 }
+
 #seccionLegal{
     width: 70%;
     position: relative;
     left: 15%;
-    /* border-left: 1px solid #3A251E; */
-    /* border-right: 1px solid #3A251E; */
 }
 
 #redesFlex{
@@ -290,7 +350,20 @@ footer ul {
 
     #redesFlex{
         justify-content: space-between;
-        
     }
+
+@media (min-width: 768px){
+
+    #botonCarrousel1, 
+    #botonCarrousel2, 
+    #botonCarrousel3 {
+        height: 1rem;
+        width: 1rem;
+    }
+
+    #botonesSelectores {
+        bottom: 5%;
+    }
+}
     
 }
