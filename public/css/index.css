@@ -136,8 +136,7 @@ main{
 #carrouselColecciones{
     position: relative;
     display: flex;
-    flex-wrap: wrap;
-    width: 70%; 
+    width: 80%; 
     margin: 3% auto;
     padding: 0.5rem;
     justify-content: center;
@@ -196,10 +195,82 @@ main{
 }
 
 
-/* ------- Carrousel Productos Destacados ------- */
+/* ------- Slider Productos Destacados ------- */
 
+#sliderProductos{
+    background-color: #E9967A;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 3% auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
 
+.contenedorProducto{
+    position: relative;
+    border: 1px solid #3A251E;
+    width: 85%;
+    margin: 1rem auto;
+}
 
+.imagenProducto {
+    width: 100%;
+    
+}
+
+.nombreProducto{
+    background-color: whitesmoke;
+    border-top: 1px solid #3A251E;
+    padding: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.infoProducto{
+    padding: 0.5rem;
+    background-color: whitesmoke;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.precio{
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 0%;
+    font-size: 16px;
+}
+
+.numeroPrecio {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 30%;
+    font-size: 16px;
+    text-align: right;
+}
+
+.carritoProducto{
+    position: absolute;
+    bottom: 33px;
+    right: 8px;
+    z-index: 1;
+
+    width: 35px;
+    height: 35px;
+    background-color: #E9967A;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#iconoCarrito{
+    font-size: 20px;
+}
 
 /* -------------- FOOTER -------------- */
 
@@ -352,6 +423,15 @@ footer ul {
         justify-content: space-between;
     }
 
+    #sliderProductos{
+        flex-direction: row;
+    }
+
+    .contenedorProducto{
+        width: 45%;
+    }
+}
+
 @media (min-width: 768px){
 
     #botonCarrousel1, 
@@ -364,6 +444,14 @@ footer ul {
     #botonesSelectores {
         bottom: 5%;
     }
+
+    #sliderProductos{
+        flex-flow: row wrap;
+        overflow: hidden;
+    }
+
+    .contenedorProducto{
+        width: 30%;
+    }
 }
     
-}
