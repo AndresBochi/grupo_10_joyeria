@@ -175,12 +175,13 @@ display: flex;
 flex-wrap: nowrap;
 background-color: whitesmoke;
 margin-bottom: 1px;
+text-align: center;
 align-items: center;
 
 }
 
 .formulario{
-    text-align: justify;
+    text-align: center;
     margin-left: 20px;
     align-items: center;
 }
@@ -213,11 +214,13 @@ input{
     margin-bottom: 2em;
     text-align: center;
     align-items: center;
-    margin-right: 20px;
+    margin-top: 2em;
+
 }
 
 .boton{
     background-color: #E9967A;
+    margin-top: 1em;
 
 }
 
@@ -675,13 +678,27 @@ footer a {
  
  }
 
+ .registro,
+ .iniciar-sesion{
+    text-align: justify;
+ }
+
+ .formulario{
+   text-align: justify;
+
+ }
+
 }
 
 @media (max-width: 414px) {
   .v-line{
     display: none;
   }
-
+  
+  ul li{
+    list-style-type: none;
+    
+   }
 
 
 }
