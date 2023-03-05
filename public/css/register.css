@@ -155,7 +155,7 @@ main {
 }
 
 .titulo {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   margin-left: 20px;
 }
 .crear-cuenta {
@@ -167,7 +167,7 @@ main {
   text-align: center;
 }
 
-.datos-personales
+
 .info-inicio-sesion {
   display: inline-block;
   margin-bottom: 2em;
@@ -175,7 +175,7 @@ main {
 
 }
 .datos-personales{
-    display: inline-block;
+  display: inline-block;
   margin-bottom: 2em;
   text-align: center;
   align-items: center;
