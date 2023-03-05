@@ -150,13 +150,6 @@ main{
     background-color: whitesmoke;
 }
 
-.contenedor-padre{
-   display: flex;
-   flex-wrap: nowrap;
-   justify-content: space-between;
-
-}
-
 .fa-user{
     color: #3A251E;
     font-size: 25px;
@@ -165,15 +158,28 @@ main{
     
 }
 
+.titulo{
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
 .crear-cuenta{
-display: flex;
-flex-wrap: nowrap;
-background-color: whitesmoke;
-margin-bottom: 1px;
-align-items: center;
-justify-content: space-around;
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-around;
+   box-sizing: border-box;
+   margin-bottom: 15px;
+align-items:flex-start;
+
 
 }
+
+.datos-personales,
+.info-inicio-sesion{
+display: inline-block;
+}
+
+
+
  .asterisco{
     color: rgb(226, 19, 19);
  }
@@ -196,12 +202,38 @@ input{
     background-color: whitesmoke;
 }
 
+.checkbox{
+    display: flex;
+    flex-wrap: nowrap;
+}
 
-.boton{
+.boton-registro{
+    background-color: #E9967A;
+    align-items: flex-end;
+
+}
+
+.botones{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.box-robot{
+    box-sizing: border-box;
+	width: 200px;
+	border: 1px solid;
+	padding: 10px;
     background-color: #E9967A;
 
 }
 
+.boton-registro{
+ display: inline-block;
+ padding: 10px;
+
+}
 
 /* -------------- FOOTER -------------- */
 
