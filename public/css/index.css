@@ -20,7 +20,7 @@ body {
 
 /* -------------- HEADER -------------- */
 
-#headerFlex{
+#headerFlex {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -34,7 +34,7 @@ header {
     
 }
 
-#divLogo{
+#divLogo {
     width: 33%;
     /* padding: 1.5rem 1rem 1.5rem 1rem; */
     margin: auto 0;
@@ -56,7 +56,7 @@ nav {
     padding: 0;
 }
 
-#listaNav li{
+#listaNav li { 
     margin: 2px 0;
 }
 
@@ -66,14 +66,14 @@ a {
     font-size: 16px;
     font-weight: bold;
 }
-.enlacesHeader{
+.enlacesHeader {
     transition: background-color 0.5s;
     border-radius: 5px;
     padding: 0.1rem 0.5rem 0.1rem 0.5rem;
     
 }
 
-#divIconos{
+#divIconos {
     width: 40%;
     display: flex;
     flex-flow: row wrap;
@@ -85,24 +85,24 @@ a {
 .fa-user,
 .fa-cart-shopping,
 .fa-magnifying-glass, 
-.fa-bars{
+.fa-bars {
     color: #3A251E;
     font-size: 25px;
     
 }
 
-.fa-bars{
+.fa-bars {
     display: block;
 }
 
-#seccionBusqueda{
+#seccionBusqueda {
     padding: 0 1rem 1rem 1rem;
     text-align: right;
     display: none; /* <------------ Aquí!!!! para traer la barra de búsqueda */
     margin: auto 0;
 }
 
-#barraBusqueda{
+#barraBusqueda {
     width: 60%;
     margin-left: 0.5rem;
     height: 40px;
@@ -115,7 +115,7 @@ a {
     font-size: 20px;
     
 }
-#barraBusqueda::placeholder{
+#barraBusqueda::placeholder {
     color: #3A251E;
     font-size: 20px;
 }
@@ -126,18 +126,18 @@ a {
 
 /* -------------- MAIN -------------- */
 
-main{
+main {
     /* background-color: whitesmoke; */
 }
 
 
 /* ------- Carrousel Colecciones ------- */
 
-#carrouselColecciones{
+#carrouselColecciones {
     position: relative;
     display: flex;
     width: 80%; 
-    margin: 3% auto;
+    margin: 5% auto;
     padding: 0.5rem;
     justify-content: center;
     background-color: #E9967A;
@@ -147,17 +147,17 @@ main{
 
 #imagen1,
 #imagen2,
-#imagen3{
+#imagen3 {
     width: 100%;
     box-shadow: 0px 0px 5px #3A251E;
     border: 1px solid #3A251E;
 }
 
-#imagen1{
+#imagen1 {
     display: block;
 }
 #imagen2,
-#imagen3{
+#imagen3 {
     display: none;
 }
 
@@ -182,14 +182,14 @@ main{
 
 #botonCarrousel1:hover,
 #botonCarrousel2:hover,
-#botonCarrousel3:hover{
+#botonCarrousel3:hover {
     background-color: #E9967A;
     border: 1px solid #3A251E;
 }
 
 #botonCarrousel1:focus,
 #botonCarrousel2:focus,
-#botonCarrousel3:focus{
+#botonCarrousel3:focus {
     background-color: #E9967A;
     border: 2px solid #3A251E;
 }
@@ -197,17 +197,17 @@ main{
 
 /* ------- Slider Productos Destacados ------- */
 
-#sliderProductos{
+#sliderProductos {
     background-color: #E9967A;
     width: 100%;
     display: flex;
     flex-flow: column wrap;
-    margin: 3% auto;
+    margin: 5% auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
-.contenedorProducto{
+.contenedorProducto {
     position: relative;
     border: 1px solid #3A251E;
     width: 85%;
@@ -219,7 +219,7 @@ main{
     
 }
 
-.nombreProducto{
+.nombreProducto {
     background-color: whitesmoke;
     border-top: 1px solid #3A251E;
     padding: 0.5rem;
@@ -230,7 +230,7 @@ main{
     font-size: 18px;
 }
 
-.infoProducto{
+.infoProducto {
     padding: 0.5rem;
     background-color: whitesmoke;
 
@@ -238,7 +238,7 @@ main{
     justify-content: space-between;
 }
 
-.precio{
+.precio {
     margin-top: 0;
     margin-bottom: 0;
     width: 0%;
@@ -253,7 +253,7 @@ main{
     text-align: right;
 }
 
-.carritoProducto{
+.carritoProducto {
     position: absolute;
     bottom: 33px;
     right: 8px;
@@ -268,20 +268,55 @@ main{
     align-items: center;
 }
 
-#iconoCarrito{
+#iconoCarrito {
     font-size: 20px;
 }
 
+/* ------- Imagenes secciones Oro y Plata ------- */
+
+#seccionOroAcero {
+    display: flex;
+    flex-flow: row wrap;   
+    justify-content: space-around;     
+    margin: 5% auto;
+    text-align: center;
+}
+
+.imagenesOroAcero {
+    width: 100%;
+    border: 1px solid #3A251E;
+}
+
+#contenedorOro {    
+    width: 80%;
+}
+
+#contenedorAcero {
+    width: 80%;
+    margin-top: 3%;
+}
+
+
+.botonesOroAcero {
+    font-size: 18px;
+    color: #3A251E;
+    background-color: #E9967A;
+    border-radius: 10px;
+    border: none;
+    margin-top: 3%;
+}
+
+
 /* -------------- FOOTER -------------- */
 
-footer{
+footer {
     display: flex;
     flex-flow: column wrap;
     background-color: #E9967A;
     text-align: center;
 }
 
-footer h3{
+footer h3 {
     border-bottom: 1px solid #3A251E;
     margin-bottom: 0;
     margin-top: 1rem;
@@ -311,25 +346,25 @@ footer ul {
     margin: 0 0.75rem;
 }
 
-#seccionEmpresa{
+#seccionEmpresa {
     width: 70%;
     position: relative;
     left: 15%;
 }
 
-#seccionRedes{
+#seccionRedes {
     width: 70%;
     position: relative;
     left: 15%;
 }
 
-#seccionLegal{
+#seccionLegal {
     width: 70%;
     position: relative;
     left: 15%;
 }
 
-#redesFlex{
+#redesFlex {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -341,6 +376,8 @@ footer ul {
 
 @media (min-width: 475px) {
 
+    /* HEADER */
+
     #listaNav {
         flex-direction: row;
         justify-content: space-around;
@@ -350,7 +387,7 @@ footer ul {
         font-size: 18px;
     }
 
-    .fa-bars{
+    .fa-bars {
         display: none;
     }
 
@@ -361,17 +398,17 @@ footer ul {
     header {
         padding: 0;
     }
-    #headerFlex{
+    #headerFlex {
         justify-content: space-between;
     }
 
-    .enlacesHeader:hover{
+    .enlacesHeader:hover { 
         background-color: #3A251E;
         color: #E9967A;
         
     }
 
-    #divIconos{
+    #divIconos {
         width: 20%;
     }
 
@@ -379,34 +416,36 @@ footer ul {
     .fa-user,
     .fa-cart-shopping,
     .fa-magnifying-glass, 
-    .fa-bars{
+    .fa-bars {
         font-size: 30px;
     }
 
-    footer{
+    /* FOOTER */
+
+    footer {
         flex-direction: row;
         justify-content: space-around;
         text-align: left;
     }
 
-    footer h3{
+    footer h3 {
         border-bottom: 1px solid #3A251E;
     }
 
-    .enlacesFooter:hover{
+    .enlacesFooter:hover {
         background-color: #3A251E;
         color: #E9967A;
     }
 
-    #seccionEmpresa{
+    #seccionEmpresa {
         width:25%;
         position: static;
     }
-    #seccionRedes{
+    #seccionRedes {
         width:25%;
         position: static;
     }
-    #seccionLegal{
+    #seccionLegal {
         width:25%;
         position: static;
     }
@@ -419,20 +458,22 @@ footer ul {
         margin-left: 0;
     }
 
-    #redesFlex{
+    #redesFlex {
         justify-content: space-between;
     }
 
-    #sliderProductos{
+    /* MAIN */
+    
+    #sliderProductos  {
         flex-direction: row;
     }
 
-    .contenedorProducto{
+    .contenedorProducto {
         width: 45%;
     }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 
     #botonCarrousel1, 
     #botonCarrousel2, 
@@ -445,13 +486,21 @@ footer ul {
         bottom: 5%;
     }
 
-    #sliderProductos{
+    #sliderProductos {
         flex-flow: row wrap;
         overflow: hidden;
     }
 
-    .contenedorProducto{
+    .contenedorProducto {
         width: 30%;
+    }
+
+    #contenedorOro{
+        width: 40%;
+    }
+    #contenedorAcero{
+        width: 40%;
+        margin: 0;
     }
 }
     
