@@ -11,12 +11,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Cargamos Hoja de Estilo .css -->
-    <link rel="stylesheet" href="/css/index.css">   
+    <link rel="stylesheet" href="/css/productDetail.css">
 
-    <title>Anastassia Joyas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detalle de Producto</title>
 </head>
 <body>
-
+    
     <header>
         <section id="headerFlex">
             <div id="divLogo">
@@ -42,42 +44,27 @@
         </section>
     </header>
 
-
     <main>
-
-        <script>
-            function imagen1(){
-                document.getElementById('imagen1').style.display = 'block';
-                document.getElementById('imagen2').style.display = 'none';
-                document.getElementById('imagen3').style.display = 'none';
-            }
-            function imagen2(){
-                document.getElementById('imagen1').style.display = 'none';
-                document.getElementById('imagen2').style.display = 'block';
-                document.getElementById('imagen3').style.display = 'none';
-            }
-            function imagen3(){
-                document.getElementById('imagen1').style.display = 'none';
-                document.getElementById('imagen2').style.display = 'none';
-                document.getElementById('imagen3').style.display = 'block';
-            }
-        </script>
-
-        <section id="carrouselColecciones">
-            <a href="productos/detalle/1"><img id="imagen1" src="images/arbol-de-la-vida-colgante.jpg" alt="Colgante Arbol de la Vida"></a>
-            <a href="productos/detalle/1"><img id="imagen2" src="images/anillo-acero.jpg" alt="Anillo Acero"></a>
-            <a href="productos/detalle/1"><img id="imagen3" src="images/anillo-oro.jpg" alt="Anillo Oro"></a>
-            <div id="botonesSelectores">
-                <button id="botonCarrousel1" class="selectorCarrousel" onclick="imagen1()"></i></button>
-                <button id="botonCarrousel2" class="selectorCarrousel" onclick="imagen2()"></i></button>
-                <button id="botonCarrousel3" class="selectorCarrousel" onclick="imagen3()"></i></button>
+        <div>
+            <p id="indice">Productos / Anillos / Anillo Acero</p>
+        </div>
+        <section id="seccionDetalleProducto">
+            <img id="imagenProducto" src="/images/anillo-acero.jpg" alt="Anillo Acero">
+            <div id="infoProducto">
+                <h2 id="nombre">Anillo Acero</h2>
+                <h4 id="precio">$1.999</h4>
+                <p id="descripcion">Descripción</p>
+                <p id="textoDescripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, rerum reprehenderit? Eius officia minus nulla a adipisci neque ut repellat labore.</p>
+                <button id="botonComprar">COMPRAR</button>
             </div>
         </section>
+
+        <h2 id="productosRelacionados">Productos Relacionados</h2>
 
         <section id="sliderProductos">
             
             <article class="contenedorProducto">
-                <a href="productos/detalle/1"><img class="imagenProducto" src="images/anillo-oro2.jpg" alt="Anillo Oro 2"></a>
+                <a href="../../productos/detalle/1"><img class="imagenProducto" src="/images/anillo-oro2.jpg" alt="Anillo Oro 2"></a>
                 <h3 class="nombreProducto">Anillo Oro</h3>
                 <div class="infoProducto">
                     <h5 class="precio">Precio</h5>
@@ -88,7 +75,7 @@
             </article>
 
             <article class="contenedorProducto">
-                <a href="productos/detalle/1"><img class="imagenProducto" src="images/arbol-de-la-vida-colgante.jpg" alt="Colgante Arbol de la Vida"></a>
+                <a href="../../productos/detalle/1"><img class="imagenProducto" src="/images/arbol-de-la-vida-colgante.jpg" alt="Colgante Arbol de la Vida"></a>
                 <h3 class="nombreProducto">Colgante Arbol de la Vida</h3>
                 <div class="infoProducto">
                     <h5 class="precio">Precio</h5>
@@ -99,7 +86,7 @@
             </article>
 
             <article class="contenedorProducto">
-                <a href="productos/detalle/1"><img class="imagenProducto" src="images/anillos-dorados.jpg" alt="Anillos Dorados"></a>
+                <a href="../../productos/detalle/1"><img class="imagenProducto" src="/images/anillos-dorados.jpg" alt="Anillos Dorados"></a>
                 <h3 class="nombreProducto">Par Anillos Oro</h3>
                 <div class="infoProducto">
                     <h5 class="precio">Precio</h5>
@@ -110,7 +97,7 @@
             </article>
                     
             <article class="contenedorProducto">
-                <a href="productos/detalle/1"><img class="imagenProducto" src="images/anillo-acero.jpg" alt="Anillos Acero"></a>
+                <a href="../../productos/detalle/1"><img class="imagenProducto" src="/images/anillo-acero.jpg" alt="Anillos Acero"></a>
                 <h3 class="nombreProducto">Par Anillos Acero</h3>
                 <div class="infoProducto">
                     <h5 class="precio">Precio</h5>
@@ -121,18 +108,7 @@
             </article>
                     
         </section>
-        
-        <section id="seccionOroAcero">
-            <div id="contenedorOro">
-                <img class="imagenesOroAcero" src="images/anillo-oro.jpg" alt="">
-                <button class="botonesOroAcero">Oro</button>
-            </div>
-            <div id="contenedorAcero">
-                <img class="imagenesOroAcero" src="images/anillo-acero.jpg" alt="">
-                <button class="botonesOroAcero">Acero</button>
-            </div>
-            
-        </section>
+
     </main>
 
     <footer>
@@ -161,6 +137,6 @@
                 </ul>
         </section>
     </footer>
-
+    
 </body>
 </html>

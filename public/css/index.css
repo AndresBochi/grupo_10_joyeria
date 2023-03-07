@@ -486,12 +486,6 @@ footer ul {
         bottom: 5%;
     }
 
-    #sliderProductos {
-        flex-flow: row wrap;
-        overflow: hidden;
-    }
-
-    
 
     #contenedorOro{
         width: 40%;
