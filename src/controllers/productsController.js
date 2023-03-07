@@ -11,6 +11,11 @@ const productsController = {
         res.send("Detalle del producto " + productoId);
     },
 
+     // Procesa el pedido get con ruta /carrito
+     carrito: (req, res) => {
+        res.sendFile(path.join(__dirname, "../views/productCart.html"));
+    },
+
 }
 
 // Exportamos el objeto literal con los distintos metodos, que se usará en el enrutador de productos

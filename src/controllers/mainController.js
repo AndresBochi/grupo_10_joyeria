@@ -8,10 +8,7 @@ const mainController = {
         res.sendFile(path.join(__dirname, "../views/index.html"));
     },
 
-     // Procesa el pedido get con ruta /carrito
-     carrito: (req, res) => {
-        res.sendFile(path.join(__dirname, "../views/productCart.html"));
-    },
+    
     
 }
 
