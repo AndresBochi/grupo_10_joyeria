@@ -140,6 +140,7 @@ a {
 
 #imagenProducto {
     width: 52%;
+    border: 1px solid #3A251E;
 }
 
 #infoProducto{
