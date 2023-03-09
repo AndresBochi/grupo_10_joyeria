@@ -5,11 +5,11 @@ const usersController = {
 
     // Creamos el metodo register que devuelve la ruta del registro del usuario
     register: (req, res) => {
-        res.render("register");
+        res.render("users/register");
     },
     // Creamos el metodo login que devuelve la ruta del login del usuario
     login: (req, res) => {
-        res.render("login");
+        res.render("users/login");
     },
     
 }

@@ -19,30 +19,7 @@
 </head>
 <body>
     
-    <header>
-        <section id="headerFlex">
-            <div id="divLogo">
-                <a href="/"><img id="logo" src="/images/anastassia-logo.jpeg" alt="Anastassia"></a>    
-            </div>
-            <nav>
-                <ul type="none" id="listaNav">
-                    <li><a href="#" class="enlacesHeader">PRODUCTOS</a></li>
-                    <li><a href="#" class="enlacesHeader">COLECCION</a></li>
-                    <li><a href="#" class="enlacesHeader">SALE</a></li>
-                </ul>
-            </nav>
-            <div id="divIconos">
-                <i class="fa-solid fa-magnifying-glass" id="lupa"></i>
-                <a href="/usuarios/login"><i class="fa-solid fa-user"></i></a>
-                <a href="/productos/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="#"><i class="fas fa-bars"></i></a>
-            </div>
-        </section>
-        <section id="seccionBusqueda">
-            <a href="#"><i  class="fa-solid fa-magnifying-glass"></i></a>
-            <input type="text" placeholder="Encontrá lo que buscás..." id="barraBusqueda">
-        </section>
-    </header>
+    <%- include('../partials/header.ejs') %>
 
     <main>
         <div>
@@ -111,32 +88,7 @@
 
     </main>
 
-    <footer>
-        <section id="seccionEmpresa">
-            <h3>EMPRESA</h3>
-            <ul type="none" class="listasFooter">
-                <li><a class="enlacesFooter" href="#">Sobre Anastassia</a></li>
-                <li><a class="enlacesFooter" href="#">Contacto</a></li>
-                <li><a class="enlacesFooter" href="#">Trabajá con nosotros</a></li>
-            </ul>
-        </section>
-        <section id="seccionRedes">
-            <h3>REDES</h3>
-                <ul type="none" id="redesFlex">
-                    <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-square-pinterest"></i></a></li>
-                </ul>
-        </section>
-        <section id="seccionLegal">
-            <h3>LEGALES</h3>
-                <ul type="none">
-                    <li><a class="enlacesFooter" href="#">Política de privacidad</a></li>
-                    <li><a class="enlacesFooter" href="#">Términos y condiciones</a></li>
-                </ul>
-        </section>
-    </footer>
+    <%- include('../partials/footer.ejs') %>
     
 </body>
 </html>
