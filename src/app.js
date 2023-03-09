@@ -5,7 +5,7 @@ const path = require('path'); // Importamos modulo nativo path y lo guardamos en
 
 app.use(express.static(path.join(__dirname, '../public'))); // Habilitamos la carpeta public para ser accedida via http
 
-app.set("view engine", "ejs"); // Configuramos el boton de plantillas
+app.set("view engine", "ejs"); // Configuramos el motor de plantillas
 
 app.set("views", path.resolve(__dirname, "views")); // Configuramos donde se encuentran las vistas
 
