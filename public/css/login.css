@@ -69,9 +69,9 @@ input{
     margin-top: 1em;
 }
 
-ul {
+#listaBeneficios {
     padding-inline-start: 0;
-    margin-top: 0;
+    margin: auto;
 }
 
 ul li{

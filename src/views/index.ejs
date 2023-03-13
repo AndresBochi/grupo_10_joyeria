@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Incluimos el Head y le pasamos el título de la página y la hoja de estilo correspondiente -->
 <%- include('./partials/head.ejs', {tituloPagina: "Anastassia Joyas", hojaEstilo: "index"}) %>
 
 <body>
 
+    <!-- Incluimos el Header -->
     <%- include('./partials/header.ejs') %>
     
     <main>
 
+        <!-- Script Carrousel Colecciones -->
         <script>
             function imagen1(){
                 document.getElementById('imagen1').style.display = 'block';
@@ -27,6 +30,7 @@
             }
         </script>
 
+        <!-- Carrousel Colecciones -->
         <section id="carrouselColecciones">
             <a href="productos/detalle/1"><img id="imagen1" src="images/arbol-de-la-vida-colgante.jpg" alt="Colgante Arbol de la Vida"></a>
             <a href="productos/detalle/1"><img id="imagen2" src="images/anillo-acero.jpg" alt="Anillo Acero"></a>
@@ -38,6 +42,7 @@
             </div>
         </section>
 
+        <!-- Display Productos -->
         <section id="sliderProductos">
             
             <article class="contenedorProducto">
@@ -86,6 +91,7 @@
                     
         </section>
         
+        <!-- Productos por Materiales -->
         <section id="seccionOroAcero">
             <div id="contenedorOro">
                 <img class="imagenesOroAcero" src="images/anillo-oro.jpg" alt="">
@@ -99,6 +105,7 @@
         </section>
     </main>
 
+    <!-- Incluimos el Footer -->
     <%- include('./partials/footer.ejs') %>
 
 </body>

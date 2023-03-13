@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Incluimos el Head y le pasamos el título de la página y la hoja de estilo correspondiente -->
 <%- include('../partials/head.ejs', {tituloPagina: "Aastassia Joyas - Login", hojaEstilo: "login"}) %>
 
 <body>
 
+    <!-- Incluimos el Header -->
     <%- include('../partials/header.ejs') %>
 
     <main>
@@ -42,7 +44,7 @@
                     <h3>CREAR UNA CUENTA</h3>
                 </div>
                 
-                <ul>
+                <ul id="listaBeneficios">
                     <li><P class="inicio-sesion">Estos son sus beneficios:</P></li>
                     <li>Comprar mas rápido.</li>
                     <li>Guardar direcciones de envío.</li>
@@ -55,6 +57,7 @@
 
     </main>
 
+    <!-- Incluimos el Footer -->
     <%- include('../partials/footer.ejs') %>
 
 </body>
