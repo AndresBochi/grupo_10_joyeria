@@ -3,21 +3,6 @@
 
 <%- include('../partials/head.ejs', {tituloPagina: "Aastassia Joyas - Login", hojaEstilo: "login"}) %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Cargamos Hoja de Estilo .css -->
-    <link rel="stylesheet" href="/css/login.css">
-
-    <title>Login</title>
-</head>
-
 <body>
 
     <%- include('../partials/header.ejs') %>
@@ -27,7 +12,7 @@
         <div class="contenedor-padre">
             <div class="iniciar-sesion">
                 <div class="datos-login">
-                    <a href="/usuarios/login"><i class="fa-solid fa-user"></i></a>
+                    <a href="/usuarios/login"><i id="iconoUsuario" class="fa-solid fa-user"></i></a>
                     <h3>YA TENGO CUENTA</h3>
                 </div>
                 <P class="inicio-sesion">Para iniciar sesión ingresá tu email y contraseña.</P>

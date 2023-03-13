@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    color: #3A251E;
+
+    /* outline: 1px solid red !important; */
+
+}   
+
+/* -------------- HEADER -------------- */
+
+#headerFlex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+header {
+    width: 100%;
+    background-color: #E9967A;
+    padding: 0.5rem 0;
+}
+
+#divLogo {
+    width: 33%;
+    /* padding: 1.5rem 1rem 1.5rem 1rem; */
+    margin: auto 0;
+}
+#logo {
+    width: 100%;
+}
+
+nav {
+    width: 40%;
+    margin: auto 0;
+    display: none;
+}
+
+#listaNav {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    padding: 0;
+}
+
+#listaNav li { 
+    margin: 2px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #3A251E;
+    font-size: 16px;
+    font-weight: bold;
+}
+.enlacesHeader {
+    transition: background-color 0.5s;
+    border-radius: 5px;
+    padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+    
+}
+
+#divIconos {
+    width: 40%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-magnifying-glass,
+.fa-user,
+.fa-cart-shopping,
+.fa-magnifying-glass, 
+.fa-bars {
+    color: #3A251E;
+    font-size: 25px;
+}
+
+.fa-bars {
+    display: block;
+}
+
+#seccionBusqueda {
+    padding: 0 1rem 1rem 1rem;
+    text-align: right;
+    display: none; /* <------------ Aquí!!!! para traer la barra de búsqueda */
+    margin: auto 0;
+}
+
+#barraBusqueda {
+    width: 60%;
+    margin-left: 0.5rem;
+    height: 40px;
+    border-bottom: 1px solid hsl(15, 32%, 17%);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background-color: #E9967A;
+    font-size: 20px;
+}
+#barraBusqueda::placeholder {
+    color: #3A251E;
+    font-size: 20px;
+}
+
+#lupa:hover #seccionBusqueda {
+    display: block;
+}
+
+/* -------------- MEDIA -------------- */
+
+@media (min-width: 475px) {
+
+    /* HEADER */
+
+    #listaNav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    a {
+        font-size: 18px;
+    }
+
+    .fa-bars {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    header {
+        padding: 0;
+    }
+    #headerFlex {
+        justify-content: space-between;
+    }
+
+    .enlacesHeader:hover { 
+        background-color: #3A251E;
+        color: #E9967A;
+    }
+
+    #divIconos {
+        width: 20%;
+    }
+
+    .fa-magnifying-glass,
+    .fa-user,
+    .fa-cart-shopping,
+    .fa-magnifying-glass, 
+    .fa-bars {
+        font-size: 30px;
+    }
+
+}
