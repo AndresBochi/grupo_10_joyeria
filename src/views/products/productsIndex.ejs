@@ -2,48 +2,20 @@
 <html lang="en">
 
 <!-- Incluimos el Head y le pasamos el título de la página y la hoja de estilo correspondiente -->
-<%- include('./partials/head.ejs', {tituloPagina: "Anastassia Joyas", hojaEstilo: "index"}) %>
+<%- include('../partials/head.ejs', {tituloPagina: "Aastassia Joyas - Listado de Productos", hojaEstilo: "productsIndex"}) %>
 
 <body>
-
-    <!-- Incluimos el Header -->
-    <%- include('./partials/header.ejs') %>
     
+    <!-- Incluimos el Header -->
+    <%- include('../partials/header.ejs') %>
+
     <main>
-
-        <!-- Script Carrousel Colecciones -->
-        <script>
-            function imagen1(){
-                document.getElementById('imagen1').style.display = 'block';
-                document.getElementById('imagen2').style.display = 'none';
-                document.getElementById('imagen3').style.display = 'none';
-            }
-            function imagen2(){
-                document.getElementById('imagen1').style.display = 'none';
-                document.getElementById('imagen2').style.display = 'block';
-                document.getElementById('imagen3').style.display = 'none';
-            }
-            function imagen3(){
-                document.getElementById('imagen1').style.display = 'none';
-                document.getElementById('imagen2').style.display = 'none';
-                document.getElementById('imagen3').style.display = 'block';
-            }
-        </script>
-
-        <!-- Carrousel Colecciones -->
-        <section id="carrouselColecciones">
-            <a href="productos/detalle/1"><img id="imagen1" src="images/arbol-de-la-vida-colgante.jpg" alt="Colgante Arbol de la Vida"></a>
-            <a href="productos/detalle/1"><img id="imagen2" src="images/anillo-acero.jpg" alt="Anillo Acero"></a>
-            <a href="productos/detalle/1"><img id="imagen3" src="images/anillo-oro.jpg" alt="Anillo Oro"></a>
-            <div id="botonesSelectores">
-                <button id="botonCarrousel1" class="selectorCarrousel" onclick="imagen1()"></i></button>
-                <button id="botonCarrousel2" class="selectorCarrousel" onclick="imagen2()"></i></button>
-                <button id="botonCarrousel3" class="selectorCarrousel" onclick="imagen3()"></i></button>
-            </div>
-        </section>
+        <div>
+            <h2 id="tituloProductos">Listado de Productos</h2>
+        </div>
 
         <!-- Display Productos -->
-        <section id="sliderProductos">
+        <section id="listadoProductos">
             
             <article class="contenedorProducto">
                 <a href="productos/detalle/1"><img class="imagenProducto" src="images/anillo-oro2.jpg" alt="Anillo Oro 2"></a>
@@ -102,23 +74,11 @@
             </article>
                     
         </section>
-        
-        <!-- Productos por Materiales -->
-        <section id="seccionOroAcero">
-            <div id="contenedorOro">
-                <img class="imagenesOroAcero" src="images/anillo-oro.jpg" alt="">
-                <button class="botonesOroAcero">Oro</button>
-            </div>
-            <div id="contenedorAcero">
-                <img class="imagenesOroAcero" src="images/anillo-acero.jpg" alt="">
-                <button class="botonesOroAcero">Acero</button>
-            </div>
-            
-        </section>
+
     </main>
 
     <!-- Incluimos el Footer -->
-    <%- include('./partials/footer.ejs') %>
-
+    <%- include('../partials/footer.ejs') %>
+    
 </body>
 </html>

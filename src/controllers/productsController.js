@@ -3,8 +3,10 @@ const path = require("path");
 // Creamos el objeto literal con los métodos a exportar
 const productsController = {
 
-    // Procesa el pedido get con ruta /
-    // Ruta parametrizada!!
+    index: (req, res) => {
+        res.render("products/productsIndex");
+    },
+
     detalle: (req, res) => {
         // En req.params tenemos el parametro que definimos en el enrutador (en este caso con la palabra num)
         let productoId = req.params.numeroProducto;

@@ -105,6 +105,12 @@ input {
 
 @media (min-width: 475px) {
   
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
   .formulario{
     padding: 1rem;
   }

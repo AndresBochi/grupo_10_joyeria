@@ -13,19 +13,24 @@ body {
 
 #seccionDetalleProducto {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     background-color: #E9967A;
     margin: 0.5rem 1rem 1.5rem 1rem;
     padding: 1rem;
 }
 
+#contenedorImagen {
+    width: 100%;
+    margin: auto 0;
+}
 #imagenProducto {
-    width: 52%;
+    width: 100%;
     border: 1px solid #3A251E;
 }
 
 #infoProducto{
-    width: 45%;
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
 }
@@ -79,6 +84,7 @@ body {
 
 .contenedorProducto {
     position: relative;
+    background-color: whitesmoke;
     border: 1px solid #3A251E;
     width: 85%;
     margin: 1rem auto;
@@ -86,12 +92,13 @@ body {
 
 .imagenProducto {
     width: 100%;
+    border-bottom: 1px solid #3A251E;
     
 }
 
 .nombreProducto {
     background-color: whitesmoke;
-    border-top: 1px solid #3A251E;
+    
     padding: 0.5rem;
     margin-top: 0;
     margin-bottom: 0;
@@ -103,7 +110,6 @@ body {
 .infoProducto {
     padding: 0.5rem;
     background-color: whitesmoke;
-
     display: flex;
     justify-content: space-between;
 }
@@ -122,13 +128,11 @@ body {
     font-size: 16px;
     text-align: right;
 }
-
+a
 .carritoProducto {
     position: absolute;
     bottom: 33px;
     right: 8px;
-    z-index: 1;
-
     width: 35px;
     height: 35px;
     background-color: #E9967A;
@@ -148,6 +152,18 @@ body {
 
      /* MAIN */
     
+    #infoProducto{
+        width: 45%;
+    }
+
+     #seccionDetalleProducto {
+        flex-direction: row;
+    }
+
+    #contenedorImagen {
+        width: 52%;
+    }
+
     #sliderProductos {
         flex-direction: row;
     }

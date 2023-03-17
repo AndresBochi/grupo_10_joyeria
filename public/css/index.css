@@ -89,7 +89,7 @@ main {
 }
 
 .contenedorProducto {
-    position: relative;
+    background-color: whitesmoke;
     border: 1px solid #3A251E;
     width: 85%;
     margin: 1rem auto;
@@ -97,24 +97,27 @@ main {
 
 .imagenProducto {
     width: 100%;
-    
+    border-bottom: 1px solid #3A251E;
+}
+
+.contenedorNombreYCarrito {
+    position: relative;
 }
 
 .nombreProducto {
     background-color: whitesmoke;
-    border-top: 1px solid #3A251E;
     padding: 0.5rem;
+    padding-right: 4rem;
     margin-top: 0;
     margin-bottom: 0;
     font-style: italic;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .infoProducto {
     padding: 0.5rem;
     background-color: whitesmoke;
-
     display: flex;
     justify-content: space-between;
 }
@@ -136,10 +139,8 @@ main {
 
 .carritoProducto {
     position: absolute;
-    bottom: 33px;
+    top: 5px;
     right: 8px;
-    z-index: 1;
-
     width: 35px;
     height: 35px;
     background-color: #E9967A;

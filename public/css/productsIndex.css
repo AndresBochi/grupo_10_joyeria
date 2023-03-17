@@ -1,0 +1,121 @@
+/* -------------- BODY -------------- */
+
+body {
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+/* ------- Listado Productos ------- */
+
+#tituloProductos {
+    margin: 1rem 0 0 0.5rem;
+    font-size: 20px;
+    
+}
+
+#listadoProductos {
+    background-color: #E9967A;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 1rem auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.contenedorProducto {
+    background-color: whitesmoke;
+    border: 1px solid #3A251E;
+    width: 85%;
+    margin: 1rem auto;
+}
+
+.imagenProducto {
+    width: 100%;
+    border-bottom: 1px solid #3A251E;
+}
+
+.contenedorNombreYCarrito {
+    position: relative;
+}
+
+.nombreProducto {
+    background-color: whitesmoke;
+    padding: 0.5rem;
+    padding-right: 4rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.infoProducto {
+    padding: 0.5rem;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+}
+
+.precio {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 0%;
+    font-size: 16px;
+}
+
+.numeroPrecio {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 30%;
+    font-size: 16px;
+    text-align: right;
+}
+
+.carritoProducto {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    width: 35px;
+    height: 35px;
+    background-color: #E9967A;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#iconoCarrito {
+    font-size: 20px;
+}
+
+/* -------------- MEDIA -------------- */
+
+@media (min-width: 475px) {
+
+    /* MAIN */
+    
+    #listadoProductos  {
+        flex-direction: row;
+    }
+
+    .contenedorProducto {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .contenedorProducto {
+        width: 22%;
+    }
+
+    footer {
+        
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        
+    }
+
+}

@@ -9,8 +9,9 @@ const productsController = require("../controllers/productsController.js")
 // En vez de app.get, utilizamos router.get. Esto va "guardando" en router las distintas rutas, que luego exportamos
 
 // Ruta parametrizada!!
-router.get("/carrito", productsController.carrito)
-router.get("/detalle/:numeroProducto", productsController.detalle)
+router.get("/", productsController.index);
+router.get("/carrito", productsController.carrito);
+router.get("/detalle/:numeroProducto", productsController.detalle);
 
 // Exportamos la variable router ya con todas las rutas "guardadas", que se usará en app.js
 module.exports = router;
