@@ -70,6 +70,7 @@ body {
 
 #productosRelacionados{
     margin-left: 0.5rem;
+    font-size: 20px;
 }
 
 #sliderProductos {
@@ -98,8 +99,8 @@ body {
 
 .nombreProducto {
     background-color: whitesmoke;
-    
     padding: 0.5rem;
+    padding-right: 4rem;
     margin-top: 0;
     margin-bottom: 0;
     font-style: italic;
@@ -128,7 +129,7 @@ body {
     font-size: 16px;
     text-align: right;
 }
-a
+
 .carritoProducto {
     position: absolute;
     bottom: 33px;
@@ -173,6 +174,9 @@ a
     }
 }
 
-@media (min-width: 768px) {
-
+@media (min-width: 1024px) {
+    
+    .contenedorProducto {
+        width: 22%;
+    }
 }

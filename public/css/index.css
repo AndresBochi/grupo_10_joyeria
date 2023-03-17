@@ -12,15 +12,21 @@ main {
     /* background-color: whitesmoke; */
 }
 
+.titulos{
+    font-size: 20px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
 /* ------- Carrousel Colecciones ------- */
 
 #carrouselColecciones {
     position: relative;
     display: flex;
-    width: 80%; 
-    margin: 5% auto;
+    width: 90%; 
+    margin: 0 auto 5% auto;
     padding: 0.5rem;
-    justify-content: center;
+    justify-content: space-around;
     background-color: #E9967A;
     /* border: 1px solid #3A251E; */
     /* overflow: hidden; */
@@ -83,7 +89,7 @@ main {
     width: 100%;
     display: flex;
     flex-flow: column wrap;
-    margin: 5% auto;
+    margin: 0 auto 5% auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
@@ -160,7 +166,7 @@ main {
     display: flex;
     flex-flow: row wrap;   
     justify-content: space-around;     
-    margin: 5% auto;
+    margin: 0 auto 5% auto;
     text-align: center;
 }
 
@@ -215,7 +221,6 @@ main {
         bottom: 5%;
     }
 
-
     #contenedorOro{
         width: 40%;
     }
@@ -225,3 +230,9 @@ main {
     }
 }
     
+@media (min-width: 1024px) {
+    
+    .contenedorProducto {
+        width: 22%;
+    }
+}
