@@ -1,0 +1,150 @@
+/* -------------- BODY -------------- */
+
+body {
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+/* -------------- MAIN -------------- */
+
+main{
+    background-color: #E9967A;
+    border-radius: 5px;
+    width: 90%;
+    margin: 1rem auto;
+    
+}
+
+#formularioAlta{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    border: 3px solid #E9967A;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+#contenedorImagen{
+    display: flex;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    
+}
+#contenedorInfoProducto{
+    width: 100%;
+    margin: 0;
+    border: none;
+    text-align: center;
+    
+}
+#contenedorDescripcion{
+    width: 100%;
+    margin: 0;
+    border: none;
+    text-align: center;
+    
+}
+#contenedorSubmit{
+    width: 100%;
+    margin: 0;
+    border: none;
+    padding: 1rem;
+    
+}
+
+#textoImagen{
+    font-weight: bold;
+}
+
+#imagen {
+    width: 0;
+    height: 0;
+}
+
+.labelForm{
+    font-weight: bold;
+}
+
+#foto{
+    display: block;
+    margin: auto;
+    border: 1px solid #3A251E;
+    margin-top: 3px;
+    background-color: white;
+}
+
+.inputForm{
+    margin-top: 3px;
+    margin-bottom: 12px;
+    width: 75%;
+    text-align: center;
+    
+}
+
+#descripcion{
+    width: 90%;
+    text-align: center;
+    margin-top: 3px;
+    
+}
+
+#botonSubmit{
+    background-color: whitesmoke;
+    border: none;
+    font-size: 18px;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid #3A251E;
+    font-weight: bold;
+    background-color: #E9967A;
+}
+/* -------------- MEDIA -------------- */
+
+@media (min-width: 475px) {
+
+    #formularioAlta{
+        flex-direction: row;
+        text-align: left;
+    }
+
+    #contenedorImagen{
+        width: 40%;
+    }
+    
+    #contenedorInfoProducto{
+        width: 60%; 
+    }
+    
+    #contenedorDescripcion{
+        width: 100%;
+    }
+    
+    #contenedorSubmit{
+        text-align: center;
+    }
+
+    #descripcion{
+        text-align: left;
+        padding: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #foto{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #foto{
+        width: 300px;
+        height: 300px;
+    }
+}

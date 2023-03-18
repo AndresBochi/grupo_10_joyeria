@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Incluimos el Head y le pasamos el título de la página y la hoja de estilo correspondiente -->
+<%- include('../partials/head.ejs', {tituloPagina: "Aastassia Joyas - Alta Producto", hojaEstilo: "productForm"}) %>
+
+<body>
+    
+    <!-- Incluimos el Header -->
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+
+        <form id="formularioAlta">
+
+            <fieldset id="contenedorImagen">
+                <label for="imagen" id="textoImagen">Imagen<span class="asterisco">*</span><img id="foto" alt="" width="150" height="150" /></label>
+                <br>
+                <input style="visibility: hidden;" id="imagen" name="image" type="file" accept=".jpg, .png, .gif" onchange="document.getElementById('foto').src = window.URL.createObjectURL(this.files[0])">
+                
+            </fieldset>
+
+            <fieldset id="contenedorInfoProducto">
+                <label for="name" class="labelForm">Nombre<span class="asterisco">*</span></label>
+                <br>
+                <input id="name" name="name" type="text" class="inputForm">
+                <br>
+                <label for="precio" class="labelForm">Precio<span class="asterisco">*</span></label>
+                <br>
+                <input id="precio" name="precio" type="text" class="inputForm">
+                <br>
+                <label for="category" class="labelForm">Categoría<span class="asterisco">*</span></label>
+                <br>
+                <select name="category" id="category" class="inputForm">
+                    <option value="">Selecciona una categoría</option>
+                    <option value="oferta">En oferta</option>
+                    <option value="destacado">Destacado</option>
+                </select>
+                <br>
+                <label for="material" class="labelForm">Material<span class="asterisco">*</span></label>
+                <br>
+                <select id="material" name="name" class="inputForm">
+                    <option value="">Selecciona un material</option>
+                    <option value="Oro">Oro</option>
+                    <option value="Acero">Acero</option>
+                </select>
+                <br>
+                <label for="coleccion" class="labelForm">Colección<span class="asterisco">*</span></label>
+                <br>
+                <select id="coleccion" name="coleccion" class="inputForm">
+                    <option value="">Selecciona una colección</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </fieldset>
+
+            <fieldset id="contenedorDescripcion">
+                <label for="descripcion" class="labelForm">Descripción</label>
+                <br>
+                <textarea name="descripcion" id="descripcion" cols="30" rows="10">Descripción del producto</textarea>
+            </fieldset>
+            
+            <fieldset id="contenedorSubmit">
+                <button type="submit" id="botonSubmit">Cargar Alta</button>
+            </fieldset>
+
+        </form>
+    </main>
+    
+    <!-- Incluimos el Footer -->
+    <%- include('../partials/footer.ejs') %>
+      
+
+</body>
+
+
+</html>

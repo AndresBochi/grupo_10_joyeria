@@ -51,10 +51,23 @@ body {
     margin-top: 4px;
 }
 
+#botonEditar{
+    font-size: 18px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    background-color: whitesmoke;
+    border: 1px solid #3A251E;
+    width: 98%;
+    height: 30px;
+    min-width: 110px;
+    text-align: center;
+}
 
 #botonComprar {
     font-size: 18px;
-    margin-top: auto;
+    margin-top: 0.5rem;
     margin-left: auto;
     margin-right: auto;
     font-weight: bold;

@@ -210,6 +210,10 @@ main {
 
 @media (min-width: 768px) {
 
+    #carrouselColecciones {
+        width: 60%; 
+    }
+
     #botonCarrousel1, 
     #botonCarrousel2, 
     #botonCarrousel3 {
@@ -234,5 +238,9 @@ main {
     
     .contenedorProducto {
         width: 22%;
+    }
+
+    #carrouselColecciones {
+        width: 50%; 
     }
 }
