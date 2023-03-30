@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Incluimos el Head y le pasamos el título de la página y la hoja de estilo correspondiente -->
+<%- include('../partials/head.ejs', {tituloPagina: "Anastassia Joyas - Edición Producto", hojaEstilo: "productForm"}) %>
+
+<body>
+    
+    <!-- Incluimos el Header -->
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+
+        <form id="formularioAlta" action="/productos/editar/<%= productoAEditar.id %>?_method=PATCH" method="POST">
+
+            <fieldset id="contenedorImagen">
+                <label for="imagen" id="textoImagen">Imagen<span class="asterisco">*</span><img src="/images/products/<%= productoAEditar.image %>" id="foto" alt="" width="150" height="150" /></label>
+                <br>
+                <input style="visibility: hidden;" id="imagen" name="image" type="file" accept=".jpg, .png, .gif" onchange="document.getElementById('foto').src = window.URL.createObjectURL(this.files[0])" required>
+            </fieldset>
+
+            <fieldset id="contenedorInfoProducto">
+                <label for="name" class="labelForm">Nombre<span class="asterisco">*</span></label>
+                <br>
+                <input id="name" name="name" type="text" class="inputForm" value="<%= productoAEditar.name %>" required>
+                <br>
+                <label for="precio" class="labelForm">Precio<span class="asterisco">*</span></label>
+                <br>
+                <input id="precio" name="precio" type="text" class="inputForm" value="<%= productoAEditar.precio %>" required>
+                <br>
+                <label for="category" class="labelForm">Categoría<span class="asterisco">*</span></label>
+                <br>
+                <select name="category" id="category" class="inputForm" required> 
+                    <option value="" disabled <%= productoAEditar.category == "" ? "selected" : "" %>> --Selecciona una categoría-- </option>   
+                    <option value="aros" <%= productoAEditar.category == "Aros" ? "selected" : "" %>> Aros </option>
+                    <option value="collares" <%= productoAEditar.category == "Collares" ? "selected" : "" %>> Collares </option>
+                    <option value="pulseras" <%= productoAEditar.category == "Pulseras" ? "selected" : "" %>> Pulseras </option>
+                    <option value="anillos" <%= productoAEditar.category == "Anillos" ? "selected" : "" %>> Anillos </option>
+                </select>
+                <br>
+                <label for="material" class="labelForm">Material<span class="asterisco">*</span></label>
+                <br>
+                <select id="material" name="name" class="inputForm" required> 
+                    <option value="" disabled <%= productoAEditar.material == "" ? "selected" : "" %>> --Selecciona un material-- </option>
+                    <option value="acero" <%= productoAEditar.material == "Acero Quirúrgico" ? "selected" : "" %>> Acero Quirúrgico </option>
+                    <option value="plata" <%= productoAEditar.material == "Plata 925" ? "selected" : "" %>> Plata 925 </option>
+                    <option value="oro" <%= productoAEditar.material == "Oro" ? "selected" : "" %>> Oro </option>
+                </select>
+                <br>
+                <label for="coleccion" class="labelForm">Colección<span class="asterisco">*</span></label>
+                <br>
+                <select id="coleccion" name="coleccion" class="inputForm" required> 
+                    <option value="" disabled <%= productoAEditar.coleccion === "" ? "selected" : "" %>> --Selecciona una colección-- </option>
+                    <option value="steel" <%= productoAEditar.coleccion === "Steel" ? "selected" : "" %>> Steel </option>
+                    <option value="silver" <%= productoAEditar.coleccion === "Silver" ? "selected" : "" %>> Silver </option>
+                    <option value="gold" <%= productoAEditar.coleccion === "Gold" ? "selected" : "" %>> Gold </option>
+                </select>
+            </fieldset>
+
+            <fieldset id="contenedorDescripcion">
+                <label for="descripcion" class="labelForm">Descripción</label>
+                <br>
+                <textarea name="descripcion" id="descripcion" cols="30" rows="10" required> <%= productoAEditar.description %> </textarea>
+            </fieldset>
+            
+            <fieldset id="contenedorSubmit">
+                <button type="submit" id="botonSubmit">Editar Producto</button>
+            </fieldset>
+
+        </form>
+    </main>
+    
+    <!-- Incluimos el Footer -->
+    <%- include('../partials/footer.ejs') %>
+      
+
+</body>
+
+
+</html>

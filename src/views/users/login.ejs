@@ -1,25 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head.ejs', {tituloPagina: "Aastassia Joyas - Login", hojaEstilo: "login"}) %>
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Cargamos Hoja de Estilo .css -->
-    <link rel="stylesheet" href="/css/login.css">
-
-    <title>Login</title>
-</head>
+<!-- Incluimos el Head y le pasamos el título de la página y la hoja de estilo correspondiente -->
+<%- include('../partials/head.ejs', {tituloPagina: "Anastassia Joyas - Login", hojaEstilo: "login"}) %>
 
 <body>
 
+    <!-- Incluimos el Header -->
     <%- include('../partials/header.ejs') %>
 
     <main>
@@ -27,7 +14,7 @@
         <div class="contenedor-padre">
             <div class="iniciar-sesion">
                 <div class="datos-login">
-                    <a href="/usuarios/login"><i class="fa-solid fa-user"></i></a>
+                    <a href="/usuarios/login"><i id="iconoUsuario" class="fa-solid fa-user"></i></a>
                     <h3>YA TENGO CUENTA</h3>
                 </div>
                 <P class="inicio-sesion">Para iniciar sesión ingresá tu email y contraseña.</P>
@@ -42,39 +29,34 @@
                     <br>
                     <input type="password">
 
-                    <p>Olvidaste tu contraseña?</p>
-                    <button class="boton">Iniciar sesión</button>
-
+                    <p id="textoOlvidaste" >Olvidaste tu contraseña?</p>
+                    <button class="boton" type="submit">Iniciar sesión</button>
                 </form>
+            
             </div>
+            <div class="v-line">
 
-            <div class="v-line"></div>
-
+            </div>
             <div class="registro">
                 <div class="datos-login">
-                    <i class="fa-solid fa-user"></i>
+                    <i id="iconoUsuario" class="fa-solid fa-user"></i>
                     <h3>CREAR UNA CUENTA</h3>
                 </div>
-                <P class="inicio-sesion">Estos son sus beneficios:</P>
-                <ul>
-                    <li>Comprar mas rápido. </li>
-                    <li>Guardar direcciones de envío </li>
-                    <li>Crear una lista con tus productos favoritos</li>
-                    <li>Enterate antes que nadie sobre nuestras promociones y descuentos </li>
-
-                    <a href="/usuarios/registro"><button class="boton">Crear cuenta</button></a>
-
+                
+                <ul id="listaBeneficios">
+                    <li><P class="inicio-sesion">Estos son sus beneficios:</P></li>
+                    <li>Comprar mas rápido.</li>
+                    <li>Guardar direcciones de envío.</li>
+                    <li>Crear una lista con tus productos favoritos.</li>
+                    <li>Enterate antes que nadie sobre nuestras promociones y descuentos.</li>
                 </ul>
-
-
-
-
+                <a href="/usuarios/registro"><button class="boton">Crear cuenta</button></a>
             </div>
-
         </div>
 
     </main>
 
+    <!-- Incluimos el Footer -->
     <%- include('../partials/footer.ejs') %>
 
 </body>

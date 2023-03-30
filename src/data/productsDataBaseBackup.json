@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Argolla Plata Roma",
+        "description":  "Argollas plateadas de 1.5 cm de diámetro. Su acabado es fuerte y duradero, resistente al agua e hipoalergénico.",
+        "image": "argolla plata Roma.webp",
+        "category": "Aros",
+        "material": "Acero Quirúrgico",
+        "coleccion": "Steel",
+        "precio": 1500
+    },
+    {
+        "id": 2,
+        "name": "Argolla Plata Berlin",
+        "description": "Argollas plateadas de 1.5 cm de diámetro. La plata 925 está compuesta por un porcentaje de 92,5% de plata pura (metal precioso) y un 7,5% de cobre. Es un material noble cuya calidad y características se encuentran entre las mejores que podemos encontrar en el mercado",
+        "image": "argollas Berlin 2.webp",
+        "category": "Aros",
+        "material": "Plata 925",
+        "coleccion": "Silver",
+        "precio": 2500
+    },
+    {
+        "id": 3,
+        "name": "Argolla Oro Mónaco",
+        "description": "Argollas doradas de 2 cm de diámetro. Todos los artículos de la colección Gold de Anastassia cuentan con baño de oro 18k y laca protectora que protege el dorado y le da mayor durabilidad.",
+        "image": "argollas Monaco 2.webp",
+        "category": "Aros",
+        "material": "Oro",
+        "coleccion": "Gold",
+        "precio": 4000
+    },
+    {
+        "id": 4,
+        "name": "Argolla Oro Valencia",
+        "description": "Argollas doradas con entramado de 1.5 cm de diámetro. Todos los artículos de la colección Gold de Anastassia cuentan con baño de oro 18k y laca protectora que protege el dorado y le da mayor durabilidad.",
+        "image": "argollas Valencia.webp",
+        "category": "Aros",
+        "material": "Oro",
+        "coleccion": "Gold",
+        "precio": 4200  
+    },
+    {
+        "id": 5,
+        "name": "Collar Plata Oslo",
+        "description": "Collar con dije infinito hecho en Plata 925. Largo de: 45 cm + 5 cm de cadena para regular. La plata 925 está compuesta por un porcentaje de 92,5% de plata pura (metal precioso) y un 7,5% de cobre. Es un material noble cuya calidad y características se encuentran entre las mejores que podemos encontrar en el mercado.",
+        "image": "colgante Oslo.webp",
+        "category": "Collares",
+        "material": "Plata 925",
+        "coleccion": "Silver",
+        "precio": 2800
+    },
+    {
+        "id": 6,
+        "name": "Collar Plata Milan",
+        "description": "Collar con dije en cubic de circonia y cadena hecha en Plata 925. Largo de: 45 cm + 5 cm de cadena para regular. La plata 925 está compuesta por un porcentaje de 92,5% de plata pura (metal precioso) y un 7,5% de cobre. Es un material noble cuya calidad y características se encuentran entre las mejores que podemos encontrar en el mercado.",
+        "image": "colgante Milan.webp",
+        "category": "Collares",
+        "material": "Plata 925",
+        "coleccion": "Silver",
+        "precio": 2300
+    },
+    {
+        "id": 7,
+        "name": "Collar Oro Boston",
+        "description": "Collar con dije de perla y cadena bañada en oro 18 k. Largo de: 45 cm + 5 cm de cadena para regular.Todos los artículos de la colección Golden de Anastassia cuentan con baño de oro 18k y laca protectora que protege el dorado y le da mayor durabilidad.",
+        "image": "colgante Boston2.webp",
+        "category": "Collares",
+        "material": "Oro",
+        "coleccion": "Gold",
+        "precio": 2300
+    },
+    {
+        "id": 8,
+        "name": "Collar Plateado Beijing",
+        "description": "Largo de: 40 cm + 5 cm de cadena para regular. Su acabado es fuerte y duradero, resistente al agua e hipoalergénico.",
+        "image": "colgante Beijing.webp",
+        "category": "Collares",
+        "material": "Acero Quirúrgico",
+        "coleccion": "Steel",
+        "precio": 1700
+    },
+    {
+        "id": 9,
+        "name": "Pulsera Alaska",
+        "description": "Pulsera flexible multicadena de acero inoxidable con dijes. Largo de: 18 cm + 5 cm de cadena para regular. Su acabado es fuerte y duradero, resistente al agua e hipoalergénico.",
+        "image": "Alaska.webp",
+        "category": "Pulseras",
+        "material": "Acero Quirúrgico",
+        "coleccion": "Steel",
+        "precio": 1650
+    },
+    {
+        "id": 10,
+        "name": "Pulsera Tokyo",
+        "description": "Pulsera de cadena de plata. Largo de: 18 cm + 5 cm de cadena para regular. La plata 925 está compuesta por un porcentaje de 92,5% de plata pura (metal precioso) y un 7,5% de cobre. Es un material noble cuya calidad y características se encuentran entre las mejores que podemos encontrar en el mercado.",
+        "image": "Tokyo.webp",
+        "category": "Pulseras",
+        "material": "Plata 925",
+        "coleccion": "Silver",
+        "precio": 2650
+    },
+    {
+        "id": 11,
+        "name": "Anillo Oro Amalfi",
+        "description": "Anillo en forma de V bañado en oro. Todos los artículos de la colección Golden de Anastassia cuentan con baño de oro 18k y laca protectora que protege el dorado y le da mayor durabilidad.",
+        "image": "Anillo Amalfi.webp",
+        "category": "Anillos",
+        "material": "Oro",
+        "coleccion": "Gold",
+        "precio": 4500
+    },
+    {
+        "id": 12,
+        "name": "Anillo Plata Paris",
+        "description": "Anillo con forma de moño fabricado en plata. La plata 925 está compuesta por un porcentaje de 92,5% de plata pura (metal precioso) y un 7,5% de cobre. Es un material noble cuya calidad y características se encuentran entre las mejores que podemos encontrar en el mercado.",
+        "image": "Anillo Paris.webp",
+        "category": "Anillos",
+        "material": "Plata 925",
+        "coleccion": "Silver",
+        "precio": 2800
+    }
+]

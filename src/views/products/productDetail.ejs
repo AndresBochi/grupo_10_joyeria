@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head.ejs', {tituloPagina: "Aastassia Joyas - Detalle de Producto", hojaEstilo: "productDetail"}) %>
+<!-- Incluimos el Head y le pasamos el título de la página y la hoja de estilo correspondiente -->
+<%- include('../partials/head.ejs', {tituloPagina: "Anastassia Joyas - Detalle de Producto", hojaEstilo: "productDetail"}) %>
 
 <body>
     
+    <!-- Incluimos el Header -->
     <%- include('../partials/header.ejs') %>
 
     <main>
+
         <div>
-            <p id="indice">Productos / Anillos / Anillo Acero</p>
+            <p id="indice">Productos / <%= producto.category %> / <%= producto.name %></p>
         </div>
+
         <section id="seccionDetalleProducto">
-            <img id="imagenProducto" src="/images/anillo-acero.jpg" alt="Anillo Acero">
-            <div id="infoProducto">
-                <h2 id="nombre">Anillo Acero</h2>
-                <h4 id="precio">$1.999</h4>
+            <div id="contenedorImagen"> 
+                <img id="imagenProducto" src="/images/products/<%= producto.image %>" alt="Anillo Acero">
+            </div>
+            <div id="infoProducto"> 
+                <h2 id="nombre"><%= producto.name %></h2>
+                <h4 id="precio">$<%= producto.precio %></h4>
                 <p id="descripcion">Descripción</p>
-                <p id="textoDescripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, rerum reprehenderit? Eius officia minus nulla a adipisci neque ut repellat labore.</p>
+                <p id="textoDescripcion"><%= producto.description %></p>
+                <a href="../../productos/editar/<%= producto.id %>" id="botonEditar">EDITAR PRODUCTO</a>
+                <!-- BOTON DE ELIMINAR PRODUCTO!! -->
                 <button id="botonComprar">COMPRAR</button>
             </div>
         </section>
 
-        <h2 id="productosRelacionados">Productos Relacionados</h2>
+        <h2 id="productosRelacionados">PRODUCTOS RELACIONADOS</h2>
 
         <section id="sliderProductos">
             
@@ -74,6 +82,7 @@
 
     </main>
 
+    <!-- Incluimos el Footer -->
     <%- include('../partials/footer.ejs') %>
     
 </body>

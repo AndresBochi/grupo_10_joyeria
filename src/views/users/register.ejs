@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head.ejs', {tituloPagina: "Aastassia Joyas - Registro de usuario", hojaEstilo: "register"}) %>
+<!-- Incluimos el Head y le pasamos el título de la página y la hoja de estilo correspondiente -->
+<%- include('../partials/head.ejs', {tituloPagina: "Anastassia Joyas - Registro de usuario", hojaEstilo: "register"}) %>
 
 <body>
 
+    <!-- Incluimos el Header -->
     <%- include('../partials/header.ejs') %>
 
     <main>
         <div>
-            <i class="fa-solid fa-user"></i>
+            <i id="iconoUsuario" class="fa-solid fa-user"></i>
             <h3 class="titulo">CREAR UNA CUENTA</h3>
         </div>
 
@@ -20,17 +22,18 @@
                 <form class="formulario">
                     <label>Nombre <span class="asterisco">*</span></label>
                     <br>
-                    <input type="text">
+                    <input class="barrasInput" type="text">
                     <br>
 
                     <label>Apellido <span class="asterisco">*</span></label>
                     <br>
-                    <input type="text">
+                    <input class="barrasInput" type="text">
                     <br>
 
                     <label>Documento <span class="asterisco">*</span></label>
                     <br>
-                    <input type="number">
+                    <input class="barrasInput" type="number">
+                </form>
             </div>
 
             <div class="info-inicio-sesion">
@@ -38,30 +41,31 @@
                 <form class="formulario">
                     <label>Email <span class="asterisco">*</span></label>
                     <br>
-                    <input type="email">
+                    <input class="barrasInput" type="email">
                     <br>
 
                     <label>Contraseña <span class="asterisco">*</span></label>
                     <br>
-                    <input type="password">
+                    <input class="barrasInput" type="password">
                     <br>
 
                     <label>Confirmar contraseña <span class="asterisco">*</span></label>
                     <br>
-                    <input type="password">
+                    <input class="barrasInput" type="password">
+                </form>
             </div>
 
 
         </div>
 
-        <div class="checkbox">
-            <input type="checkbox">
-            <p>Acepto recibir información por e-mail sobre novedades, ofertas, descuentos, promociones y eventos.</p>
+        <div class="checkbox"> 
+            <input class="inputCheckboxes" type="checkbox">
+            <p class="textoCheckboxes">Acepto recibir información por e-mail sobre novedades, ofertas, descuentos, promociones y eventos.</p>
         </div>
 
         <div class="checkbox">
-            <input type="checkbox">
-            <p>Acepto los Términos y condiciones, y las Políticas de privacidad del sitio.</p>
+            <input class="inputCheckboxes" type="checkbox">
+            <p class="textoCheckboxes">Acepto los Términos y condiciones, y las Políticas de privacidad del sitio.</p>
         </div>
 
         <div class="botones">
@@ -80,6 +84,7 @@
 
     </main>
 
+    <!-- Incluimos el Footer -->
     <%- include('../partials/footer.ejs') %>
 
 </body>
