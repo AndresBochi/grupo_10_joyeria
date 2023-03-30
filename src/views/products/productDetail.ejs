@@ -26,7 +26,7 @@
                 <p id="textoDescripcion"><%= producto.description %></p>
                 <div id="contenedorBotones">
                     <a href="../../productos/editar/<%= producto.id %>" id="botonEditar">EDITAR PRODUCTO</a>
-                    <form action="" method="" id="formularioEliminar">
+                    <form action="/productos/eliminar/<%= producto.id %>?_method=DELETE" method="post" id="formularioEliminar">
                         <button id="botonEliminar">ELIMINAR PRODUCTO</button>
                     </form>
                 </div>

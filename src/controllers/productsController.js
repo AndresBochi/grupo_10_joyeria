@@ -79,6 +79,26 @@ const productsController = {
         res.render("products/productEditForm", {productoAEditar: productoAEditar}); // Enviamos la vista correspondiente y el producto a editar al cliente
     },
 
+    // Procesa el pedido delete con ruta productos/eliminar/:numeroProducto
+    eliminar: (req, res) => {
+
+        let productoId = req.params.numeroProducto;
+
+        const productos = JSON.parse(fs.readFileSync(rutaProductosJson, "utf-8"));
+
+        let nuevaListaProductos = productos.filter(producto =>{
+
+            return producto.id != productoId;
+
+        });
+
+        let productosJSON = JSON.stringify(nuevaListaProductos, null, " ");
+
+        fs.writeFileSync(rutaProductosJson, productosJSON);
+
+        res.redirect("/productos");
+    }
+
 }
 
 // Exportamos el objeto literal con los distintos metodos, que se usará en el enrutador de productos

@@ -26,6 +26,9 @@ router.get("/detalle/:numeroProducto", productsController.detalle);
 router.get("/editar/:numeroProducto", productsController.editar);
 /* router.patch("/editar/:numeroProducto", productsController.update); */
 
+// Eliminar un producto
+router.delete("/eliminar/:numeroProducto", productsController.eliminar);
+
 // Exportamos la variable router ya con todas las rutas "guardadas", que se usará en app.js
 module.exports = router;
 
