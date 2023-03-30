@@ -12,7 +12,7 @@
     <main>
 
         <div>
-            <p id="indice">Productos / <%= producto.category %> / <%= producto.name %></p>
+            <p id="indice"> <a href="../../productos/">Productos</a> / <%= producto.category %> / <%= producto.name %></p>
         </div>
 
         <section id="seccionDetalleProducto">
@@ -24,8 +24,12 @@
                 <h4 id="precio">$<%= producto.precio %></h4>
                 <p id="descripcion">Descripción</p>
                 <p id="textoDescripcion"><%= producto.description %></p>
-                <a href="../../productos/editar/<%= producto.id %>" id="botonEditar">EDITAR PRODUCTO</a>
-                <!-- BOTON DE ELIMINAR PRODUCTO!! -->
+                <div id="contenedorBotones">
+                    <a href="../../productos/editar/<%= producto.id %>" id="botonEditar">EDITAR PRODUCTO</a>
+                    <form action="" method="" id="formularioEliminar">
+                        <button id="botonEliminar">ELIMINAR PRODUCTO</button>
+                    </form>
+                </div>
                 <button id="botonComprar">COMPRAR</button>
             </div>
         </section>

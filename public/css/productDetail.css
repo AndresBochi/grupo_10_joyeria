@@ -51,31 +51,62 @@ body {
     margin-top: 4px;
 }
 
+#contenedorBotones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
 #botonEditar{
-    font-size: 18px;
-    margin-top: auto;
+    font-size: 14px;
+    margin-top: 0.5rem;
     margin-left: auto;
     margin-right: auto;
     font-weight: bold;
-    background-color: whitesmoke;
+    background-color: orangered;
     border: 1px solid #3A251E;
-    width: 98%;
+    width: 85%;
     height: 30px;
     min-width: 110px;
     text-align: center;
 }
 
-#botonComprar {
-    font-size: 18px;
+#formularioEliminar{
+    width: 85%;
     margin-top: 0.5rem;
     margin-left: auto;
     margin-right: auto;
+}
+
+#botonEliminar{
+    font-size: 14px;
+    
+    font-weight: bold;
+    background-color: rgb(218, 26, 26);
+    border: 1px solid #3A251E;
+    width: 100%;
+    height: 30px;
+    min-width: 110px;
+    text-align: center;
+    padding: auto;
+}
+
+
+
+#botonComprar {
+    font-size: 14px;
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    min-width: 110px;
     font-weight: bold;
     background-color: whitesmoke;
     border: 1px solid #3A251E;
-    width: 70%;
     height: 30px;
-    min-width: 110px;
+    
     
 }
 
@@ -185,11 +216,23 @@ body {
     .contenedorProducto {
         width: 45%;
     }
+
+    #contenedorBotones{
+        margin-top: auto;
+    }
+    
 }
 
 @media (min-width: 1024px) {
     
     .contenedorProducto {
         width: 22%;
+    }
+
+    #botonEditar{
+        height: 30px;
+    }
+    #botonEliminar{
+        height: 30px;
     }
 }
