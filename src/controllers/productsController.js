@@ -33,9 +33,36 @@ const productsController = {
         res.render("products/productCart");
     },
 
-    // Procesa el pedido get con ruta productos/crear
+    // (GET) Procesa el pedido get con ruta productos/crear
     crear: (req, res) => {
         res.render("products/productCreateForm");
+    },
+
+    // (POST) metodo para guardar la información el producto nuevo
+    guardar: (req,res) => {
+
+        const productos = JSON.parse(fs.readFileSync(rutaProductosJson, "utf-8"));
+
+        console.log(req.body);
+
+        let productoNuevo = {
+            id: productos[productos.length -1].id +1,
+            name: req.body.name,
+            description: req.body.description,
+            image: req.body.image,
+            category: req.body.category,
+            material: req.body.material,
+            coleccion: req.body.coleccion,
+            precio: req.body.precio,
+        };
+
+        productos.push(productoNuevo);
+
+        let productosJSON = JSON.stringify(productos, null, " ");
+
+        fs.writeFileSync(rutaProductosJson, productosJSON);
+
+       // res.redirect("/productos");
     },
 
     // Procesa el pedido get con ruta productos/editar/:numeroProducto

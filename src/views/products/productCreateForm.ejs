@@ -11,58 +11,62 @@
 
     <main>
 
-        <form id="formularioAlta">
+        <form id="formularioAlta" action="/productos" method="post">
 
             <fieldset id="contenedorImagen">
                 <label for="imagen" id="textoImagen">Imagen<span class="asterisco">*</span><img id="foto" alt="" width="150" height="150" /></label>
                 <br>
-                <input style="visibility: hidden;" id="imagen" name="image" type="file" accept=".jpg, .png, .gif" onchange="document.getElementById('foto').src = window.URL.createObjectURL(this.files[0])">
+                <input style="visibility: hidden;" id="imagen" name="image" type="file" accept=".jpg, .png, .gif" onchange="document.getElementById('foto').src = window.URL.createObjectURL(this.files[0])"
+                required>
                 
             </fieldset>
 
             <fieldset id="contenedorInfoProducto">
                 <label for="name" class="labelForm">Nombre<span class="asterisco">*</span></label>
                 <br>
-                <input id="name" name="name" type="text" class="inputForm">
+                <input id="name" name="name" type="text" class="inputForm" required>
                 <br>
                 <label for="precio" class="labelForm">Precio<span class="asterisco">*</span></label>
                 <br>
-                <input id="precio" name="precio" type="text" class="inputForm">
+                <input id="precio" name="precio" type="text" class="inputForm" required>
                 <br>
                 <label for="category" class="labelForm">Categoría<span class="asterisco">*</span></label>
                 <br>
-                <select name="category" id="category" class="inputForm">
-                    <option value="">Selecciona una categoría</option>
-                    <option value="oferta">En oferta</option>
-                    <option value="destacado">Destacado</option>
+                <select name="category" id="category" class="inputForm" required>
+                    <option value="" selected disabled>--Selecciona una categoría--</option>
+                    <option value="aros"> Aros </option>
+                    <option value="collares"> Collares </option>
+                    <option value="pulseras"> Pulseras </option>
+                    <option value="anillos"> Anillos </option>
                 </select>
                 <br>
                 <label for="material" class="labelForm">Material<span class="asterisco">*</span></label>
                 <br>
-                <select id="material" name="name" class="inputForm">
-                    <option value="">Selecciona un material</option>
-                    <option value="Oro">Oro</option>
-                    <option value="Acero">Acero</option>
+                <select id="material" name="material" class="inputForm">
+                    <option value="" selected disabled>--Selecciona un material--</option>
+                    <option value="acero"> Acero Quirúrgico </option>
+                    <option value="plata"> Plata 925 </option>
+                    <option value="oro"> Oro </option>
                 </select>
                 <br>
                 <label for="coleccion" class="labelForm">Colección<span class="asterisco">*</span></label>
                 <br>
                 <select id="coleccion" name="coleccion" class="inputForm">
-                    <option value="">Selecciona una colección</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                    <option value="" selected disabled>--Selecciona una colección--</option>
+                    <option value="steel"> Steel </option>
+                    <option value="silver"> Silver </option>
+                    <option value="gold"> Gold </option>
                 </select>
             </fieldset>
 
             <fieldset id="contenedorDescripcion">
                 <label for="descripcion" class="labelForm">Descripción</label>
                 <br>
-                <textarea name="descripcion" id="descripcion" cols="30" rows="10">Descripción del producto</textarea>
+                <textarea name="description" id="descripcion" cols="30" rows="10">Descripción del producto</textarea>
             </fieldset>
             
             <fieldset id="contenedorSubmit">
-                <button type="submit" id="botonSubmit">Cargar Alta</button>
+                <button type="submit" id="botonSubmit" value="Submit">Cargar Alta</button>
             </fieldset>
 
         </form>

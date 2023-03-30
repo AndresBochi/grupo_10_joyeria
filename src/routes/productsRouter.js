@@ -17,6 +17,7 @@ router.get("/carrito", productsController.carrito);
 
 // Dar de alta un producto
 router.get("/crear", productsController.crear);
+router.post("/", productsController.guardar);
 
 // Detalle de un producto
 router.get("/detalle/:numeroProducto", productsController.detalle);

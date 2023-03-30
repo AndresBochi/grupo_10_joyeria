@@ -40,7 +40,7 @@
                 <br>
                 <label for="material" class="labelForm">Material<span class="asterisco">*</span></label>
                 <br>
-                <select id="material" name="name" class="inputForm" required> 
+                <select id="material" name="material" class="inputForm" required> 
                     <option value="" disabled <%= productoAEditar.material == "" ? "selected" : "" %>> --Selecciona un material-- </option>
                     <option value="acero" <%= productoAEditar.material == "Acero Quirúrgico" ? "selected" : "" %>> Acero Quirúrgico </option>
                     <option value="plata" <%= productoAEditar.material == "Plata 925" ? "selected" : "" %>> Plata 925 </option>
@@ -60,7 +60,7 @@
             <fieldset id="contenedorDescripcion">
                 <label for="descripcion" class="labelForm">Descripción</label>
                 <br>
-                <textarea name="descripcion" id="descripcion" cols="30" rows="10" required> <%= productoAEditar.description %> </textarea>
+                <textarea name="description" id="descripcion" cols="30" rows="10" required> <%= productoAEditar.description %> </textarea>
             </fieldset>
             
             <fieldset id="contenedorSubmit">
