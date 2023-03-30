@@ -49,7 +49,7 @@ const productsController = {
             id: productos[productos.length -1].id +1,
             name: req.body.name,
             description: req.body.description,
-            image: req.body.image,
+            image: req.body.category + "/" + req.body.image,
             category: req.body.category,
             material: req.body.material,
             coleccion: req.body.coleccion,
@@ -62,7 +62,7 @@ const productsController = {
 
         fs.writeFileSync(rutaProductosJson, productosJSON);
 
-       // res.redirect("/productos");
+        res.redirect("/productos");
     },
 
     // Procesa el pedido get con ruta productos/editar/:numeroProducto
