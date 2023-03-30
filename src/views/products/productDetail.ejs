@@ -2,7 +2,7 @@
 <html lang="en">
 
 <!-- Incluimos el Head y le pasamos el título de la página y la hoja de estilo correspondiente -->
-<%- include('../partials/head.ejs', {tituloPagina: "Aastassia Joyas - Detalle de Producto", hojaEstilo: "productDetail"}) %>
+<%- include('../partials/head.ejs', {tituloPagina: "Anastassia Joyas - Detalle de Producto", hojaEstilo: "productDetail"}) %>
 
 <body>
     
@@ -12,7 +12,7 @@
     <main>
 
         <div>
-            <p id="indice">Productos / Anillos / Anillo Acero</p>
+            <p id="indice">Productos / <%= producto.category %> / <%= producto.name %></p>
         </div>
 
         <section id="seccionDetalleProducto">
@@ -24,7 +24,7 @@
                 <h4 id="precio">$<%= producto.precio %></h4>
                 <p id="descripcion">Descripción</p>
                 <p id="textoDescripcion"><%= producto.description %></p>
-                <a href="../../productos/editar/1" id="botonEditar">EDITAR PRODUCTO</a>
+                <a href="../../productos/editar/<%= producto.id %>" id="botonEditar">EDITAR PRODUCTO</a>
                 <!-- BOTON DE ELIMINAR PRODUCTO!! -->
                 <button id="botonComprar">COMPRAR</button>
             </div>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <!-- Incluimos el Head y le pasamos el título de la página y la hoja de estilo correspondiente -->
-<%- include('../partials/head.ejs', {tituloPagina: "Aastassia Joyas - Listado de Productos", hojaEstilo: "productsIndex"}) %>
+<%- include('../partials/head.ejs', {tituloPagina: "Anastassia Joyas - Listado de Productos", hojaEstilo: "productsIndex"}) %>
 
 <body>
     
@@ -17,62 +17,23 @@
         <!-- Display Productos -->
         <section id="listadoProductos">
             
-            <article class="contenedorProducto">
-                <a href="productos/detalle/1"><img class="imagenProducto" src="images/anillo-oro2.jpg" alt="Anillo Oro 2"></a>
-                <div class="contenedorNombreYCarrito">
-                    <h3 class="nombreProducto">Anillo Oro</h3>
-                    <div class="carritoProducto">
-                        <a href="#"><i  class="fa-solid fa-cart-shopping" id="iconoCarrito"></i></a>
+            <!-- Muestra los productos dinámicamente (usando un foreach) -->
+            <% productos.forEach(producto => { %>
+                <article class="contenedorProducto">
+                    <a href="/productos/detalle/<%= producto.id %>"><img class="imagenProducto" src="/images/products/<%= producto.image %>" alt="Imagen Producto"></a>
+                    <div class="contenedorNombreYCarrito">
+                        <h3 class="nombreProducto"><%= producto.name %></h3>
+                        <div class="carritoProducto">
+                            <a href="#"><i  class="fa-solid fa-cart-shopping" id="iconoCarrito"></i></a>
+                        </div>
                     </div>
-                </div>
-                <div class="infoProducto">
-                    <h5 class="precio">Precio</h5>
-                    <h5 class="numeroPrecio">$ 999</h5>
-                
-            </article>
+                    <div class="infoProducto">
+                        <h5 class="precio">Precio</h5>
+                        <h5 class="numeroPrecio">$ <%= producto.precio %></h5>
+                    </div>
+                </article>
+            <% }) %>
 
-            <article class="contenedorProducto">
-                <a href="productos/detalle/1"><img class="imagenProducto" src="images/arbol-de-la-vida-colgante.jpg" alt="Colgante Arbol de la Vida"></a>
-                <div class="contenedorNombreYCarrito">
-                    <h3 class="nombreProducto">Colgante Arbol de la Vida</h3>
-                    <div class="carritoProducto">
-                        <a href="#"><i class="fa-solid fa-cart-shopping" id="iconoCarrito"></i></a>
-                    </div>
-                </div>
-                <div class="infoProducto">
-                    <h5 class="precio">Precio</h5>
-                    <h5 class="numeroPrecio">$ 1999</h5>
-                
-            </article>
-
-            <article class="contenedorProducto">
-                <a href="productos/detalle/1"><img class="imagenProducto" src="images/anillos-dorados.jpg" alt="Anillos Dorados"></a>
-                <div class="contenedorNombreYCarrito">
-                    <h3 class="nombreProducto">Par Anillos Oro</h3>
-                    <div class="carritoProducto">
-                        <a href="#"><i  class="fa-solid fa-cart-shopping" id="iconoCarrito"></i></a>
-                    </div>
-                </div>
-                <div class="infoProducto">
-                    <h5 class="precio">Precio</h5>
-                    <h5 class="numeroPrecio">$ 2999</h5>
-                
-            </article>
-                    
-            <article class="contenedorProducto">
-                <a href="productos/detalle/1"><img class="imagenProducto" src="images/anillo-acero.jpg" alt="Anillos Acero"></a>
-                <div class="contenedorNombreYCarrito">
-                    <h3 class="nombreProducto">Par Anillos Acero</h3>
-                    <div class="carritoProducto">
-                        <a href="#"><i class="fa-solid fa-cart-shopping" id="iconoCarrito"></i></a>
-                    </div>
-                </div>
-                <div class="infoProducto">
-                    <h5 class="precio">Precio</h5>
-                    <h5 class="numeroPrecio">$ 1999</h5>
-                
-            </article>
-                    
         </section>
 
     </main>
