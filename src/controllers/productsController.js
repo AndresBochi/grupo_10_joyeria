@@ -23,7 +23,7 @@ const productsController = {
         
         const productoAMostrar = productos.find(producto =>{
             return producto.id == productoId;
-        }) // Guardamos el producto a mostrar en una variable. Para ello utilizamos el método .find para recorrer el array de productos y buscar el correspondiente según su id
+        }); // Guardamos el producto a mostrar en una variable. Para ello utilizamos el método .find para recorrer el array de productos y buscar el correspondiente según su id
 
         res.render("products/productDetail", {producto: productoAMostrar}); // Enviamos la vista correspondiente y el producto a mostrar al cliente
     },
@@ -49,7 +49,7 @@ const productsController = {
             id: productos[productos.length -1].id +1,
             name: req.body.name,
             description: req.body.description,
-            image: req.body.category + "/" + req.body.image,
+            image: req.body.category + "/" + req.body.image, // MODIFICAR - HAY QUE USAR MULTER !!!!!!!!
             category: req.body.category,
             material: req.body.material,
             coleccion: req.body.coleccion,
@@ -74,9 +74,43 @@ const productsController = {
 
         const productoAEditar = productos.find(producto =>{
             return producto.id == productoId;
-        }) // Guardamos el producto a editar en una variable. Para ello utilizamos el método .find para recorrer el array de productos y buscar el correspondiente según su id
+        }); // Guardamos el producto a editar en una variable. Para ello utilizamos el método .find para recorrer el array de productos y buscar el correspondiente según su id
 
         res.render("products/productEditForm", {productoAEditar: productoAEditar}); // Enviamos la vista correspondiente y el producto a editar al cliente
+    },
+
+    actualizar: (req, res) => {
+
+        let productoId = req.params.numeroProducto;
+
+        const productos = JSON.parse(fs.readFileSync(rutaProductosJson, "utf-8"));
+
+        let productoSinEdicion = productos.find(producto => {
+            return producto.id == productoId; 
+        });
+
+        let productoEditado = {
+            id: productoId,
+			name: req.body.name, 
+            description: req.body.description,
+            image: productoSinEdicion.image, // MODIFICAR - HAY QUE USAR MULTER !!!!!!!!
+			category: req.body.category,
+			material: req.body.material,
+			coleccion: req.body.coleccion,
+            precio: req.body.precio
+        };
+
+        let indiceProducto = productos.findIndex(producto =>{
+            return producto.id == productoId;
+        });
+ 
+        productos[indiceProducto] = productoEditado;
+
+        let productosJSON = JSON.stringify(productos, null, " ");
+
+        fs.writeFileSync(rutaProductosJson, productosJSON);
+
+        res.redirect("/productos"); 
     },
 
     // Procesa el pedido delete con ruta productos/eliminar/:numeroProducto
@@ -87,17 +121,15 @@ const productsController = {
         const productos = JSON.parse(fs.readFileSync(rutaProductosJson, "utf-8"));
 
         let nuevaListaProductos = productos.filter(producto =>{
-
-            return producto.id != productoId;
-
-        });
+            return producto.id != productoId
+        })
 
         let productosJSON = JSON.stringify(nuevaListaProductos, null, " ");
 
         fs.writeFileSync(rutaProductosJson, productosJSON);
 
         res.redirect("/productos");
-    }
+    },
 
 }
 

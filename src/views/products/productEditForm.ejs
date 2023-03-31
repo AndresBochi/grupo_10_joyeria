@@ -14,9 +14,9 @@
         <form id="formularioAlta" action="/productos/editar/<%= productoAEditar.id %>?_method=PATCH" method="POST">
 
             <fieldset id="contenedorImagen">
-                <label for="imagen" id="textoImagen">Imagen<span class="asterisco">*</span><img src="/images/products/<%= productoAEditar.image %>" id="foto" alt="" width="150" height="150" /></label>
+                <label for="imagen" id="textoImagen">Imagen<span class="asterisco">*</span><img src="/images/products/<%= productoAEditar.image %>" id="foto" alt="" width="150" height="150"/></label>
                 <br>
-                <input style="visibility: hidden;" id="imagen" name="image" type="file" accept=".jpg, .png, .gif" onchange="document.getElementById('foto').src = window.URL.createObjectURL(this.files[0])" required>
+                <input style="visibility: hidden;" id="imagen" name="image" type="file" accept=".jpg, .png, .gif" onchange="document.getElementById('foto').src = window.URL.createObjectURL(this.files[0])" > <!-- ACA TENDRÍA QUE IR UN REQUIRED!!!! -->
             </fieldset>
 
             <fieldset id="contenedorInfoProducto">
