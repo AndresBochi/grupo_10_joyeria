@@ -14,7 +14,7 @@
         <form id="formularioAlta" action="/productos" method="post">
 
             <fieldset id="contenedorImagen">
-                <label for="imagen" id="textoImagen">Imagen<span class="asterisco">*</span><img id="foto" alt="" width="150" height="150" /></label>
+                <label for="imagen" id="textoImagen">Imagen<span class="asterisco">*</span><img id="foto" alt=""/></label>
                 <br>
                 <input style="visibility: hidden;" id="imagen" name="image" type="file" accept=".jpg, .png, .gif" onchange="document.getElementById('foto').src = window.URL.createObjectURL(this.files[0])"
                 required>
