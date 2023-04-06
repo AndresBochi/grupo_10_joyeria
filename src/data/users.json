@@ -1,0 +1,21 @@
+[
+    {
+     "identificador": 1,
+     "nombre": "Stefania",
+     "apellido": "Méndez",
+     "email": "stefania.tm88@gmail.com",
+     "contrasenia": 12345678,
+     "categoria": "administrador",
+     "imagen": "images/users/foto-andres.jpg"
+    },
+
+    {
+        "identificador": 2,
+        "nombre": "Andres",
+        "apellido": "Bocchigliere",
+        "email": "elmaildeandresbochi@gmail.com",
+        "contrasenia": 87654321,
+        "categoria": "administrador",
+        "imagen": "images/users/foto-stefania.jpeg"
+    }
+]
