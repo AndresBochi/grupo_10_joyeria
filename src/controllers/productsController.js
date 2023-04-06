@@ -1,7 +1,7 @@
 const fs = require('fs'); // Requerimos el modulo nativo de Node File System
 const path = require("path"); // Requerimos el modulo nativo de Node Path
 
-const rutaProductosJson = path.join(__dirname, '../data/productsDataBase.json'); // Guardamos la ruta del archivo JSON donde esta la lista de productos en una variable
+const rutaProductosJson = path.join(__dirname, '../data/products.json'); // Guardamos la ruta del archivo JSON donde esta la lista de productos en una variable
 
 // Creamos el objeto literal con los métodos a exportar
 const productsController = {
