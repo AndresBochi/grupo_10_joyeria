@@ -19,13 +19,17 @@ const productsController = {
         
         let productoId = req.params.numeroProducto; // En req.params tenemos el parametro que definimos en el enrutador 
 
-        const productos = JSON.parse(fs.readFileSync(rutaProductosJson, "utf-8"));
+        const productos = JSON.parse(fs.readFileSync(rutaProductosJson, "utf-8")); // Guardamos una lista de todos los productos en la variable productos
         
         const productoAMostrar = productos.find(producto =>{
             return producto.id == productoId;
         }); // Guardamos el producto a mostrar en una variable. Para ello utilizamos el método .find para recorrer el array de productos y buscar el correspondiente según su id
 
-        res.render("products/productDetail", {producto: productoAMostrar}); // Enviamos la vista correspondiente y el producto a mostrar al cliente
+        const productosRelacionados = productos.filter(producto =>{
+            return producto.coleccion == productoAMostrar.coleccion && producto.id != productoAMostrar.id;
+        }); // Guardamos una lista de productos relacionados por coleccion en una variable, utilizando el método .filter
+
+        res.render("products/productDetail", {producto: productoAMostrar, productosRelacionados: productosRelacionados}); // Enviamos la vista correspondiente y el producto a mostrar al cliente
     },
 
     // Procesa el pedido get con ruta productos/carrito
