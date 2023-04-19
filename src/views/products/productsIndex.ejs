@@ -20,7 +20,7 @@
             <!-- Muestra los productos dinámicamente (usando un foreach) -->
             <% productos.forEach(producto => { %>
                 <article class="contenedorProducto">
-                    <a href="/productos/detalle/<%= producto.id %>"><img class="imagenProducto" src="/images/products/<%= producto.image %>" alt="Imagen Producto"></a>
+                    <a href="/productos/detalle/<%= producto.id %>"><img class="imagenProducto" src="/images/products/<%= producto.category %>/<%= producto.image %>" alt="Imagen Producto"></a>
                     <div class="contenedorNombreYCarrito">
                         <h3 class="nombreProducto"><%= producto.name %></h3>
                         <div class="carritoProducto">

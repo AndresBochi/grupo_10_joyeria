@@ -104,8 +104,6 @@ main{
 }
 
 #botonSubmit{
-    background-color: whitesmoke;
-    border: none;
     font-size: 18px;
     padding: 0.2rem 0.5rem;
     border: 1px solid #3A251E;

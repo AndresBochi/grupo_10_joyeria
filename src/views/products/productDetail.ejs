@@ -17,11 +17,11 @@
 
         <section id="seccionDetalleProducto">
             <div id="contenedorImagen"> 
-                <img id="imagenProducto" src="/images/products/<%= producto.image %>" alt="Anillo Acero">
+                <img id="imagenProducto" src="/images/products/<%= producto.category %>/<%= producto.image %>" alt="<%= producto.name %>">
             </div>
             <div id="infoProducto"> 
                 <h2 id="nombre"><%= producto.name %></h2>
-                <h4 id="precio">$<%= producto.precio %></h4>
+                <h4 id="precio">$ <%= producto.precio %></h4>
                 <p id="descripcion">Descripción</p>
                 <p id="textoDescripcion"><%= producto.description %></p>
                 <div id="contenedorBotones">
@@ -38,50 +38,19 @@
 
         <section id="sliderProductos">
             
-            <article class="contenedorProducto">
-                <a href="../../productos/detalle/1"><img class="imagenProducto" src="/images/anillo-oro2.jpg" alt="Anillo Oro 2"></a>
-                <h3 class="nombreProducto">Anillo Oro</h3>
-                <div class="infoProducto">
-                    <h5 class="precio">Precio</h5>
-                    <h5 class="numeroPrecio">$ 999</h5>
-                <div class="carritoProducto">
-                    <a href="#"><i  class="fa-solid fa-cart-shopping" id="iconoCarrito"></i></a>
-                </div>
-            </article>
+            <% productosRelacionados.forEach(productoRelacionado => { %>
+                <article class="contenedorProducto">
+                    <a href="../../productos/detalle/<%= productoRelacionado.id %>"><img class="imagenProducto" src="/images/products/<%= productoRelacionado.category %>/<%= productoRelacionado.image %>" alt="<%= productoRelacionado.name %>"></a>
+                    <h3 class="nombreProducto"><%= productoRelacionado.name %></h3>
+                    <div class="infoProducto">
+                        <h5 class="precio">Precio</h5>
+                        <h5 class="numeroPrecio">$ <%= productoRelacionado.precio %></h5>
+                    <div class="carritoProducto">
+                        <a href="#"><i  class="fa-solid fa-cart-shopping" id="iconoCarrito"></i></a>
+                    </div>
+                </article>
+            <% }) %>
 
-            <article class="contenedorProducto">
-                <a href="../../productos/detalle/1"><img class="imagenProducto" src="/images/arbol-de-la-vida-colgante.jpg" alt="Colgante Arbol de la Vida"></a>
-                <h3 class="nombreProducto">Colgante Arbol de la Vida</h3>
-                <div class="infoProducto">
-                    <h5 class="precio">Precio</h5>
-                    <h5 class="numeroPrecio">$ 1999</h5>
-                <div class="carritoProducto">
-                    <a href="#"><i class="fa-solid fa-cart-shopping" id="iconoCarrito"></i></a>
-                </div>
-            </article>
-
-            <article class="contenedorProducto">
-                <a href="../../productos/detalle/1"><img class="imagenProducto" src="/images/anillos-dorados.jpg" alt="Anillos Dorados"></a>
-                <h3 class="nombreProducto">Par Anillos Oro</h3>
-                <div class="infoProducto">
-                    <h5 class="precio">Precio</h5>
-                    <h5 class="numeroPrecio">$ 2999</h5>
-                <div class="carritoProducto">
-                    <a href="#"><i  class="fa-solid fa-cart-shopping" id="iconoCarrito"></i></a>
-                </div>
-            </article>
-                    
-            <article class="contenedorProducto">
-                <a href="../../productos/detalle/1"><img class="imagenProducto" src="/images/anillo-acero.jpg" alt="Anillos Acero"></a>
-                <h3 class="nombreProducto">Par Anillos Acero</h3>
-                <div class="infoProducto">
-                    <h5 class="precio">Precio</h5>
-                    <h5 class="numeroPrecio">$ 1999</h5>
-                <div class="carritoProducto">
-                    <a href="#"><i class="fa-solid fa-cart-shopping" id="iconoCarrito"></i></a>
-                </div>
-            </article>
-                    
         </section>
 
     </main>
