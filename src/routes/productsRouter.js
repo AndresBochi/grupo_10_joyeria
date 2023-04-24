@@ -8,16 +8,16 @@ const router = express.Router();
 const multer = require('multer'); 
 const path = require('path')
 
-const storage= multer.diskStorage({
+const storage = multer.diskStorage({
     destination : function (req, file, cb){
-        cb(null, path.join(__dirname, '../../public/images/products'));
+        cb(null, "public/images/products");
     },
     filename: function (req, file, cb){
-        cb(null, '${Date.now()}_img_${path.extname(file.originalname)}');
+        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname) );
     }
 });
 
-const uploadFile = multer ({storage});
+const uploadFile = multer ({storage: storage});
 
 // Importamos el controlador de productos
 const productsController = require("../controllers/productsController.js")
@@ -33,7 +33,7 @@ router.get("/carrito", productsController.carrito);
 
 // Dar de alta un producto
 router.get("/crear", productsController.crear);
-router.post("/", productsController.guardar);
+router.post("/", uploadFile.single('imagen'), productsController.guardar);
 
 // Detalle de un producto
 router.get("/detalle/:numeroProducto", productsController.detalle);

@@ -53,7 +53,7 @@ const productsController = {
             id: productos[productos.length -1].id +1,
             name: req.body.name,
             description: req.body.description,
-            image: req.body.category + "/" + req.body.image, // MODIFICAR - HAY QUE USAR MULTER !!!!!!!!
+            image: req.file ? req.file.filename : "default-image.png",
             category: req.body.category,
             material: req.body.material,
             coleccion: req.body.coleccion,
