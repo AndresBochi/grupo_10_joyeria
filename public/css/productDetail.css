@@ -128,17 +128,23 @@ body {
 }
 
 .contenedorProducto {
-    position: relative;
+    
     background-color: whitesmoke;
     border: 1px solid #3A251E;
     width: 85%;
     margin: 1rem auto;
+    
 }
+
 
 .imagenProducto {
     width: 100%;
     border-bottom: 1px solid #3A251E;
     
+}
+
+#contenedorInfo{
+    position: relative;
 }
 
 .nombreProducto {
@@ -157,6 +163,7 @@ body {
     background-color: whitesmoke;
     display: flex;
     justify-content: space-between;
+    
 }
 
 .precio {
@@ -176,7 +183,7 @@ body {
 
 .carritoProducto {
     position: absolute;
-    bottom: 33px;
+    top: 4px;
     right: 8px;
     width: 35px;
     height: 35px;
@@ -185,6 +192,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 
 #iconoCarrito {
