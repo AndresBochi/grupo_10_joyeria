@@ -107,6 +107,6 @@ footer ul {
     }
 
     #redesFlex {
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 }

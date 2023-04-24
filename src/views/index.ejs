@@ -12,40 +12,51 @@
     <main>
 
         <!-- Script Carrousel Colecciones -->
+            
         <script>
+            function imagen0(){
+                document.getElementById('imagen0').style.display = 'block';
+                document.getElementById('imagen1').style.display = 'none';
+                document.getElementById('imagen2').style.display = 'none';
+                
+                document.getElementById("tituloColeccion").innerText = "Coleccion1";
+            }
             function imagen1(){
+                document.getElementById('imagen0').style.display = 'none';
                 document.getElementById('imagen1').style.display = 'block';
                 document.getElementById('imagen2').style.display = 'none';
-                document.getElementById('imagen3').style.display = 'none';
+
+                document.getElementById("tituloColeccion").innerText = "Coleccion2";
             }
             function imagen2(){
+                document.getElementById('imagen0').style.display = 'none';
                 document.getElementById('imagen1').style.display = 'none';
                 document.getElementById('imagen2').style.display = 'block';
-                document.getElementById('imagen3').style.display = 'none';
-            }
-            function imagen3(){
-                document.getElementById('imagen1').style.display = 'none';
-                document.getElementById('imagen2').style.display = 'none';
-                document.getElementById('imagen3').style.display = 'block';
-            }
-        </script>
 
+                document.getElementById("tituloColeccion").innerText = "Coleccion3";
+            }
+                
+        </script>
+            
+        
         <!-- Carrousel Colecciones -->
         <h2 class="titulos">COLECCIONES</h2>
 
         <section id="carrouselColecciones">
+
+            <% productosDeCadaColeccion.forEach((producto, i) => { %>
+                <a href="productos/detalle/<%= producto.id %>"><img id="<%= "imagen" + i %>" src="images/products/<%= producto.category %>/<%= producto.image %>" alt="<%= producto.name %>"></a>
+            <% }) %>
             
-            <a href="productos/detalle/11"><img id="imagen1" src="images/products/anillos/Anillo Amalfi.webp" alt="Anillo Amalfi"></a>
-            <a href="productos/detalle/12"><img id="imagen2" src="images/products/anillos/Anillo Paris.webp" alt="Argolla Plata Roma"></a>
-            <a href="productos/detalle/10"><img id="imagen3" src="images/products/pulseras/Tokyo.webp" alt="Colgante Beijing"></a>
             <div id="botonesSelectores">
-                <button id="botonCarrousel1" class="selectorCarrousel" onclick="imagen1()"></i></button>
-                <button id="botonCarrousel2" class="selectorCarrousel" onclick="imagen2()"></i></button>
-                <button id="botonCarrousel3" class="selectorCarrousel" onclick="imagen3()"></i></button>
+                <button id="botonCarrousel1" class="selectorCarrousel" onclick="imagen0()" autofocus></i></button>
+                <button id="botonCarrousel2" class="selectorCarrousel" onclick="imagen1()"></i></button>
+                <button id="botonCarrousel3" class="selectorCarrousel" onclick="imagen2()"></i></button>
             </div>
-           
-            
+
         </section>
+
+        <h3 id="tituloColeccion" class="titulos"><%= productosDeCadaColeccion[0].coleccion  %></h3>
 
         <!-- Display Productos -->
         <h2 class="titulos">PRODUCTOS DESTACADOS</h2>
