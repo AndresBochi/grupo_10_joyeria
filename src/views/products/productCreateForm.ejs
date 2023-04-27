@@ -11,7 +11,7 @@
 
     <main>
 
-        <form id="formularioAlta" action="/productos" method="post">
+        <form id="formularioAlta" action="/productos" method="post" enctype="multipart/form-data">
 
             <fieldset id="contenedorImagen">
                 <label for="imagen" id="textoImagen">Imagen<span class="asterisco">*</span><img id="foto" alt=""/></label>
@@ -53,9 +53,9 @@
                 <br>
                 <select id="coleccion" name="coleccion" class="inputForm">
                     <option value="" selected disabled>--Selecciona una colección--</option>
-                    <option value="steel"> Steel </option>
-                    <option value="silver"> Silver </option>
-                    <option value="gold"> Gold </option>
+                    <option value="Steel"> Steel </option>
+                    <option value="Silver"> Silver </option>
+                    <option value="Gold"> Gold </option>
                 </select>
             </fieldset>
 

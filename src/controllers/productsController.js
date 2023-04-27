@@ -47,8 +47,6 @@ const productsController = {
 
         const productos = JSON.parse(fs.readFileSync(rutaProductosJson, "utf-8"));
 
-        console.log(req.body);
-
         let productoNuevo = {
             id: productos[productos.length -1].id +1,
             name: req.body.name,
@@ -67,6 +65,7 @@ const productsController = {
         fs.writeFileSync(rutaProductosJson, productosJSON);
 
         res.redirect("/productos");
+        /* res.send(req.body); */
     },
 
     // Procesa el pedido get con ruta productos/editar/:numeroProducto
