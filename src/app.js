@@ -2,6 +2,7 @@
 const express = require('express'); // Importamos modulo express
 const path = require('path'); // Importamos modulo nativo path y lo guardamos en la constante path
 const methodOverride = require('method-override'); // Para poder usar los métodos PUT y DELETE
+const session = require ('express-session');
 
 // ** express() **
 const app = express(); // Instanciamos Express y lo asignamos a la constante app
@@ -15,6 +16,7 @@ app.use(express.static(path.join(__dirname, '../public'))); // Habilitamos la ca
 app.use(express.urlencoded({ extended: false })); // Para poder leer el body de los formularios
 app.use(express.json());
 app.use(methodOverride('_method')); // Para poder usar los métodos PUT y DELETE
+app.use(session( {secret: "Anastassia Joyas"} ));
 
 // ** Rutas **
 

@@ -84,6 +84,11 @@ ul li{
     margin-bottom: 0;
 }
 
+#recordar {
+    margin: auto;
+    width: 100%;
+}
+
 .inicio-sesion {
     text-decoration: underline;
     margin-top: 0;
