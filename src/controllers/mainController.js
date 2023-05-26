@@ -11,12 +11,12 @@ const mainController = {
     index: (req, res) => {
 
         const productos = JSON.parse(fs.readFileSync(rutaProductosJson, "utf-8")); // Guardamos el array de productos (cada uno un objeto literal) en la variable productos
-
-        let ordenarProductosPor = (arrayProductos, criterio) => {
+        
+        function ordenarProductosPor (arrayProductos, criterio){
 
             let productosAgrupados = []; // Crea una nueva lista donde se irán agrupando los productos en grupos (listas) según el criterio seleccionado
             let estaEnGrupo = false; // Creamos una variable para indicar si el producto ya se encuentra en algún grupo.
-    
+
             arrayProductos.forEach(producto => { // Recorremos el listado de todos los productos.
 
                 estaEnGrupo = false; // En cada iteración, reseteamos el indicador a false.
@@ -32,11 +32,12 @@ const mainController = {
                     productosAgrupados.push([producto]); // Agrega el producto a un nuevo grupo []
                 };
             });
-        
+    
             return productosAgrupados; // Devuelve el array de productos agrupados (en otros arrays) según criterio 
         };
+        
 
-        let productosPorColeccion = ordenarProductosPor(productos, "coleccion");
+        let productosPorColeccion =  ordenarProductosPor(productos, "coleccion");
 
         let productosDeCadaColeccion = [];
     
@@ -44,13 +45,11 @@ const mainController = {
             productosDeCadaColeccion.push(coleccion[Math.floor(Math.random() * coleccion.length)]) // Selecciona al azar un producto de cada colección
         });
 
-        console.log(productosDeCadaColeccion); ///////////////////////////
+        //console.log(productosDeCadaColeccion); ///////////////////////////
 
         res.render("index", {productosDeCadaColeccion: productosDeCadaColeccion});
         
-
-    },
-
+    }
     
 }
 
