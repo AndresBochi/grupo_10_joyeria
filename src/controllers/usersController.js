@@ -1,5 +1,8 @@
 const path = require("path");
 
+//Requiero el User de la carpeta models
+const User = require('../models/User');
+
 // Creamos el controlador con sus metodos
 const usersController = {
 
@@ -11,6 +14,10 @@ const usersController = {
     login: (req, res) => {
         res.render("users/login");
     },
+
+    create: function(req,res){
+        res.send("Se ha registrado correctamente")
+    }
     
 }
 

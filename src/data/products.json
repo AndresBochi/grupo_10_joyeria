@@ -118,15 +118,5 @@
   "material": "Plata 925",
   "coleccion": "Silver",
   "precio": 2800
- },
- {
-  "id": 13,
-  "name": "gato",
-  "description": "gato",
-  "image": "default-image.png",
-  "category": "pulseras",
-  "material": "acero",
-  "coleccion": "steel",
-  "precio": "999"
  }
 ]

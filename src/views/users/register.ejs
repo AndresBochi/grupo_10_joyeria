@@ -2,90 +2,97 @@
 <html lang="en">
 
 <!-- Incluimos el Head y le pasamos el título de la página y la hoja de estilo correspondiente -->
-<%- include('../partials/head.ejs', {tituloPagina: "Anastassia Joyas - Registro de usuario", hojaEstilo: "register"}) %>
+<%- include('../partials/head.ejs', {tituloPagina: "Anastassia Joyas - Registro de usuario" , hojaEstilo: "register" })
+    %>
 
-<body>
+    <body>
 
-    <!-- Incluimos el Header -->
-    <%- include('../partials/header.ejs') %>
+        <!-- Incluimos el Header -->
+        <%- include('../partials/header.ejs') %>
 
-    <main>
-        <div>
-            <i id="iconoUsuario" class="fa-solid fa-user"></i>
-            <h3 class="titulo">CREAR UNA CUENTA</h3>
-        </div>
+            <main>
+                <div>
+                    <i id="iconoUsuario" class="fa-solid fa-user"></i>
+                    <h3 class="titulo">CREAR UNA CUENTA</h3>
+                </div>
+                <form method="POST" action="/usuarios/registro" enctype="multipart/form-data">
+                    <!--Para enviar el formulario a traves de POST-->
+                    <div>
+                        <div class="crear-cuenta">
 
-        <div class="crear-cuenta">
+                            <div class="datos-personales">
+                                <h3>Datos personales</h3>
+                                <form class="formulario">
+                                    <label>Nombre <span class="asterisco">*</span></label>
+                                    <br>
+                                    <input class="barrasInput" type="text">
+                                    <br>
 
-            <div class="datos-personales">
-                <h3>Datos personales</h3>
-                <form class="formulario">
-                    <label>Nombre <span class="asterisco">*</span></label>
-                    <br>
-                    <input class="barrasInput" type="text">
-                    <br>
+                                    <label>Apellido <span class="asterisco">*</span></label>
+                                    <br>
+                                    <input class="barrasInput" type="text">
+                                    <br>
 
-                    <label>Apellido <span class="asterisco">*</span></label>
-                    <br>
-                    <input class="barrasInput" type="text">
-                    <br>
+                                    <label>Documento <span class="asterisco">*</span></label>
+                                    <br>
+                                    <input class="barrasInput" type="number">
+                                </form>
+                            </div>
 
-                    <label>Documento <span class="asterisco">*</span></label>
-                    <br>
-                    <input class="barrasInput" type="number">
+                            <div class="info-inicio-sesion">
+                                <h3>Información de inicio de sesión</h3>
+                                <form class="formulario">
+                                    <label>Email <span class="asterisco">*</span></label>
+                                    <br>
+                                    <input class="barrasInput" type="email">
+                                    <br>
+
+                                    <label>Contraseña <span class="asterisco">*</span></label>
+                                    <br>
+                                    <input class="barrasInput" type="password">
+                                    <br>
+
+                                    <label>Confirmar contraseña <span class="asterisco">*</span></label>
+                                    <br>
+                                    <input class="barrasInput" type="password">
+                                </form>
+                            </div>
+
+
+                        </div>
+
+                        <div class="checkbox">
+                            <input class="inputCheckboxes" type="checkbox">
+                            <p class="textoCheckboxes">Acepto recibir información por e-mail sobre novedades, ofertas,
+                                descuentos, promociones y eventos.</p>
+                        </div>
+
+                        <div class="checkbox">
+                            <input class="inputCheckboxes" type="checkbox">
+                            <p class="textoCheckboxes">Acepto los Términos y condiciones, y las Políticas de privacidad
+                                del sitio.</p>
+                        </div>
+
+                        <div class="botones">
+
+                            <div class="box-robot">
+                                <label>
+                                    <input type="checkbox">
+                                    No soy un robot
+                                </label>
+                            </div>
+
+
+                            <button class="boton-registro" type="submit">Crear cuenta</button> 
+                        </div>
+                    </div>
                 </form>
-            </div>
 
-            <div class="info-inicio-sesion">
-                <h3>Información de inicio de sesión</h3>
-                <form class="formulario">
-                    <label>Email <span class="asterisco">*</span></label>
-                    <br>
-                    <input class="barrasInput" type="email">
-                    <br>
+            </main>
 
-                    <label>Contraseña <span class="asterisco">*</span></label>
-                    <br>
-                    <input class="barrasInput" type="password">
-                    <br>
+            <!-- Incluimos el Footer -->
+            <%- include('../partials/footer.ejs') %>
 
-                    <label>Confirmar contraseña <span class="asterisco">*</span></label>
-                    <br>
-                    <input class="barrasInput" type="password">
-                </form>
-            </div>
+    </body>
 
-
-        </div>
-
-        <div class="checkbox"> 
-            <input class="inputCheckboxes" type="checkbox">
-            <p class="textoCheckboxes">Acepto recibir información por e-mail sobre novedades, ofertas, descuentos, promociones y eventos.</p>
-        </div>
-
-        <div class="checkbox">
-            <input class="inputCheckboxes" type="checkbox">
-            <p class="textoCheckboxes">Acepto los Términos y condiciones, y las Políticas de privacidad del sitio.</p>
-        </div>
-
-        <div class="botones">
-
-            <div class="box-robot">
-                <label>
-                    <input type="checkbox">
-                    No soy un robot
-                </label>
-            </div>
-
-
-            <a href="#"><button class="boton-registro" type="submit">Crear cuenta</button></a>
-        </div>
-
-
-    </main>
-
-    <!-- Incluimos el Footer -->
-    <%- include('../partials/footer.ejs') %>
-
-</body>
 </html>
