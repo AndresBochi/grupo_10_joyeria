@@ -26,7 +26,7 @@ main {
     width: 90%; 
     margin: 0 auto 0 auto;
     padding: 0.5rem;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: #E9967A;
     /* border: 1px solid #3A251E; */
     /* overflow: hidden; */

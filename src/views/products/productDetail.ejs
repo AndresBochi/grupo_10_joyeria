@@ -17,7 +17,7 @@
 
         <section id="seccionDetalleProducto">
             <div id="contenedorImagen"> 
-                <img id="imagenProducto" src="/images/products/<%= producto.category %>/<%= producto.image %>" alt="<%= producto.name %>">
+                <img id="imagenProducto" src="/images/products/<%= producto.image %>" alt="<%= producto.name %>">
             </div>
             <div id="infoProducto"> 
                 <h2 id="nombre"><%= producto.name %></h2>
@@ -41,7 +41,7 @@
             <% productosRelacionados.forEach(productoRelacionado => { %>
                 <article class="contenedorProducto">
                     <a href="../../productos/detalle/<%= productoRelacionado.id %>">
-                        <img class="imagenProducto" src="/images/products/<%= productoRelacionado.category %>/<%= productoRelacionado.image %>" alt="<%= productoRelacionado.name %>">
+                        <img class="imagenProducto" src="/images/products/<%= productoRelacionado.image %>" alt="<%= productoRelacionado.name %>">
                     </a>
                     <div id="contenedorInfo">
                         <h3 class="nombreProducto"><%= productoRelacionado.name %></h3>

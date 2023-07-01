@@ -5,7 +5,7 @@ const router = express.Router();
 
 // Multer (para cargar archivos)
 
-const multer = require('multer'); 
+const multer = require('multer');
 const path = require('path')
 
 const storage = multer.diskStorage({
@@ -33,7 +33,7 @@ router.get("/carrito", productsController.carrito);
 
 // Dar de alta un producto
 router.get("/crear", productsController.crear);
-router.post("/", uploadFile.single('imagen'), productsController.guardar);
+router.post("/", uploadFile.single("imagen"), productsController.guardar);
 
 // Detalle de un producto
 router.get("/detalle/:numeroProducto", productsController.detalle);
