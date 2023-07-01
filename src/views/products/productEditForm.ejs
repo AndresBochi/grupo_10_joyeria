@@ -14,7 +14,7 @@
         <form id="formularioAlta" action="/productos/editar/<%= productoAEditar.id %>?_method=PATCH" method="POST">
 
             <fieldset id="contenedorImagen">
-                <label for="imagen" id="textoImagen">Imagen<span class="asterisco">*</span><img src="/images/products/<%= productoAEditar.category %>/<%= productoAEditar.image %>" id="foto" alt=""/></label>
+                <label for="imagen" id="textoImagen">Imagen<span class="asterisco">*</span><img src="/images/products/<%= productoAEditar.image %>" id="foto" alt=""/></label>
                 <br>
                 <input style="visibility: hidden;" id="imagen" name="Imagen" type="file" accept=".jpg, .png, .gif" onchange="document.getElementById('foto').src = window.URL.createObjectURL(this.files[0])" > <!-- ACA TENDRÍA QUE IR UN REQUIRED!!!! -->
             </fieldset>
@@ -51,9 +51,9 @@
                 <br>
                 <select id="coleccion" name="coleccion" class="inputForm" required> 
                     <option value="" disabled <%= productoAEditar.coleccion === "" ? "selected" : "" %>> --Selecciona una colección-- </option>
-                    <option value="steel" <%= productoAEditar.coleccion === "Steel" ? "selected" : "" %>> Steel </option>
-                    <option value="silver" <%= productoAEditar.coleccion === "Silver" ? "selected" : "" %>> Silver </option>
-                    <option value="gold" <%= productoAEditar.coleccion === "Gold" ? "selected" : "" %>> Gold </option>
+                    <option value="Steel" <%= productoAEditar.coleccion === "Steel" ? "selected" : "" %>> Steel </option>
+                    <option value="Silver" <%= productoAEditar.coleccion === "Silver" ? "selected" : "" %>> Silver </option>
+                    <option value="Gold" <%= productoAEditar.coleccion === "Gold" ? "selected" : "" %>> Gold </option>
                 </select>
             </fieldset>
 
