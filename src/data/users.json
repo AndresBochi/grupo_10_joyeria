@@ -1,21 +1,21 @@
 [
     {
-        "identificador": 1,
-        "nombre": "Stefania",
-        "apellido": "Méndez",
+        "id": 1,
+        "name": "Stefania",
+        "lastname": "Méndez",
         "email": "stefania.tm88@gmail.com",
-        "contrasenia": 12345678,
-        "categoria": "administrador",
-        "imagen": "images/users/foto-andres.jpg" 
+        "pasword": 12345678,
+        "country": "Argentina",
+        "avatar": "images/users/foto-andres.jpg" 
     },
 
     {
-        "identificador": 2,
-        "nombre": "Andres",
-        "apellido": "Bocchigliere",
+        "id": 2,
+        "name": "Andres",
+        "lastname": "Bocchigliere",
         "email": "elmaildeandresbochi@gmail.com",
-        "contrasenia": 87654321,
-        "categoria": "administrador",
-        "imagen": "images/users/foto-stefania.jpeg"
+        "password": 87654321,
+        "country": "Argentina",
+        "avatar": "images/users/foto-stefania.jpeg"
     }
 ]
