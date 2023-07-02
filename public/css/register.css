@@ -4,6 +4,7 @@ body {
   margin: 0;
   position: relative;
   background-color: whitesmoke;
+  min-height: 900px;
 }
 
 /* -------------- MAIN -------------- */
@@ -50,6 +51,7 @@ main {
   display: inline-block;
   margin-top: 1rem;
   margin-left: auto;
+  min-height: 300px;
 
 } 
 
@@ -61,6 +63,9 @@ main {
   text-align: center;
 }
 
+#foto{
+  border: 0.5px solid #3a251e;
+}
 .asterisco {
   color: rgb(226, 19, 19);
 }
@@ -110,6 +115,7 @@ input {
   border: 1px solid;
   padding: 10px;
   background-color: #e9967a;
+  margin-bottom: 1rem;
 }
 
 .inputCheckboxes {
@@ -127,11 +133,10 @@ input {
 
 /* -------------- MEDIA -------------- */
 
-@media (min-width: 475px) {
+@media (min-width: 500px) {
   
   footer {
-    position: fixed;
-    bottom: 0;
+    
     width: 100%;
   }
 

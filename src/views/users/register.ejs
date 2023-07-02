@@ -42,7 +42,7 @@
                             <div class="divImagen">
                                 <h3>Cargar Imagen</h3>
 
-                                <label for="imagen" id="labelImg">Imagen<span class="asterisco">*</span><img id="foto" alt=""/></label>
+                                <label for="imagen" id="labelImg"><img id="foto" alt=""/></label><span class="asterisco">*</span>
                                 <br>
                                 <input style="visibility: hidden;" id="imagen" name="imagen" type="file" accept=".jpg, .png, .gif" onchange="document.getElementById('foto').src = window.URL.createObjectURL(this.files[0])"
                                  required>
