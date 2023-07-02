@@ -6,7 +6,11 @@
         "email": "stefania.tm88@gmail.com",
         "contrasenia": 12345678,
         "categoria": "administrador",
+<<<<<<< HEAD
         "imagen": "images/users/foto-andres.jpg" 
+=======
+        "imagen": "images/users/foto-andres.jpg" /* Modificar ruta.  */
+>>>>>>> 14b4eec09a15e3f34d4f3f4d43e4c3b6010ccc29
     },
 
     {
