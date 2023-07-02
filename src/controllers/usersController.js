@@ -28,7 +28,7 @@ const usersController = {
       return res.render("register", {
         errors: {
           email: {
-            msg: "Este email ya está registrado", //no deja registrar a un nuevo usuario con el mismo mail
+            msg: "Este email ya está registrado", //no deja registrar a otro usuario con un mail que ya se encuentra registrado anteriormente
           },
         },
         oldData: req.body,
@@ -50,10 +50,7 @@ const usersController = {
   login: (req, res) => {
     res.render("users/login");
   },
-
-  login: (req, res) => {
-    return res.render("login");
-  },
+  
   loginProcess: (req, res) => {
     let userToLogin = User.findByField("email", req.body.email);
 
