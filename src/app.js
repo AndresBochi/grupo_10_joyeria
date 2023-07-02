@@ -13,8 +13,8 @@ app.set("views", path.resolve(__dirname, "views")); // Configuramos donde se enc
 
 // ** Middlewares **
 app.use(express.static(path.join(__dirname, '../public'))); // Habilitamos la carpeta public para ser accedida via http
-app.use(express.urlencoded({ extended: false })); // Para poder leer el body de los formularios
-app.use(express.json());
+app.use(express.urlencoded({ extended: false })); // Para poder capturar la información del body de los formularios
+app.use(express.json()); // Para poder capturar la información del body de los formularios
 app.use(methodOverride('_method')); // Para poder usar los métodos PUT y DELETE
 app.use(session( {secret: "Anastassia Joyas"} ));
 
@@ -29,6 +29,10 @@ const usersRouter = require("./routes/usersRouter.js")
 app.use("/", mainRouter);
 app.use("/productos", productsRouter);  
 app.use("/usuarios", usersRouter);
+
+app.use((req,res,next) => {
+    res.status(404).render("error404");
+})
 
 
 // Levantamos el servidor en el puerto 3000
