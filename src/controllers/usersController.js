@@ -95,6 +95,7 @@ const usersController = {
     });
   },
 
+//logout y redirijo al home
   logout: (req, res) => {
     res.clearCookie("userEmail");
     req.session.destroy();
