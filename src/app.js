@@ -8,8 +8,6 @@ const session = require('express-session'); //Requiero el paquete session
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');//************/
 const cookies = require('cookie-parser');//************************** */
 
-const session = require ('express-session');
-
 
 // ** express() **
 const app = express(); // Instanciamos Express y lo asignamos a la constante app
@@ -44,19 +42,6 @@ const usersRouter = require("./routes/usersRouter.js")
 app.use("/", mainRouter);
 app.use("/productos", productsRouter);  
 app.use("/usuarios", usersRouter);
-
-
-//****************************** */
-// Template Engine
-app.set('view engine', 'ejs');
-
-// Routers
-const mainRoutes = require('./routes/mainRoutes');
-const userRoutes = require('./routes/userRoutes');
-
-app.use('/', mainRoutes);
-app.use('/user', userRoutes);
-//************************************** */
 
 // Levantamos el servidor en el puerto 3000
 
