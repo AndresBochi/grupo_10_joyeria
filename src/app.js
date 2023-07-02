@@ -16,7 +16,6 @@ app.set("view engine", "ejs"); // Configuramos el motor de plantillas
 app.set("views", path.resolve(__dirname, "views")); // Configuramos donde se encuentran las vistas
 
 // ** Middlewares **
-app.use(userLoggedMiddleware); //**************** */
 app.use(cookies()); //******************** */
 app.use(express.static(path.join(__dirname, "../public"))); // Habilitamos la carpeta public para ser accedida via http
 app.use(express.urlencoded({ extended: false })); // Para poder leer el body de los formularios
@@ -30,6 +29,7 @@ app.use(
     saveUninitialized: false,
   })
 );
+app.use(userLoggedMiddleware); //**************** */
 
 // ** Rutas **
 
