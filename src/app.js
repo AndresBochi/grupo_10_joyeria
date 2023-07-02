@@ -29,7 +29,7 @@ app.use(
     saveUninitialized: false,
   })
 );
-/* app.use(userLoggedMiddleware); */
+app.use(userLoggedMiddleware);
 
 
 // ** Rutas **
