@@ -28,6 +28,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  justify-content: space-between;
   flex-direction: column;
 }
 
@@ -35,6 +36,29 @@ main {
   display: inline-block;
   margin-top: 1rem;
 
+}
+
+.info-inicio-sesion{
+  width: 100%;
+  display: inline-block;
+  margin-top: 1rem;
+
+}
+
+.divImagen{
+  width: 100%;
+  display: inline-block;
+  margin-top: 1rem;
+  margin-left: auto;
+
+} 
+
+#foto{
+  width: 70%;
+}
+
+#labelImg{
+  text-align: center;
 }
 
 .asterisco {
@@ -131,10 +155,21 @@ input {
 
   .info-inicio-sesion {
     margin-top: 1rem;
+    width: 30%;
+  }
+
+  .datos-personales{
+    width: 30%;
+  
   }
 
   .barrasInput{
     width: 30vw;
+  }
+
+  
+  .divImagen{
+    width: 30%;
   }
 
 }
