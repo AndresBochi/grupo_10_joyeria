@@ -6,6 +6,9 @@ const router = express.Router();
 // Multer (para cargar archivos)
 const uploadFile = require('../middlewares/multerMiddlewareProductos');
 
+// Middleware de autenticación de usuario
+const auth = require('../middlewares/authMiddleware');
+
 // Importamos el controlador de productos
 const productsController = require("../controllers/productsController.js")
 
@@ -19,18 +22,18 @@ router.get("/", productsController.index);
 router.get("/carrito", productsController.carrito);
 
 // Dar de alta un producto
-router.get("/crear", productsController.crear);
-router.post("/", uploadFile.single("imagen"), productsController.guardar);
+router.get("/crear",  productsController.crear);
+router.post("/", auth, uploadFile.single("imagen"), productsController.guardar);
 
 // Detalle de un producto
 router.get("/detalle/:numeroProducto", productsController.detalle);
 
 // Editar un producto
-router.get("/editar/:numeroProducto", productsController.editar);
-router.patch("/editar/:numeroProducto", productsController.actualizar);
+router.get("/editar/:numeroProducto", auth, productsController.editar);
+router.patch("/editar/:numeroProducto", auth, productsController.actualizar);
 
 // Eliminar un producto
-router.delete("/eliminar/:numeroProducto", productsController.eliminar);
+router.delete("/eliminar/:numeroProducto", auth, productsController.eliminar);
 
 // Exportamos la variable router ya con todas las rutas "guardadas", que se usará en app.js
 module.exports = router;

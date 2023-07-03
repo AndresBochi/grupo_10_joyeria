@@ -73,8 +73,10 @@ const usersController = {
   loginProcess: (req, res) => {
 
     let errors = validationResult(req);
+
     
-    if(errors.isEmpty()){
+    
+    if(errors.isEmpty()){ //Logica del express-validator
 
       let userToLogin = User.findByField("email", req.body.email);
 
