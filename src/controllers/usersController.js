@@ -68,6 +68,7 @@ const usersController = {
   login: (req, res) => {
     res.render("users/login");
   },
+  
 
   loginProcess: (req, res) => {
     let userToLogin = User.findByField("email", req.body.email);

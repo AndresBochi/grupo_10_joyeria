@@ -31,6 +31,7 @@ app.use(
 );
 app.use(userLoggedMiddleware);
 
+app.use(userLoggedMiddleware); //SOLUCIONAR PROBLEMA
 
 // ** Rutas **
 

@@ -178,5 +178,23 @@
   "email": "juancarlos@gmail.com",
   "password": "$2a$10$5VNX3/ASuusLO2Q6BVNlouauASwnA7BJXS8ogsxPngRm4HvrckyHq",
   "avatar": "default-image.png"
+ },
+ {
+  "id": 21,
+  "name": "asdasdaf",
+  "lastname": "mariano",
+  "documento": "2312345252",
+  "email": "juancarlos@gmail.com",
+  "password": "$2a$10$E7ULrh3I8zGVF8sq36rVceTTCBvEgPqS/xndaNUJDwqIJH5RHgIAW",
+  "avatar": "default-image.png"
+ },
+ {
+  "id": 22,
+  "name": "asdasdaf",
+  "lastname": "mariano",
+  "documento": "2312345252",
+  "email": "juancarlos@gmail.com",
+  "password": "$2a$10$m4CLrzFer4Z8Lve.K2zGtu1CTjyiLUBMHAAOydZtB/UUWDT0bCpNO",
+  "avatar": "1688377539266_img.jpg"
  }
 ]
