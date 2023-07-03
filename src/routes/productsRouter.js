@@ -4,7 +4,6 @@ const express = require("express");
 const router = express.Router();
 
 // Multer (para cargar archivos)
-
 const uploadFile = require('../middlewares/multerMiddlewareProductos');
 
 // Importamos el controlador de productos

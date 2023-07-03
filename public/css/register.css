@@ -135,6 +135,11 @@ input {
   width: 60vw;
 }
 
+#errores{
+
+  text-align: center;
+
+}
 /* -------------- MEDIA -------------- */
 
 @media (min-width: 500px) {

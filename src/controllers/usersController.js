@@ -12,38 +12,56 @@ const usersController = {
   register: (req, res) => {
     res.render("users/register");
   },
+
+  // Procesamos el pedido de creación de usuario
   processRegister: (req, res) => {
+
+    // Validaciones del BackEnd
     const resultValidation = validationResult(req);
 
     if (resultValidation.errors.length > 0) {
-      return res.render("/users/register", {
+      console.log("Usuario no creado");
+      res.render("users/register", { 
         errors: resultValidation.mapped(),
         oldData: req.body,
       });
     }
 
+    // Chequeo de existencia de contraseña
     let userInDB = User.findByField("email", req.body.email);
 
     if (userInDB) {
-      return res.render("register", {
+      console.log("Usuario ya existente");
+      res.render("users/register", {
         errors: {
           email: {
-            msg: "Este email ya está registrado", //no deja registrar a un nuevo usuario con el mismo mail
+            msg: "Este email ya se encuentra registrado", //no deja registrar a un nuevo usuario con el mismo mail
           },
         },
         oldData: req.body,
       });
     }
 
+    // Creación de Usuario Nuevo
     let userToCreate = {
-      ...req.body,
+      name: req.body.name,
+      lastname: req.body.lastName,
+      documento: req.body.documento,
+      email: req.body.email,
       password: bcryptjs.hashSync(req.body.password, 10), //encriptando password
-      imagen: req.file.filename,
+      avatar: req.file ? req.file.filename : "default-image.png",
     };
 
     let userCreated = User.create(userToCreate);
 
-    return res.redirect("/user/login");
+    /* let usuarioLogueado = req.session.userLogged;
+
+    return res.render("users/profile", {
+      usuarioLogueado: usuarioLogueado,
+    }); */
+
+    res.redirect("login")
+
   },
 
   // Creamos el metodo login que devuelve la ruta del login del usuario
@@ -67,7 +85,7 @@ const usersController = {
           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
         }
 
-        return res.redirect("/user/profile");
+        return res.redirect("/usuarios/profile");
       }
       return res.render("login", {
         errors: {
@@ -88,15 +106,17 @@ const usersController = {
   },
 
   profile: (req, res) => {
-    return res.render("profile", {
-      user: req.session.userLogged,
+    let usuarioLogueado = req.session.userLogged;
+
+    return res.render("users/profile", {
+      usuarioLogueado: usuarioLogueado,
     });
   },
 
 //logout y redirijo al home
   logout: (req, res) => {
     res.clearCookie("userEmail");
-    req.session.destroy();
+    req.session.destroy();  
     return res.redirect("/");
   },
 };

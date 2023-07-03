@@ -5,8 +5,6 @@ const routerUsers = express.Router();
 // Importamos el controlador de usuarios
 const usersController = require("../controllers/usersController.js");
 
-// En vez de app.get, utilizamos router.get. Esto va "guardando" en router las distintas rutas, que luego exportamos
-
 //Middlewares Session and register
 const uploadFile = require('../middlewares/multerMiddleware');
 const validations = require("../middlewares/validateRegisterMiddleware");
@@ -29,10 +27,10 @@ routerUsers.get('/login', guestMiddleware, usersController.login);
 routerUsers.post('/login', usersController.loginProcess);
 
 // Perfil de Usuario
-routerUsers.get("/profile/", authMiddleware, usersController.profile);
+routerUsers.get("/profile", authMiddleware, usersController.profile);
 
 // Proceso de Logout
-routerUsers.get("/logout/", usersController.logout);
+routerUsers.get("/logout", usersController.logout);
 
 // Exportamos la variable router ya con todas las rutas "guardadas", que se usará en app.js
 module.exports = routerUsers;

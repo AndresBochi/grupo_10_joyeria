@@ -15,7 +15,7 @@ const app = express(); // Instanciamos Express y lo asignamos a la constante app
 app.set("view engine", "ejs"); // Configuramos el motor de plantillas
 app.set("views", path.resolve(__dirname, "views")); // Configuramos donde se encuentran las vistas
 
-// ** Middlewares **
+// ** Middlewares Globales **
 app.use(cookies()); //******************** */
 app.use(express.static(path.join(__dirname, "../public"))); // Habilitamos la carpeta public para ser accedida via http
 app.use(express.urlencoded({ extended: false })); // Para poder leer el body de los formularios
@@ -47,6 +47,7 @@ app.use("/usuarios", usersRouter);
 // Error 404 - de ruta no encontrada -
 app.use((req,res,next) => {
     res.status(404).render("error404");
+    next();
 })
 
 

@@ -11,90 +11,103 @@
         <%- include('../partials/header.ejs') %>
 
             <main>
+                
+                <% if (locals && locals.errors) { %>
+                    <div id="errores">
+                        <h2>Lista de Error/es: </h2>
+                        <% for( let error in errors) { %>
+                            <p> - <%= errors[error].msg %></p>
+                        <% } %>
+                        
+                    </div>
+                <% } %>   
                 <div>
                     <i id="iconoUsuario" class="fa-solid fa-user"></i>
                     <h3 class="titulo">CREAR UNA CUENTA</h3>
                 </div>
                 <form  class="formulario" method="POST" action="/usuarios/registro" enctype="multipart/form-data">
                     <!--Para enviar el formulario a traves de POST-->
-                    <div>
-                        <div class="crear-cuenta">
+                    
+                    <div class="crear-cuenta">
 
-                            <div class="datos-personales">
-                                <h3>Datos personales</h3>
-                                
-                                    <label>Nombre <span class="asterisco">*</span></label>
-                                    <br>
-                                    <input class="barrasInput" type="text">
-                                    <br>
-
-                                    <label>Apellido <span class="asterisco">*</span></label>
-                                    <br>
-                                    <input class="barrasInput" type="text">
-                                    <br>
-
-                                    <label>Documento <span class="asterisco">*</span></label>
-                                    <br>
-                                    <input class="barrasInput" type="number">
-                                
-                            </div>
-
-                            <div class="divImagen">
-                                <h3>Cargar Imagen</h3>
-
-                                <label for="imagen" id="labelImg"><img id="foto" alt=""/></label><span class="asterisco">*</span>
-                                <br>
-                                <input style="visibility: hidden;" id="imagen" name="imagen" type="file" accept=".jpg, .png, .gif" onchange="document.getElementById('foto').src = window.URL.createObjectURL(this.files[0])"
-                                 required>
-                            </div>
+                        <div class="datos-personales">
+                            <h3>Datos personales</h3>
                             
-                            <div class="info-inicio-sesion">
-                                <h3>Información de inicio de sesión</h3>
+                                <label>Nombre <span class="asterisco">*</span></label>
+                                <br>
+                                <input class="barrasInput" type="text" name="name" value="<%= locals.oldData && oldData.name ? oldData.name : "" %>"> 
+                                <br>
+
+                                <label>Apellido <span class="asterisco">*</span></label>
+                                <br>
+                                <input class="barrasInput" type="text" name="lastName" value="<%= locals.oldData && oldData.lastName ? oldData.lastName : "" %>">
+                                <br>
+
+                                <label>Documento <span class="asterisco">*</span></label>
+                                <br>
+                                <input class="barrasInput" type="number" name="documento" value="<%= locals.oldData && oldData.documento ? oldData.documento : "" %>">
                                 
-                                    <label>Email <span class="asterisco">*</span></label>
-                                    <br>
-                                    <input class="barrasInput" type="email">
-                                    <br>
-
-                                    <label>Contraseña <span class="asterisco">*</span></label>
-                                    <br>
-                                    <input class="barrasInput" type="password">
-                                    <br>
-
-                                    <label>Confirmar contraseña <span class="asterisco">*</span></label>
-                                    <br>
-                                    <input class="barrasInput" type="password">
-                                
-                            </div>
-
-
+                            
                         </div>
 
-                        <div class="checkbox">
-                            <input class="inputCheckboxes" type="checkbox">
-                            <p class="textoCheckboxes">Acepto recibir información por e-mail sobre novedades, ofertas,
-                                descuentos, promociones y eventos.</p>
+                        <div class="divImagen">
+                            <h3>Cargar Imagen</h3>
+
+                            <label for="imagen" id="labelImg"><img id="foto" alt=""/></label><span class="asterisco">*</span>
+                            <br>
+                            <input style="visibility: hidden;" id="imagen" name="imagen" type="file" accept=".jpg, .png, .gif" onchange="document.getElementById('foto').src = window.URL.createObjectURL(this.files[0])"
+                                > <!-- required -->
+                        </div>
+                        
+                        <div class="info-inicio-sesion">
+                            <h3>Información de inicio de sesión</h3>
+                            
+                                <label>Email <span class="asterisco">*</span></label>
+                                <br>
+                                <input class="barrasInput" type="email" name="email" value="<%= locals.oldData && oldData.email ? oldData.email : "" %>">
+            
+                            
+                                <br>
+
+                                <label>Contraseña <span class="asterisco">*</span></label>
+                                <br>
+                                <input class="barrasInput" type="password" name="password">
+                                <br>
+
+                                <label>Confirmar contraseña <span class="asterisco">*</span></label>
+                                <br>
+                                <input class="barrasInput" type="password">
+                            
                         </div>
 
-                        <div class="checkbox">
-                            <input class="inputCheckboxes" type="checkbox">
-                            <p class="textoCheckboxes">Acepto los Términos y condiciones, y las Políticas de privacidad
-                                del sitio.</p>
-                        </div>
 
-                        <div class="botones">
-
-                            <div class="box-robot">
-                                <label>
-                                    <input type="checkbox">
-                                    No soy un robot
-                                </label>
-                            </div>
-
-
-                            <button class="boton-registro" type="submit">Crear cuenta</button> 
-                        </div>
                     </div>
+
+                    <div class="checkbox">
+                        <input class="inputCheckboxes" type="checkbox">
+                        <p class="textoCheckboxes">Acepto recibir información por e-mail sobre novedades, ofertas,
+                            descuentos, promociones y eventos.</p>
+                    </div>
+
+                    <div class="checkbox">
+                        <input class="inputCheckboxes" type="checkbox">
+                        <p class="textoCheckboxes">Acepto los Términos y condiciones, y las Políticas de privacidad
+                            del sitio.</p>
+                    </div>
+
+                    <div class="botones">
+
+                        <div class="box-robot">
+                            <label>
+                                <input type="checkbox">
+                                No soy un robot
+                            </label>
+                        </div>
+
+
+                        <button class="boton-registro" type="submit">Crear cuenta</button> 
+                    </div>
+                    
                 </form>
 
             </main>
