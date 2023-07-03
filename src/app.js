@@ -29,6 +29,8 @@ app.use(
     saveUninitialized: false,
   })
 );
+app.use(userLoggedMiddleware);
+
 app.use(userLoggedMiddleware); //SOLUCIONAR PROBLEMA
 
 // ** Rutas **
@@ -42,6 +44,12 @@ const usersRouter = require("./routes/usersRouter.js");
 app.use("/", mainRouter);
 app.use("/productos", productsRouter);
 app.use("/usuarios", usersRouter);
+
+// Error 404 - de ruta no encontrada -
+app.use((req,res,next) => {
+    res.status(404).render("error404");
+})
+
 
 // Levantamos el servidor en el puerto 3000
 

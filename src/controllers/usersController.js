@@ -16,7 +16,7 @@ const usersController = {
     const resultValidation = validationResult(req);
 
     if (resultValidation.errors.length > 0) {
-      return res.render("register", {
+      return res.render("/users/register", {
         errors: resultValidation.mapped(),
         oldData: req.body,
       });
@@ -38,7 +38,7 @@ const usersController = {
     let userToCreate = {
       ...req.body,
       password: bcryptjs.hashSync(req.body.password, 10), //encriptando password
-      avatar: req.file.filename,
+      imagen: req.file.filename,
     };
 
     let userCreated = User.create(userToCreate);
@@ -51,6 +51,7 @@ const usersController = {
     res.render("users/login");
   },
   
+
   loginProcess: (req, res) => {
     let userToLogin = User.findByField("email", req.body.email);
 
@@ -86,6 +87,7 @@ const usersController = {
       },
     });
   },
+
   profile: (req, res) => {
     return res.render("profile", {
       user: req.session.userLogged,

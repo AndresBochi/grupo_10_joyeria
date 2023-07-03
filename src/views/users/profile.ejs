@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Incluimos el Head y le pasamos el título de la página y la hoja de estilo correspondiente -->
+  <%- include('partials/head.ejs', {tituloPagina: "Anastassia Joyas - Perfil", hojaEstilo: "login"}) %>
+
+  <body>
+    <!-- Incluimos el Header -->
+    <%- include('partials/header.ejs') %>
+
+    <div style="margin-top: 40px">
+      <h2>Hola <%= user.name %></h2>
+      <img src="/images/avatars/<%= user.avatar %> " />
+      <br />
+      <br />
+      <div><%= user.email %></div>
+    </div>
+
+    <!-- Incluimos el Footer -->
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

@@ -4,6 +4,7 @@ body {
   margin: 0;
   position: relative;
   background-color: whitesmoke;
+  min-height: 900px;
 }
 
 /* -------------- MAIN -------------- */
@@ -28,6 +29,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  justify-content: space-between;
   flex-direction: column;
 }
 
@@ -37,6 +39,33 @@ main {
 
 }
 
+.info-inicio-sesion{
+  width: 100%;
+  display: inline-block;
+  margin-top: 1rem;
+
+}
+
+.divImagen{
+  width: 100%;
+  display: inline-block;
+  margin-top: 1rem;
+  margin-left: auto;
+  min-height: 300px;
+
+} 
+
+#foto{
+  width: 70%;
+}
+
+#labelImg{
+  text-align: center;
+}
+
+#foto{
+  border: 0.5px solid #3a251e;
+}
 .asterisco {
   color: rgb(226, 19, 19);
 }
@@ -86,6 +115,7 @@ input {
   border: 1px solid;
   padding: 10px;
   background-color: #e9967a;
+  margin-bottom: 1rem;
 }
 
 .inputCheckboxes {
@@ -103,11 +133,10 @@ input {
 
 /* -------------- MEDIA -------------- */
 
-@media (min-width: 475px) {
+@media (min-width: 500px) {
   
   footer {
-    position: fixed;
-    bottom: 0;
+    
     width: 100%;
   }
 
@@ -131,10 +160,21 @@ input {
 
   .info-inicio-sesion {
     margin-top: 1rem;
+    width: 30%;
+  }
+
+  .datos-personales{
+    width: 30%;
+  
   }
 
   .barrasInput{
     width: 30vw;
+  }
+
+  
+  .divImagen{
+    width: 30%;
   }
 
 }
