@@ -1,0 +1,67 @@
+html {
+    height: 100%;
+}
+
+/* -------------- BODY -------------- */
+
+body {
+    margin: 0;
+    position: relative;
+    background-color: whitesmoke;
+    min-height: 850px;
+}
+
+/* -------------- MAIN -------------- */
+
+main{
+    background-color: whitesmoke;
+}
+
+#imagenUsuario{
+    width: 50vw;
+    border-radius: 1px solid #3A251E ;
+    
+}
+
+#logOut{
+    margin-bottom: 2rem;
+    
+    text-align: center;
+}
+
+#usuario{
+    margin: 1rem;
+    
+    text-align: center;
+}
+
+#contenedor{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    min-height: 50vh;
+}
+
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* -------------- MEDIA -------------- */
+
+@media (min-width: 475px) {
+
+   
+    #imagenUsuario{
+        width: 25vw;
+        
+    }
+
+}
+
+@media (max-width: 414px) {
+  
+  
+  
+}
