@@ -5,19 +5,7 @@ const router = express.Router();
 
 // Multer (para cargar archivos)
 
-const multer = require('multer');
-const path = require('path')
-
-const storage = multer.diskStorage({
-    destination : function (req, file, cb){
-        cb(null, "public/images/products");
-    },
-    filename: function (req, file, cb){
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname) );
-    }
-});
-
-const uploadFile = multer ({storage: storage});
+const uploadFile = require('../middlewares/multerMiddlewareProductos');
 
 // Importamos el controlador de productos
 const productsController = require("../controllers/productsController.js")
