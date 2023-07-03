@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const User = {
 
-	fileName: './data/users.json',
+	fileName: './src/data/users.json',
     
 //Metodo para buscar todos los usuarios
 	getData: function () {
