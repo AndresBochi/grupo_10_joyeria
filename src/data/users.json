@@ -196,5 +196,14 @@
   "email": "juancarlos@gmail.com",
   "password": "$2a$10$m4CLrzFer4Z8Lve.K2zGtu1CTjyiLUBMHAAOydZtB/UUWDT0bCpNO",
   "avatar": "1688377539266_img.jpg"
+ },
+ {
+  "id": 23,
+  "name": "pantera",
+  "lastname": "rosa",
+  "documento": "36562897",
+  "email": "pantera@rosa.com",
+  "password": "$2a$10$t8iiHQDn/LmuUDdjxiaAD.03Ral09kJD7i1dSLzuAo5xa1VE6q81m",
+  "avatar": "1688397199049_img.jpg"
  }
 ]
