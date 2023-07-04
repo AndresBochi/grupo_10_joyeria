@@ -71,39 +71,49 @@ const usersController = {
   
 
   loginProcess: (req, res) => {
-    let userToLogin = User.findByField("email", req.body.email);
 
-    if (userToLogin) {
-      let isOkThePassword = bcryptjs.compareSync(
-        req.body.password,
-        userToLogin.password
-      );
-      if (isOkThePassword) {
-        delete userToLogin.password;
-        req.session.userLogged = userToLogin;
+    let errors = validationResult(req);
 
-        if (req.body.remember_user) {
-          res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
+    
+    
+    if(errors.isEmpty()){ //Logica del express-validator
+
+      let userToLogin = User.findByField("email", req.body.email);
+
+      if (userToLogin) {
+        let isOkThePassword = bcryptjs.compareSync(
+          req.body.password,
+          userToLogin.password
+        );
+        if (isOkThePassword) {
+          delete userToLogin.password;
+          req.session.userLogged = userToLogin;
+
+          if (req.body.remember_user) {
+            res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
+          }
+
+          return res.redirect("/usuarios/profile");
         }
-
-        return res.redirect("/usuarios/profile");
-      }
-      return res.render("login", {
-        errors: {
-          email: {
-            msg: "Las credenciales son inválidas",
+        return res.render("users/login", {
+          errors: {
+            email: {
+              msg: "La contraseña es incorrecta",
+            },
           },
-        },
-      });
+        });
     }
 
-    return res.render("login", {
+    return res.render("users/login", {
       errors: {
         email: {
-          msg: "No se encuentra este email en nuestra base de datos",
+          msg: "No es un usuario registrado en nuestra base de datos",
         },
       },
     });
+    }
+
+    
   },
 
   profile: (req, res) => {

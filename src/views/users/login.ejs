@@ -19,20 +19,28 @@
                 </div>
                 <P class="inicio-sesion">Para iniciar sesión ingresá tu email y contraseña.</P>
 
-                <form class="formulario">
+                <form class="formulario" action="/usuarios/login" method="POST">
                     <label>E-mail</label>
                     <br>
-                    <input type="email">
+                    <input type="email" name="email">
                     <br>
 
                     <label>Contraseña</label>
                     <br>
-                    <input type="password">
+                    <input type="password" name="password">
 
                     <br>
                     <label for="recordar">Recordarme</label>
                     <input type="checkbox" id="recordar" name="recordar">
 
+                    <% if (locals && locals.errors) { %>
+                        <div id="errores">
+                            <% for( let error in errors) { %>
+                                <p style="color: rgb(136, 8, 8); font-weight: bold;"> - <%= errors[error].msg %> -</p>
+                            <% } %>
+                            
+                        </div>
+                    <% } %>   
                     <br>
                     <br>
                     <p id="textoOlvidaste" >Olvidaste tu contraseña?</p>

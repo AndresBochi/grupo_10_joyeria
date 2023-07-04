@@ -18,28 +18,22 @@
   "avatar": "foto-stefania.jpeg"
  },
  {
-  "id": 3,
-  "name": "",
-  "lastname": "",
-  "documento": "",
-  "email": "",
-  "password": "$2a$10$0q27U14qPYxWTF1VXsnmS.NGSeZnK7HbVRXfuZixnL5nG/T0U9SwS",
-  "avatar": "default-image.png"
- },
- {
   "id": 4,
-  "name": "A",
-  "lastname": "AAA",
-  "documento": "123123123",
-  "email": "ce123123123sar.britez@gmail.com",
-  "password": "$2a$10$.Nd9.Dp9W8Ze5Y5Gi4mVnOUiDKJgKvuLbIbvwCmzNRiPezyjYfyCK",
-  "avatar": "1688375269382_img.jpg"
+  "name": "Juan",
+  "lastname": "Cortez",
+  "documento": "123456789",
+  "email": "cesar.britez@gmail.com",
+  "password": "$2a$10$oI2kmuPdmVvxq6Iw4xomIel3/mVxLZJrLEfAhoYqNuJgXD.sDQEuS",
+  "avatar": "1688416023658_img.png"
  },
  {
   "id": 5,
-  "name": "",
-  "lastname": "AAA",
+  "name": "Augusto",
+  "lastname": "Abad",
   "documento": "123123123",
+  "email": "nagalan@hotmail.com",
+  "password": "$2a$10$v4q4XAIA/Osl1v/eoYnJh.vwy2i/fyvdQOiqe0i0FQ15/Q63zlVbq",
+  "avatar": "1688418265219_img.jpg",
   "email": "ce123123123sar.britez@gmail.com",
   "password": "$2a$10$b/s2Y2Q9rsFs0JTH8/uBHuFC2TBY4Tt8BpNGfkDaZlqNB6b2jVJpi",
   "avatar": "default-image.png"
