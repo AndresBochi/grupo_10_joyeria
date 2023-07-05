@@ -6,7 +6,7 @@
   "documento": 111111111,
   "email": "stefania.tm88@gmail.com",
   "pasword": "12345678",
-  "avatar": "foto-andres.jpg"
+  "avatar": "foto-stefania.jpg"
  },
  {
   "id": 2,
@@ -15,24 +15,33 @@
   "documento": 99999999,
   "email": "elmaildeandresbochi@gmail.com",
   "password": "87654321",
-  "avatar": "foto-stefania.jpeg"
+  "avatar": "foto-andres.jpeg"
+ },
+ {
+  "id": 3,
+  "name": "Augusto",
+  "lastname": "Costa",
+  "documento": "123123123",
+  "email": "nagalan@hotmail.com",
+  "password": "$2a$10$GahTi9dQ/DkL32a8k0Dbo.yNQyZ6MrTeMXzPFLHgDDNzkcSYSYsZC",
+  "avatar": "1688435269727_img.jpg"
  },
  {
   "id": 4,
-  "name": "Juan",
-  "lastname": "Cortez",
-  "documento": "123456789",
-  "email": "cesar.britez@gmail.com",
-  "password": "$2a$10$oI2kmuPdmVvxq6Iw4xomIel3/mVxLZJrLEfAhoYqNuJgXD.sDQEuS",
-  "avatar": "1688416023658_img.png"
+  "name": "Asdf",
+  "lastname": "dff",
+  "documento": "123123",
+  "email": "nagalan@hotmail.com",
+  "password": "$2a$10$tXsGcBAphZzVd03cw42cleHYVL/JoHzl3m3LEXqfm4f9FCYpAgTRK",
+  "avatar": "1688447350676_img.jpg"
  },
  {
   "id": 5,
-  "name": "Augusto",
-  "lastname": "Abad",
-  "documento": "123123123",
-  "email": "nagalan@hotmail.com",
-  "password": "$2a$10$v4q4XAIA/Osl1v/eoYnJh.vwy2i/fyvdQOiqe0i0FQ15/Q63zlVbq",
-  "avatar": "1688418265219_img.jpg"
+  "name": "Asdf",
+  "lastname": "dff",
+  "documento": "123123",
+  "email": "cesar.britez@gmail.com",
+  "password": "$2a$10$solJdEsiej8O4udk9hCvRebTAiPpVemvRVDujzMbYATM96ZhfYhvy",
+  "avatar": "1688447367222_img.jpg"
  }
 ]

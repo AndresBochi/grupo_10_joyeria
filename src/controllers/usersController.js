@@ -6,6 +6,10 @@ const { validationResult } = require("express-validator");
 //Requiero el User de la carpeta models
 const User = require("../models/User");
 
+// DATABASE **************************
+  // const db = require("../database/models/index"); // Requerimos la base de datos
+// ***********************************
+
 // Creamos el controlador con sus metodos
 const usersController = {
   // Creamos el metodo register que devuelve la ruta del registro del usuario
@@ -30,6 +34,8 @@ const usersController = {
     // Chequeo de existencia de contraseña
     let userInDB = User.findByField("email", req.body.email);
 
+    
+
     if (userInDB) {
       console.log("Usuario ya existente");
       res.render("users/register", {
@@ -52,13 +58,11 @@ const usersController = {
       avatar: req.file ? req.file.filename : "default-image.png",
     };
 
-    let userCreated = User.create(userToCreate);
 
-    /* let usuarioLogueado = req.session.userLogged;
 
-    return res.render("users/profile", {
-      usuarioLogueado: usuarioLogueado,
-    }); */
+    let userCreated = User.create(userToCreate); 
+
+    // Loguearse e ir al profile!!!
 
     res.redirect("login")
 
@@ -89,7 +93,7 @@ const usersController = {
           delete userToLogin.password;
           req.session.userLogged = userToLogin;
 
-          if (req.body.remember_user) {
+          if (req.body.recordar != undefined) {
             res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
           }
 

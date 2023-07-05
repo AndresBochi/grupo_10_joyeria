@@ -9,16 +9,16 @@
 
     <div id="contenedor" >
       <h2>Hola <%= usuarioLogueado.name %>!</h2>
-      <img src="/images/users/<%= usuarioLogueado.avatar %> " id="imagenUsuario" />
-      <br />
-      <br />
-      <h3 id="usuario">Usuario: <%= usuarioLogueado.email %></h3>
-      
-      
 
-      <div>
-        <a href="/usuarios/logout/" id="logOut">Cerrar Sesión</a>
+      <div id="tarjeta">
+        <img src="/images/users/<%= usuarioLogueado.avatar %> " id="imagenUsuario" />
+      <br />
+      <br />
+      <h3 id="usuario"><%= usuarioLogueado.email %></h3>
       </div>
+
+      <a href="/usuarios/logout/" id="logOut">Cerrar Sesión</a>
+      
     </div>
 
     <!-- Incluimos el Footer -->
