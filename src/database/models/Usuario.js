@@ -19,7 +19,9 @@ module.exports = function (sequelize, dataTypes){
         },
         email: {
             type: dataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            unique: true
+
         },
         password: {
             type: dataTypes.STRING,
