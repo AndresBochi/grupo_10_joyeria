@@ -30,7 +30,7 @@ app.use(
   })
 );
 
-app.use(userLoggedMiddleware); //SOLUCIONAR PROBLEMA
+app.use(userLoggedMiddleware); // !!!
 
 // ** Rutas **
 

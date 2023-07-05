@@ -20,19 +20,22 @@ main{
 #imagenUsuario{
     width: 50vw;
     border-radius: 1px solid #3A251E ;
+    border-radius: 35%;
+
     
 }
 
 #logOut{
+    margin-top: 2rem;
     margin-bottom: 2rem;
     color: rgb(136, 8, 8);
     text-align: center;
 }
 
 #usuario{
-    margin: 1rem;
-    
     text-align: center;
+    display: inline-block;
+    font-size: 18px;
 }
 
 #contenedor{
@@ -48,6 +51,19 @@ footer{
     bottom: 0;
 }
 
+#tarjeta{
+    width: 60%;
+    border: 1px solid #3A251E ;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    border-bottom-right-radius: 20px ;
+    box-shadow: 8px 8px 7px #3A251E ;
+    background-color: #E9967A;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+
+
 /* -------------- MEDIA -------------- */
 
 @media (min-width: 475px) {
@@ -55,6 +71,11 @@ footer{
    
     #imagenUsuario{
         width: 25vw;
+        
+    }
+
+    #tarjeta{
+        width: 30%;
         
     }
 
