@@ -58,9 +58,9 @@ const productsController = {
             name: req.body.name,
             description: req.body.description,
             image: req.file ? req.file.filename : "default-image.png",
-            category: req.body.category,
-            material: req.body.material,
-            coleccion: req.body.coleccion,
+            category_id: req.body.category,
+            material_id: req.body.material,
+            collection_id: req.body.coleccion,
             precio: req.body.precio,
         })
         .then(()=>{
@@ -85,9 +85,9 @@ const productsController = {
 			name: req.body.name, 
             description: req.body.description,
             image: productoSinEdicion.image, // MODIFICAR - HAY QUE USAR MULTER !!!!!!!!
-			category: req.body.category,
-			material: req.body.material,
-			coleccion: req.body.coleccion,
+			category_id: req.body.category,
+			material_id: req.body.material,
+			collection_id: req.body.coleccion,
             precio: req.body.precio
         }, {where:{id : req.params.numeroProducto}})
         .then(()=>{

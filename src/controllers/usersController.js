@@ -35,7 +35,7 @@ const usersController = {
 
     db.User.findOne({where: {email: req.body.email}})
       .then(usuario =>{
-        if (userInDB) {
+        if (usuario) {
           console.log("Usuario ya existente");
           res.render("users/register", {
             errors: {
@@ -46,27 +46,30 @@ const usersController = {
             oldData: req.body,
           });
         }
-        // Creación de Usuario Nuevo
-        let usuarioACrear = {
-          name: req.body.name,
-          lastname: req.body.lastName,
-          documento: req.body.documento,
-          email: req.body.email,
-          password: bcryptjs.hashSync(req.body.password, 10), //encriptando password
-          avatar: req.file ? req.file.filename : "default-image.png",
-        };
-
-        db.User.create(usuarioACrear)
-          .then(usuarioCreado=>{
-            return res.redirect("login")
-          })
-          .catch((error)=>{
-            console.log(error);
-          })
+        
       })
       .catch((error) =>{
         console.log(error);
+    })
+
+    // Creación de Usuario Nuevo
+    let usuarioACrear = {
+      name: req.body.name,
+      lastname: req.body.lastName,
+      documento: req.body.documento,
+      email: req.body.email,
+      password: bcryptjs.hashSync(req.body.password, 10), //encriptando password
+      avatar: req.file ? req.file.filename : "default-image.png",
+    };
+
+    db.User.create(usuarioACrear)
+      .then(usuarioCreado=>{
+        return res.redirect("login")
       })
+      .catch((error)=>{
+        console.log(error);
+      })
+
   },
 
   // Creamos el metodo login que devuelve la ruta del login del usuario
@@ -112,6 +115,8 @@ const usersController = {
       }}).catch((error)=>{console.log(error)})
 
       
+    }else{
+      console.log(errors);
     }
 
     return res.render("users/login", {

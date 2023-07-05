@@ -7,9 +7,14 @@ const mainController = {
     // Creamos el metodo index que devuelve la ruta del home
     index: (req, res) => {
 
-        // db.
-
-        res.render("index", {productosDeCadaColeccion: productosDeCadaColeccion});
+        db.Product.findAll()
+        .then(productos =>{
+            res.render("index", {productosDeCadaColeccion: productos});
+        })
+        .catch((error)=>{
+            res.send(error)
+        })
+        
         
     }
     

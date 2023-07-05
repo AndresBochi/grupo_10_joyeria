@@ -23,7 +23,7 @@ router.get("/carrito", productsController.carrito);
 
 // Dar de alta un producto
 router.get("/crear",  productsController.crear);
-router.post("/", auth, uploadFile.single("imagen"), productsController.guardar);
+router.post("/", /* auth, */ uploadFile.single("imagen"), productsController.guardar);
 
 // Detalle de un producto
 router.get("/detalle/:numeroProducto", productsController.detalle);
