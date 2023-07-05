@@ -18,17 +18,28 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.STRING,
         },
         category_id: {
-            type: dataTypes.INT,
-            
+            type: dataTypes.INTEGER,
+            references:{
+                model: "Category",
+                key: "id" 
+            } 
         },
         material_id: {
-            type: dataTypes.INT,
+            type: dataTypes.INTEGER,
+            references:{
+                model: "Material",
+                key: "id" 
+            } 
         },
         collection_id: {
-            type: dataTypes.INT,
+            type: dataTypes.INTEGER,
+            references:{
+                model: "Collection",
+                key: "id" 
+            } 
         },
         precio: {
-            type: dataTypes.INT,
+            type: dataTypes.INTEGER,
         }  
 
     };
@@ -47,22 +58,19 @@ module.exports = function (sequelize, dataTypes){
         Product.belongsTo(models.Category, {
             foreignKey: "category_id",
             as: "genero"}
-        )
-    }
-     
-    Product.associate= function(models){
+        ),
         Product.belongsTo(models.Material, {
             foreignKey: "material_id",
             as: "material"}
-        )
-    }
-    
-    Product.associate= function(models){
+        ),
         Product.belongsTo(models.Collection, {
             foreignKey: "collection_id",
             as: "coleccion"}
         )
+
+
     }
+     
 
     return Product;
 }

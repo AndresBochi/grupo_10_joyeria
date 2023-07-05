@@ -1,14 +1,12 @@
 //Para encriptar password
 const bcryptjs = require("bcryptjs");
-const path = require("path");
 const { validationResult } = require("express-validator");
 
-//Requiero el User de la carpeta models
-const User = require("../models/User");
-
 // DATABASE **************************
-  // const db = require("../database/models/index"); // Requerimos la base de datos
-// ***********************************
+
+//Requiero el User de la carpeta models
+/* const User = require("../models/User");  */// ******************
+const db = require("../database/models/index"); // Requerimos la base de datos
 
 // Creamos el controlador con sus metodos
 const usersController = {
@@ -31,41 +29,44 @@ const usersController = {
       });
     }
 
+
     // Chequeo de existencia de contraseña
-    let userInDB = User.findByField("email", req.body.email);
+    /* let userInDB = User.findByField("email", req.body.email); */
 
-    
+    db.User.findOne({where: {email: req.body.email}})
+      .then(usuario =>{
+        if (userInDB) {
+          console.log("Usuario ya existente");
+          res.render("users/register", {
+            errors: {
+              email: {
+                msg: "Este email ya se encuentra registrado", //no deja registrar a un nuevo usuario con el mismo mail
+              },
+            },
+            oldData: req.body,
+          });
+        }
+        // Creación de Usuario Nuevo
+        let usuarioACrear = {
+          name: req.body.name,
+          lastname: req.body.lastName,
+          documento: req.body.documento,
+          email: req.body.email,
+          password: bcryptjs.hashSync(req.body.password, 10), //encriptando password
+          avatar: req.file ? req.file.filename : "default-image.png",
+        };
 
-    if (userInDB) {
-      console.log("Usuario ya existente");
-      res.render("users/register", {
-        errors: {
-          email: {
-            msg: "Este email ya se encuentra registrado", //no deja registrar a un nuevo usuario con el mismo mail
-          },
-        },
-        oldData: req.body,
-      });
-    }
-
-    // Creación de Usuario Nuevo
-    let userToCreate = {
-      name: req.body.name,
-      lastname: req.body.lastName,
-      documento: req.body.documento,
-      email: req.body.email,
-      password: bcryptjs.hashSync(req.body.password, 10), //encriptando password
-      avatar: req.file ? req.file.filename : "default-image.png",
-    };
-
-
-
-    let userCreated = User.create(userToCreate); 
-
-    // Loguearse e ir al profile!!!
-
-    res.redirect("login")
-
+        db.User.create(usuarioACrear)
+          .then(usuarioCreado=>{
+            return res.redirect("login")
+          })
+          .catch((error)=>{
+            console.log(error);
+          })
+      })
+      .catch((error) =>{
+        console.log(error);
+      })
   },
 
   // Creamos el metodo login que devuelve la ruta del login del usuario
@@ -82,30 +83,35 @@ const usersController = {
     
     if(errors.isEmpty()){ //Logica del express-validator
 
-      let userToLogin = User.findByField("email", req.body.email);
 
-      if (userToLogin) {
-        let isOkThePassword = bcryptjs.compareSync(
-          req.body.password,
-          userToLogin.password
-        );
-        if (isOkThePassword) {
-          delete userToLogin.password;
-          req.session.userLogged = userToLogin;
+      /* let userToLogin = User.findByField("email", req.body.email); */
+      db.User.findOne({where: {email: req.body.email}})
+        .then((userToLogin)=>{
+          if (userToLogin) {
+            let isOkThePassword = bcryptjs.compareSync(
+              req.body.password,
+              userToLogin.password
+            );
+            if (isOkThePassword) {
+              delete userToLogin.password;
+              req.session.userLogged = userToLogin;
+    
+              if (req.body.recordar != undefined) {
+                res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
+              }
+    
+              return res.redirect("/usuarios/profile");
+            }
+            return res.render("users/login", {
+              errors: {
+                email: {
+                  msg: "La contraseña es incorrecta",
+                },
+              },
+            });
+      }}).catch((error)=>{console.log(error)})
 
-          if (req.body.recordar != undefined) {
-            res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
-          }
-
-          return res.redirect("/usuarios/profile");
-        }
-        return res.render("users/login", {
-          errors: {
-            email: {
-              msg: "La contraseña es incorrecta",
-            },
-          },
-        });
+      
     }
 
     return res.render("users/login", {
@@ -115,9 +121,6 @@ const usersController = {
         },
       },
     });
-    }
-
-    
   },
 
   profile: (req, res) => {

@@ -23,25 +23,7 @@
   "lastname": "Costa",
   "documento": "123123123",
   "email": "nagalan@hotmail.com",
-  "password": "$2a$10$GahTi9dQ/DkL32a8k0Dbo.yNQyZ6MrTeMXzPFLHgDDNzkcSYSYsZC",
-  "avatar": "1688435269727_img.jpg"
- },
- {
-  "id": 4,
-  "name": "Asdf",
-  "lastname": "dff",
-  "documento": "123123",
-  "email": "nagalan@hotmail.com",
-  "password": "$2a$10$tXsGcBAphZzVd03cw42cleHYVL/JoHzl3m3LEXqfm4f9FCYpAgTRK",
-  "avatar": "1688447350676_img.jpg"
- },
- {
-  "id": 5,
-  "name": "Asdf",
-  "lastname": "dff",
-  "documento": "123123",
-  "email": "cesar.britez@gmail.com",
-  "password": "$2a$10$solJdEsiej8O4udk9hCvRebTAiPpVemvRVDujzMbYATM96ZhfYhvy",
-  "avatar": "1688447367222_img.jpg"
+  "password": "$2a$10$xUVqVqoX.jESxUqZU99gn.hF5iyl6KmZc0BrLxyaKdDeoR.S8sp/m",
+  "avatar": "1688561299995_img.jpg"
  }
 ]
