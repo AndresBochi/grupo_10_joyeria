@@ -35,6 +35,25 @@ router.patch("/editar/:numeroProducto", auth, uploadFile.single("imagen"), produ
 // Eliminar un producto
 router.delete("/eliminar/:numeroProducto", auth, productsController.eliminar);
 
+
+
+/*
+app.get("/",productsController.list); // Listado de productos
+
+app.get("/:id",productsController.show); // Vista del detalle de un producto
+
+
+
+
+*/
+
+
+
+
+
+
+
+
 // Exportamos la variable router ya con todas las rutas "guardadas", que se usará en app.js
 module.exports = router;
 

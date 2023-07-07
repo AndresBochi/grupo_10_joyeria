@@ -22,6 +22,25 @@ routerUsers.post(
   usersController.processRegister
 );
 
+/*
+// API
+app.get("/", productsController.listUser) // Listado de productos
+
+app.get("/:id", productsController.showUser) // Vista del detalle de un producto
+
+module.exports = app;
+
+*/
+
+
+
+
+
+
+
+
+
+
 // Procesa el pedido get con ruta /login
 routerUsers.get('/login', guestMiddleware, usersController.login);
 // Procesar el login

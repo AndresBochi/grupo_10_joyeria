@@ -148,5 +148,68 @@ const usersController = {
   },
 };
 
+/*
+//**API**
+const DB = require('../src/models');
+const Op = DB.Sequelize.Op
+
+
+module.exports = {
+  listUser: async (req, res) => {
+        let Users = await DB.User.findAll();
+
+        return res.json({
+            meta: {
+                status: 200,
+                url: '/api/users/',
+                count: Users.length
+            },
+            data: Users.map(Usuario => {
+                return {
+                    id: User.id,
+                    nombre: User.nombre,
+                    email: User.email,
+                    url: `http://localhost:3000/api/users/${Usuario.id}`
+                }
+            })
+        })
+    },
+
+    // Muestra el producto por ID
+
+    showUser: async (req, res) => { 
+        let User = await DB.User.findByPk(req.params.id);
+
+        let detalleUsuario = {
+            id: User.id,
+            nombre: User.nombre,
+            apellido: User.apellido,
+            email: User.email,
+            foto : `http://localhost:3000/images/users/${Usuario.foto}`
+        }
+        if (req.params.id >= 0) {
+            return res.json({
+                meta: {
+                    status: 200,
+                    url: '/api/users/' + req.params.id,
+                    listUser: '/api/users/'
+                },
+                data: detalleUsuario
+            });
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+*/
+
 // Exportamos el controlador
 module.exports = usersController;

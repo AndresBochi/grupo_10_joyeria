@@ -1,5 +1,14 @@
 [
  {
+<<<<<<< HEAD
+  "id": 23,
+  "name": "pantera",
+  "lastname": "rosa",
+  "documento": "36562897",
+  "email": "pantera@rosa.com",
+  "password": "$2a$10$t8iiHQDn/LmuUDdjxiaAD.03Ral09kJD7i1dSLzuAo5xa1VE6q81m",
+  "avatar": "1688397199049_img.jpg"
+=======
   "id": 1,
   "name": "Stefania",
   "lastname": "Méndez",
@@ -25,5 +34,6 @@
   "email": "nagalan@hotmail.com",
   "password": "$2a$10$xUVqVqoX.jESxUqZU99gn.hF5iyl6KmZc0BrLxyaKdDeoR.S8sp/m",
   "avatar": "1688561299995_img.jpg"
+>>>>>>> 5e7539853bef5389c0d4bc17248b4680258530ec
  }
 ]
