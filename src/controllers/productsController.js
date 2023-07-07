@@ -3,7 +3,6 @@ const fs = require('fs'); // Requerimos el modulo nativo de Node File System
 
 /* const rutaProductosJson = path.join(__dirname, '../data/products.json'); */ // Guardamos la ruta del archivo JSON donde esta la lista de productos en una variable
 let db = require("../database/models"); // Base de Datos
-const Op = db.Sequelize.Op;
 
 // Creamos el objeto literal con los métodos a exportar
 const productsController = {
@@ -83,7 +82,7 @@ const productsController = {
         db.Product.update ( {
 			name: req.body.name, 
             description: req.body.description,
-            image: req.file ? req.file.filename : req.body.image, // MODIFICAR - HAY QUE USAR MULTER !!!!!!!!
+            image: req.file ? req.file.filename : req.body.image,
 			category_id: req.body.category,
 			material_id: req.body.material,
 			collection_id: req.body.coleccion,
@@ -111,61 +110,4 @@ const productsController = {
 
 }
 
-
-//Mas arriba requiero el modelo de productos
-const DB = require('../src/models');
-const Op = DB.Sequelize.Op
-
-//**APIS**
-
-
-
-module.exports = {
-    list: async (req, res) => {
-        let Products = await DB.Product.findAll({include:["categoria"]});
-
-        return res.json({
-            meta: {
-                status: 200,
-                url: './controllers/api/products/',
-                count: Products.length
-            },
-            data: Products.map(producto => {
-                return {
-                    id: Product.id,
-                    nombre: Product.nombre,
-                    descripcion: Product.descripcion,
-                    categoria: Product.categoria,
-                    url: `http://localhost:3000/api/products/${product.id}`
-                }
-            })
-        })
-    },
-
-    // Muestra el producto por ID
-    show: async (req, res) => { 
-        let Product  = await DB.Product.findByPk(req.params.id,{include:["categoria"]});
-
-        let detalleProducto = {
-            id: Product.id,
-            nombre: Product.nombre,
-            descripcion: Product.descripcion,
-            imagen: `http://localhost:3000/images/users/${Product.foto}`,
-            precio: Product.precio,
-            categoria: Product.categoria,
-        }
-        if (req.params.id >= 0) {
-            return res.json({
-                meta: {
-                    status: 200,
-                    url: '/api/products/' + req.params.id,
-                    listadoProducts: '/api/products/'
-                },
-                data: detalleProduct
-            });
-        }
-    }
-}
-
-// Exportamos el objeto literal con los distintos metodos, que se usará en el enrutador de productos
 module.exports = productsController;
