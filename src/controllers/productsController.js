@@ -29,9 +29,8 @@ const productsController = {
         db.Product.findByPk(req.params.numeroProducto)
             .then(productoAMostrar =>{
                 db.Product.findAll({
-                    include:[{association: "coleccion"}],
                     where: {
-                        coleccion_id : coleccion.id
+                        collection_id : productoAMostrar.collection_id
                     }
                 }).then(productosRelacionados=>{
                     res.render("products/productDetail", {producto: productoAMostrar, productosRelacionados: productosRelacionados}); // Enviamos la vista correspondiente y el producto a mostrar al cliente
@@ -84,7 +83,7 @@ const productsController = {
         db.Product.update ( {
 			name: req.body.name, 
             description: req.body.description,
-            image: productoSinEdicion.image, // MODIFICAR - HAY QUE USAR MULTER !!!!!!!!
+            image: req.file ? req.file.filename : req.body.image, // MODIFICAR - HAY QUE USAR MULTER !!!!!!!!
 			category_id: req.body.category,
 			material_id: req.body.material,
 			collection_id: req.body.coleccion,

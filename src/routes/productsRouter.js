@@ -30,7 +30,7 @@ router.get("/detalle/:numeroProducto", productsController.detalle);
 
 // Editar un producto
 router.get("/editar/:numeroProducto", auth, productsController.editar);
-router.patch("/editar/:numeroProducto", auth, productsController.actualizar);
+router.patch("/editar/:numeroProducto", auth, uploadFile.single("imagen"), productsController.actualizar);
 
 // Eliminar un producto
 router.delete("/eliminar/:numeroProducto", auth, productsController.eliminar);

@@ -104,28 +104,32 @@ const usersController = {
               }
     
               return res.redirect("/usuarios/profile");
-            }
-            return res.render("users/login", {
-              errors: {
-                email: {
-                  msg: "La contraseña es incorrecta",
+            }else{
+              return res.render("users/login", {
+                errors: {
+                  email: {
+                    msg: "La contraseña es incorrecta",
+                  },
                 },
-              },
-            });
-      }}).catch((error)=>{console.log(error)})
+              });
+            }
+            
+        }}).catch((error)=>{console.log(error)})
 
       
     }else{
       console.log(errors);
+
+      /* return res.render("users/login", {
+        errors: {
+          email: {
+            msg: "No es un usuario registrado en nuestra base de datos",
+          },
+        },
+      }); */
     }
 
-    return res.render("users/login", {
-      errors: {
-        email: {
-          msg: "No es un usuario registrado en nuestra base de datos",
-        },
-      },
-    });
+    
   },
 
   profile: (req, res) => {
